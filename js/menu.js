@@ -1,5 +1,5 @@
 var bodyEL = document.querySelector("body");
-var headerEL = document.querySelector("header");
+var headerEL = document.getElementById("item1");
 var menuEL = document.createElement("div");
 function AddButtonToMenu(displayName, link) 
 {  // Legger til en knapp. Teksten er displayName og knappen leder til href
