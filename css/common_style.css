@@ -3,7 +3,7 @@ body, html {
     margin: 0;
   }
 
-  .item1 { 
+  #item1 { 
       grid-area: header;
       background-image: url("https://d.newsweek.com/en/full/623639/gettyimages-116048571.jpg");
       height: 500px; 
@@ -11,16 +11,16 @@ body, html {
       background-repeat: no-repeat;
       background-size: cover;
      }
-  .item2 { 
+  #item2 { 
       grid-area: menu; 
     }
-  .item3 { 
+  #item3 { 
       grid-area: main; 
     }
-  .item4 { 
+  #item4 { 
       grid-area: right; 
     }
-  .item5 { 
+  #item5 { 
       grid-area: footer; 
     }
   
