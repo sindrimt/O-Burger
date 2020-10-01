@@ -12,7 +12,6 @@ body, html {
     'menu main right'
     'menu footer right';
   grid-gap: 0px;
-  background-color: lightgrey;
   padding: 5px;
   z-index : -10;
 }
@@ -39,6 +38,7 @@ body, html {
 #item3 { 
     grid-area: main;
     z-index : 100;
+    background-color : lightgrey;
   }
 #item4 { 
     grid-area: right; 
@@ -52,4 +52,38 @@ body, html {
   position : fixed;
   z-index : 0;
   width : 100%;
+}
+
+
+
+#menu
+{
+  z-index : 1000;
+  position : fixed;
+  margin : auto;
+  width : 100%;
+  background-color : rgba(237, 237, 237, 0.8);
+}
+.menuButton
+{
+  text-decoration : none;
+  padding : 15px 32px;
+  display : inline-block;
+
+  background-color : transparent;
+  border : none;
+  border-bottom : 0px solid black;
+  color : black;
+  text-shadow : 2px 2px lightgrey;
+  text-align : center;
+  font-size : 30px;
+  cursor : pointer;
+  transition : 0.2s;
+}
+.menuButton:hover
+{
+    border-bottom : 3px solid black;
+    padding-bottom : 20px;
+    transition : 0.2s;
+    text-shadow : 3px 3px lightgrey;
 }
