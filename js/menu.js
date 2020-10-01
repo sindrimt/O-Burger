@@ -1,6 +1,5 @@
 var bodyEL = document.querySelector("body");
-var headerEL = document.querySelector("header");
-var menuEL = document.createElement("div");
+var menuEL = document.getElementById("menu");
 function AddButtonToMenu(displayName, link) 
 {  // Legger til en knapp. Teksten er displayName og knappen leder til href
     var buttonEL = document.createElement("button");
@@ -47,7 +46,3 @@ AddMenuCss();
 AddButtonToMenu("Home", "index.html");
 AddButtonToMenu("Order", "order.html");
 AddButtonToMenu("Maps", "find_restaurant.html");
-
-
-headerEL.append(menuEL);
-//bodyEL.appendChild(headerEL);  Ubrukt siden header lages i html
