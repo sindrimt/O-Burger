@@ -3,44 +3,53 @@ body, html {
     margin: 0;
   }
 
-  #item1 { 
-      grid-area: header;
-      background-image: url("https://d.newsweek.com/en/full/623639/gettyimages-116048571.jpg");
-      height: 500px; 
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-     }
-  #item2 { 
-      grid-area: menu; 
-    }
-  #item3 { 
-      grid-area: main; 
-    }
-  #item4 { 
-      grid-area: right; 
-    }
-  #item5 { 
-      grid-area: footer; 
-    }
   
-
-  .grid-container {
-    display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu menu main main right right'
-      'menu menu footer footer right right';
-    grid-gap: 2px;
-    background-color: lightgrey;
-    padding: 5px;
-  }
   
-  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 5px 0;
-    font-size: 30px;
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'menu main right'
+    'menu footer right';
+  grid-gap: 0px;
+  background-color: lightgrey;
+  padding: 5px;
+  z-index : -10;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 30px;
+  z-index : 10;
+}
+#item1 { 
+    grid-area: header;
+    /*background-image: url();*/
+    height: 500px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index : -5;
+    }
+#item2 { 
+    grid-area: menu; 
+  }
+#item3 { 
+    grid-area: main;
+    z-index : 100;
+  }
+#item4 { 
+    grid-area: right; 
+  }
+#item5 { 
+    grid-area: footer; 
   }
 
-
+.backgroundImg
+{
+  position : fixed;
+  z-index : 0;
+  width : 100%;
+}
