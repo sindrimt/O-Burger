@@ -1,3 +1,6 @@
+/* LAST EDITED BY:
+Torbjørn, 05.10.2020 */
+
 body, html {
     height: 100%;
     margin: 0;
@@ -29,7 +32,8 @@ article.content
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
-  width : 60%;
+  min-width : 800px;
+  width : 50%;
   margin : auto;
 }
 
@@ -42,34 +46,42 @@ article.content
 
 
 
-#menu
+#navbar
 {
   z-index : 1000;
   position : fixed;
   margin : auto;
   width : 100%;
-  background-color : rgba(237, 237, 237, 0.8);
+  background-color : rgba(255, 137, 0, 1);
 }
-.menuButton
+.navcell
+{
+  
+  background-color: red;
+}
+.navbutton
 {
   text-decoration : none;
-  padding : 15px 32px;
+  background-color : green;
   display : inline-block;
 
   background-color : transparent;
   border : none;
   border-bottom : 0px solid black;
   color : black;
-  text-shadow : 2px 2px lightgrey;
+  
+  position : relative;
+  top : 50%;
+  width : 300px;
+  height : 100px;
   text-align : center;
   font-size : 30px;
   cursor : pointer;
-  transition : 0.2s;
+  transition : 0s;
 }
-.menuButton:hover
+.navbutton:hover
 {
-    border-bottom : 3px solid black;
-    padding-bottom : 20px;
-    transition : 0.2s;
-    text-shadow : 3px 3px lightgrey;
+    transition : 0s;
+    color : lightgrey;
+    text-shadow : 1px 1px black;
 }
