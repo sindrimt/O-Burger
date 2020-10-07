@@ -45,8 +45,11 @@ article.content
 }
 
 
-
-#navbar
+#banner
+{
+  background-color : green;
+}
+#navBar
 {
   z-index : 1000;
   position : fixed;
@@ -54,12 +57,12 @@ article.content
   width : 100%;
   background-color : rgba(255, 137, 0, 1);
 }
-.navcell
+.navImg
 {
-  
-  background-color: red;
+  position : relative;
+  left : 50%;
 }
-.navbutton
+.navButton
 {
   text-decoration : none;
   background-color : green;
@@ -71,15 +74,13 @@ article.content
   color : black;
   
   position : relative;
-  top : 50%;
-  width : 300px;
-  height : 100px;
+  
   text-align : center;
   font-size : 30px;
   cursor : pointer;
   transition : 0s;
 }
-.navbutton:hover
+.navButton:hover
 {
     transition : 0s;
     color : lightgrey;
