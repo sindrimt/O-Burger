@@ -43,7 +43,11 @@ footer
     margin-bottom: 25px;
 }
  
- 
+.restaurantsTable {
+    border: 1px solid black;
+    color: blue;
+
+}
  
  
  

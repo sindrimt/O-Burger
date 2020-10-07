@@ -85,3 +85,14 @@ article.content
     color : lightgrey;
     text-shadow : 1px 1px black;
 }
+
+.tableDiv {
+  max-width: 100%;
+}
+
+.restaurantsTable {
+  border: 1px solid black;
+  margin-top: 10px;
+  width: 80%;
+  align-content: center;
+}
