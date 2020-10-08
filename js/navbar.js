@@ -3,17 +3,19 @@
 
 // ========== GLOBAL VARIABLES ==========
 // Config
-var bannerHeight = 100;
-var navBarHeight = 100;
+var bannerHeight = 60;
+var navBarHeight = 80;
+var minimizedImageHeight = 1.25;  // as a fraction of navBarHeight
+var imageCellWidthWeight = 0.5;  // Button cells have a weight of 1
 
 var bodyEL = document.querySelector("body");
 var bannerEL = null;
 var navBarEL = null;
-var itemTableEL;  // The links are inside of a table with 1 row
-var itemRowEL;
+//var itemTableEL;  // The links are inside of a table with 1 row
+//var itemRowEL;
 var navItems =
 [  // Template to use when creating navButtons
-    {"display":"Home", "link":"index.html", "displayImg":"../imgs/OBurger-logo.png"},
+    {"display":"Home", "link":"index.html", "displayImg":"../imgs/OBurger-logo-cropped.png"},
     {"display":"O'rder", "link":"order.html"},
     {"display":"Find Restaurant", "link":"find_restaurant.html"},
     {"display":"O'bout Us", "link":"about.html"},
@@ -29,13 +31,18 @@ function ResetAll()
     navBarEL = CreateNavBar();
 
     navBarEL.innerHTML = "";
+    /*
     itemTableEL = document.createElement("table");
     itemRowEL = itemTableEL.insertRow();
+    */
     CreateNavItems();
+    /*
     navBarEL.appendChild(itemTableEL);
-    document.addEventListener("scroll", Scroll);
+    */
+    document.addEventListener("scroll", UpdateNavbar);
+    window.addEventListener("resize", UpdateNavbar);
     ResetStyle();
-    Scroll();  // So that the navBar starts at the correct position before scrolling
+    UpdateNavbar();  // So that the navBar starts at the correct position before scrolling
 }
 
 function CreateNavBarIfNonexistent()
@@ -70,19 +77,23 @@ function GetBanner()
 }
 function CreateNavItems()
 {
+    var weightSum = GetNavItemWeightSum();
     for (var i = 0; i < navItems.length; i++)
     {  // i: navItem-index
-        var itemCellEL = itemRowEL.insertCell();
+        var itemCellEL = document.createElement("span");
         itemCellEL.className = "navCell";
         var thisItem = navItems[i];
         var thisDisplay = thisItem["display"];
         var thisLink = thisItem["link"];
-        var itemWidth = screen.width/navItems.length;
-        
+        var itemWidth = 100/weightSum;
+
         if ("displayImg" in thisItem)
         {  // Display an image instead of text
             var itemEL = document.createElement("img");
             itemEL.className = "navImg";
+            // Images need to be loaded in order to get their width and height,
+            // which is necessary for the page to look alright.
+            itemEL.addEventListener("load", UpdateNavbar);
             itemEL.src = thisItem["displayImg"];
             itemEL.alt = thisDisplay;
             itemEL.style.height = navBarHeight+"px";
@@ -93,18 +104,31 @@ function CreateNavItems()
             itemEL.className = "navButton";
             itemEL.innerText = thisDisplay;
             itemEL.style.height = navBarHeight+"px";
-            itemEL.style.width = itemWidth+"px";
+            
+            console.log(itemWidth);
         }
 
-        
-        itemCellEL.style.width = itemWidth+"px";
+        itemCellEL.style.width = itemWidth+"%";
+        itemCellEL.style.height = navBarHeight+"px";
         itemEL.link = thisLink;
-        itemEL.addEventListener("click", NavitemClicked);
+        itemEL.addEventListener("click", NavItemClicked);
 
         itemCellEL.appendChild(itemEL);
+        navBarEL.appendChild(itemCellEL);
     }
 }
-function NavitemClicked(e)
+function GetNavItemWeightSum()
+{
+    var sum = 0;
+    for (var i = 0; i < navItems.length; i++)
+    {
+        var item = navItems[i];
+        if ("img" in item) sum += logoCellWidthWeight;
+        else sum++;
+    }
+    return sum;
+}
+function NavItemClicked(e)
 {
     if (e == null)
     {
@@ -120,23 +144,32 @@ function ResetStyle()
     navBarEL.style.height = navBarHeight+"px";
     bannerEL.style.height = navBarHeight+bannerHeight+"px";
 }
-function Scroll()
+function UpdateNavbar()
 {
     var scroll = document.scrollingElement.scrollTop;
-    var yPos = bannerHeight-scroll;
-    if (yPos < 0) yPos = 0;
+    // y is a scalar [0, 1]. 0 => navbar is at top, 1 => is as low as possible
+    var y = (bannerHeight-scroll)/bannerHeight;
+    if (y < 0) y = 0;
 
-    navBarEL.style.top = yPos+"px";
-    
-    var imgHeight = navBarHeight+yPos;
+    navBarEL.style.top = y*bannerHeight+"px";
     var navImgELs = document.getElementsByClassName("navImg");
     for (var i = 0; i < navImgELs.length; i++)
     {
-        
         var imgEL = navImgELs[i];
-        imgEL.style.height = imgHeight;
-        console.log(imgHeight);
+        if (imgEL.naturalWidth == 0) return;  // avoid dividing by zero
+        // imgDimensionRelation is the relation between the source image height to width
+        var imgDimensionRelation = imgEL.naturalHeight/imgEL.naturalWidth;
+
+        var minHeight = minimizedImageHeight;
+        var minWidth = Math.floor(minHeight/imgDimensionRelation);
+        var maxHeight = y*bannerHeight*2+navBarHeight;
+        var maxWidth = Math.floor(maxHeight/imgDimensionRelation);
+        var width = Math.floor(minWidth*(1-y)+maxWidth*y);
+        imgEL.style.width = width+"px";
+        imgEL.style.height = width*imgDimensionRelation+"px";
+        imgEL.style.top = -y*bannerHeight+"px";
     }
 }
+
 // ========== INITIALIZATION ==========
 ResetAll();
