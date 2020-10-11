@@ -114,7 +114,10 @@ article.content
   font-size: 30px;
 }
 #footerBackground {
+  position: relative;
   width: 100%;
+  z-index: -100;
+  bottom: 150px;
 }
 
 #footerLogo {
