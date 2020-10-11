@@ -104,25 +104,26 @@ article.content
   align-content: center;
 }
 
-.footerDiv {
-  position: relative;
-  width: 100%;
-  height: 30%;
-  background-color: red;
-  color: orange;
-  text-align: center;
-  font-size: 30px;
-}
+
 #footerBackground {
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: -100;
-  bottom: 150px;
+  bottom: 0;
+  left: 0;
 }
 
 #footerLogo {
   position: "relative";
-  left: 10px;
-  width: 200px; 
+  width: 150px;
+  margin: auto; 
 }
 
+#container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content {
+  padding-bottom: 100px;
+}
