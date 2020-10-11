@@ -16,10 +16,10 @@ var navBarEL = null;  // navBarEL is the orange part with all the buttons and lo
 var navItems =
 [  // Template to use when creating navButtons
     {"display":"Home", "link":"index.html", "displayImg":"../imgs/OBurger-logo-cropped.png"},
-    {"display":"O'rder", "link":"order.html"},
-    {"display":"Find Restaurant", "link":"find_restaurant.html"},
-    {"display":"O'bout Us", "link":"about.html"},
-    {"display":"Contact Us", "link":"contact.html"}
+    {"display":"Order", "link":"order.html"},
+    {"display":"Restaurants", "link":"find_restaurant.html"},
+    {"display":"O'bout", "link":"about.html"},
+    {"display":"Contact", "link":"contact.html"}
 ];
 
 // ========== FUNCTIONS ==========

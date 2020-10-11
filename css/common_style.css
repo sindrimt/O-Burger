@@ -60,6 +60,7 @@ article.content
 }
 .navCell
 {
+  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
   vertical-align : top;
   display : inline-block;
   position : relative;
@@ -76,6 +77,7 @@ article.content
 }
 .navButton
 {
+  font-family : inherit;
   text-decoration : none;
   border : none;
   border-bottom : 0px solid black;
