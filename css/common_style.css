@@ -118,6 +118,9 @@ article.content
   text-align: center;
   width: 100%;
 }
+#footer img:hover {
+  cursor: pointer;
+}
 #footerBackground {
   position: absolute;
   width: 100%;
