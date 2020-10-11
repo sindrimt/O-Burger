@@ -1,0 +1,16 @@
+body, html {
+  height: 100%;
+  font-family: "Signica negative SC", sans-serif;
+}
+
+.bgimg {
+
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/image 2.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
