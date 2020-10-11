@@ -86,7 +86,7 @@ article.content
     text-shadow : 1px 1px black;
 }
 
-.tableDiv {
+.tableDiv { /*Find restaurants*/
   max-width: 100%;
 }
 
@@ -104,21 +104,6 @@ article.content
   align-content: center;
 }
 
-
-#footerBackground {
-  position: absolute;
-  width: 100%;
-  z-index: -100;
-  bottom: 0;
-  left: 0;
-}
-
-#footerLogo {
-  position: "relative";
-  width: 150px;
-  margin: auto; 
-}
-
 #container {
   position: relative;
   min-height: 100vh;
@@ -126,4 +111,35 @@ article.content
 
 #content {
   padding-bottom: 100px;
+}
+
+#footer {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+#footerBackground {
+  position: absolute;
+  width: 100%;
+  z-index: -1000;
+  bottom: 0;
+  left: 0;
+}
+
+#footerLogo {
+  position: relative;
+  width: 15%;
+}
+
+
+#facebook {
+  position: relative;
+  width: 5%;
+  right: 45%;
+}
+
+#instagram {
+  position: relative;
+  width: 5%;
+  right: 44%;
 }
