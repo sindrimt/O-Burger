@@ -155,7 +155,7 @@ article.content {
 
 /*changes the cursor when hover over images in the footer. */
 
-#footer img:hover {
+#footer a:hover {
   cursor: pointer;
 }
 
@@ -180,14 +180,14 @@ article.content {
 
 #facebook {
   position: relative;
-  width: 4%;
-  right: 35%;
+  width: 3%;
+  right: 44%;
 }
 
 /* Instagram image in footer */
 
 #instagram {
   position: relative;
-  width: 4%;
-  right: 34%;
+  width: 3%;
+  right: 42%;
 }
