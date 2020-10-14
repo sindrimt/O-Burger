@@ -96,11 +96,13 @@ article.content {
   text-align: center;
 }
 
+/* The names of the restaurants in the table (frist row) */
 .restaurantsName td {
   border-bottom: 1px solid black;
   font-weight: bold;
 }
 
+/* Changes the width of the cells in the table */
 .restaurantsTable td {
   width: 5%;
 }
@@ -131,13 +133,14 @@ article.content {
 }
 
 /* The header representing our navbar on the testing page for our footer */
+
 #content h1 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 /* p elements on our testing page for our footer */
+
 #content p {
   margin: 0 10% 0 10%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
