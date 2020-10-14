@@ -8,7 +8,7 @@
 // Tweak these numbers to adjust logo size in different situations.
 var bannerHeight = 70;
 var navBarHeight = 80;
-var imageCellWidthWeight = 0.65;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
+var imageCellWidthWeight = 1;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
 
 var bodyEL = document.querySelector("body");
 var bannerEL = null;  // bannerEL is the spruce wood-part
