@@ -1,5 +1,6 @@
 // ========== GLOBAL VARIABLES ==========
 // Config
+var countIndex = 1;
 var dishes =
 [  // Dish blueprints are stored in objects
     {"name":"O'Burger",     "price":4.99, "img":"banner.jpg"},
@@ -13,24 +14,35 @@ var dishes =
 // System variables
 var bodyEL = document.querySelector("body");
 var articleEL = document.getElementsByClassName("content")[0];
+var dishesEL = null;
+var receiptEL = null;
 
 
 // ========== FUNCTIONS ==========
+
+// Everything to do with dishes
 function CreateDishes()
 {  // Dishes means the menu items where you add and subtract dishes
-    var dishesEL = document.createElement("div");
+    if (dishesEL == null)
+    {
+        dishesEL = document.createElement("div");
+    } else
+    {
+        dishesEL.innerHTML = "";
+    }
 
     for (var i = 0; i < dishes.length; i++)
     {
-        var dish = dishes[i];
-        dishesEL.appendChild(CreateDish(dish));
+        dishesEL.appendChild(CreateDish(i));
     }
     articleEL.appendChild(dishesEL);
 }
-function CreateDish(dish)
+function CreateDish(dishIndex)
 {
+    var dish = dishes[dishIndex];
     var dishEL = document.createElement("div");
     dishEL.className = "dish";
+    dishEL.dishIndex = dishIndex;  // Refers to the corresponding dish in dishes variable
 
     var displayNameEL = document.createElement("div");
     var text = dish["name"];
@@ -54,16 +66,76 @@ function CreateDish(dish)
 function CreateDishButtons()
 {
     var wrapperEL = document.createElement("div");
-
-    var addButtonEL = document.createElement("img");
+    wrapperEL.className = "buttonWrapper";
+    var addButtonEL = document.createElement("button");
+    addButtonEL.addEventListener("click", IncreaseDishCount);
+    addButtonEL.className = "dishButton";
     var countEL = document.createElement("span");
-    var subtractButtonEL = document.createElement("img");
+    countEL.innerText = "0";
+    var subtractButtonEL = document.createElement("button");
+    subtractButtonEL.addEventListener("click", DecreaseDishCount);
+    subtractButtonEL.className = "dishButton";
     wrapperEL.appendChild(addButtonEL);
     wrapperEL.appendChild(countEL);
     wrapperEL.appendChild(subtractButtonEL);
-    wrapperEL.innerText += "13";
     return wrapperEL;
+}
+function IncreaseDishCount(e) {ChangeDishCount(e, 1);}
+function DecreaseDishCount(e) {ChangeDishCount(e, -1);}
+function ChangeDishCount(e, amount)
+{
+    var countEL = e.target.parentNode.childNodes[countIndex];
+    var count = parseInt(countEL.innerText);
+    count += amount;
+    if (count < 0) count = 0;
+    if (count > 99) count = 99;
+    countEL.innerText = count;
+
+    UpdateReceipt();
+}
+
+// Everything to do with receipt
+function CreateReceipt()
+{
+    if (receiptEL == null) 
+    {
+        receiptEL = document.createElement("span");
+    } else
+    {
+        receiptEL.innerHTML = "";
+    }
+    receiptEL.innerText = "";
+    articleEL.appendChild(receiptEL);
+}
+function UpdateReceipt()
+{
+    if (receiptEL == null || dishesEL == null)
+    {   
+        console.error("ERROR: either receiptEL or dishesEL is null");
+        return;
+    }
+    receiptEL.innerHTML = "";
+    var dishELs = dishesEL.childNodes;
+    for (var i = 0; i < dishELs.length; i++)
+    {
+        var dishEL = dishELs[i];
+        var count = parseInt(dishEL.childNodes[2].childNodes[countIndex].innerText);
+
+        if (count == 0) continue;
+        var dishIndex = dishEL.dishIndex;
+        var dishBP = dishes[dishIndex];
+        var name = dishBP["name"];
+        var price = dishBP["price"];
+        var info = "";
+        if ("info" in dishBP) info = dishBP["info"];
+        var cost = Math.round(price*count, 2);
+        var txt = count+"x "+name+": $"+cost+";<br>";
+        receiptEL.innerHTML += txt;
+    }
+
+
 }
 
 // ========== INITIALIZATION ==========
 CreateDishes();
+CreateReceipt();
