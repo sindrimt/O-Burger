@@ -1,5 +1,14 @@
 var bodyEL = document.querySelector("body");
 var menuEL = document.getElementById("menu");
+function AddLogo()
+{
+    var logoEL = document.createElement("img");
+    logoEL.src = "OBurger-logo.png";
+    logoEL.alt = "O-Burger Logo";
+    logoEL.style.position = "absolute";  // Relativt til navigation bar
+    
+    menuEL.appendChild(logoEL);
+}
 function AddButtonToMenu(displayName, link) 
 {  // Legger til en knapp. Teksten er displayName og knappen leder til href
     var buttonEL = document.createElement("button");
@@ -41,8 +50,9 @@ function AddCss(path)
     }
 }
 
-AddMenuCss();
+//AddMenuCss();  trengs ikke akkurat nå, meny-css er i common_style.css
 // Legger til diverse knapper
+AddLogo();
 AddButtonToMenu("Home", "index.html");
 AddButtonToMenu("Order", "order.html");
 AddButtonToMenu("Maps", "find_restaurant.html");

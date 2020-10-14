@@ -8,6 +8,7 @@ document.addEventListener("scroll", Scroll)
 function Scroll()
 {
     var scroll = (0-bodyEL.scrollTop)/8;
+    console.log(scroll);
     for (var i = 0; i < backgroundImgELs.length; i++)
     {
         var img = backgroundImgELs[i];

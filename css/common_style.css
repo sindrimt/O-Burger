@@ -1,13 +1,14 @@
+/* LAST EDITED BY:
+Torbjørn, 05.10.2020 */
+
 body, html {
     height: 100%;
     margin: 0;
   }
 
-
-
 header { /*NOT THE SAME AS NAVIGATON BAR*/
     /*background-image: url();*/
-    height: 500px; 
+    height: 682px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,15 +22,16 @@ article.bg
 {
   width : 100%;
   
-  background-color : rgba(27, 27, 27, 1);
+  background-color : rgba(227, 227, 227, 1);
 }
 article.content
 {
-  background-color : rgba(237, 237, 237, 1);
+  background-color : rgba(237, 237, 237, 0.4);
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
-  width : 60%;
+  min-width : 800px;
+  width : 50%;
   margin : auto;
 }
 
@@ -41,35 +43,83 @@ article.content
 }
 
 
-
-#menu
+#banner
 {
+  background-image : url("../imgs/banner.jpg");
+}
+#navBar
+{
+  display : inline-block;
   z-index : 1000;
   position : fixed;
   margin : auto;
   width : 100%;
-  background-color : rgba(237, 237, 237, 0.8);
+  background-color : rgba(255, 137, 0, 1);
 }
-.menuButton
+.navCell
 {
-  text-decoration : none;
-  padding : 15px 32px;
+  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
+  vertical-align : top;
   display : inline-block;
-
-  background-color : transparent;
+  position : relative;
+  top : 0px;
+}
+.navImg, .navButton
+{
+  cursor : pointer;
+}
+.navImg
+{
+  /*background-color : red;*/
+  position : relative;
+}
+.navButton
+{
+  font-family : inherit;
+  text-decoration : none;
   border : none;
   border-bottom : 0px solid black;
   color : black;
-  text-shadow : 2px 2px lightgrey;
-  text-align : center;
+  width : 100%;
+  background-color : transparent;
   font-size : 30px;
-  cursor : pointer;
-  transition : 0.2s;
+  text-align : center;
+  transition : 0s;
 }
-.menuButton:hover
+.navButton:hover
 {
-    border-bottom : 3px solid black;
-    padding-bottom : 20px;
-    transition : 0.2s;
-    text-shadow : 3px 3px lightgrey;
+    transition : 0s;
+    color : lightgrey;
+    background-color : rgba(245, 127, 0, 1);
+    text-shadow : 1px 1px black;
 }
+
+/*ADDED FOR SLIDESHOW*/
+
+img {
+  width: 100%;
+  height: 682px;
+}
+
+#lButton {
+    background:url("https://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png") no-repeat;
+    cursor: pointer;
+    background-size:100% 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 200px;
+    height: 100px;
+    border: none;
+}
+
+#RButton {
+    background:url("https://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png") no-repeat;
+    cursor: pointer;
+    background-size:100% 100%;
+    width: 200px;
+    height: 100px;
+    border: none;
+}
+
+
+
