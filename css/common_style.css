@@ -6,11 +6,9 @@ body, html {
     margin: 0;
   }
 
-
-
 header { /*NOT THE SAME AS NAVIGATON BAR*/
     /*background-image: url();*/
-    height: 500px; 
+    height: 682px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,3 +93,33 @@ article.content
     background-color : rgba(245, 127, 0, 1);
     text-shadow : 1px 1px black;
 }
+
+/*ADDED FOR SLIDESHOW*/
+
+img {
+  width: 100%;
+  height: 682px;
+}
+
+#lButton {
+    background:url("https://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png") no-repeat;
+    cursor: pointer;
+    background-size:100% 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 200px;
+    height: 100px;
+    border: none;
+}
+
+#RButton {
+    background:url("https://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png") no-repeat;
+    cursor: pointer;
+    background-size:100% 100%;
+    width: 200px;
+    height: 100px;
+    border: none;
+}
+
+
+
