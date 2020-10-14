@@ -2,98 +2,91 @@
 Torbjørn, 05.10.2020 */
 
 body, html {
-    height: 100%;
-    margin: 0;
-  }
-
-
-
-header { /*NOT THE SAME AS NAVIGATON BAR*/
-    /*background-image: url();*/
-    height: 500px; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index : -5;
-    }
-article.content, article.bg
-{
-  z-index : 100;
+  height: 100%;
+  margin: 0;
 }
-article.bg
-{
-  width : 100%;
-  
-  background-color : rgba(227, 227, 227, 1);
+
+header {
+  /*NOT THE SAME AS NAVIGATON BAR*/
+  /*background-image: url();*/
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -5;
 }
-article.content
-{
-  background-color : rgba(237, 237, 237, 0.4);
+
+article.content, article.bg {
+  z-index: 100;
+}
+
+article.bg {
+  width: 100%;
+  background-color: rgba(227, 227, 227, 1);
+}
+
+article.content {
+  background-color: rgba(237, 237, 237, 0.4);
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
-  min-width : 800px;
-  width : 50%;
-  margin : auto;
+  min-width: 800px;
+  width: 50%;
+  margin: auto;
 }
 
-.backgroundImg
-{
-  position : fixed;
-  z-index : -1000;
-  width : 100%;
+.backgroundImg {
+  position: fixed;
+  z-index: -1000;
+  width: 100%;
 }
 
-
-
-#navbar
-{
-  z-index : 1000;
-  position : fixed;
-  margin : auto;
-  width : 100%;
-  background-color : rgba(255, 137, 0, 1);
+#navbar {
+  z-index: 1000;
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  background-color: rgba(255, 137, 0, 1);
 }
-.navcell
-{
-  
+
+.navcell {
   background-color: red;
 }
-.navbutton
-{
-  text-decoration : none;
-  background-color : green;
-  display : inline-block;
 
-  background-color : transparent;
-  border : none;
-  border-bottom : 0px solid black;
-  color : black;
-  
-  position : relative;
-  top : 50%;
-  width : 300px;
-  height : 100px;
-  text-align : center;
-  font-size : 30px;
-  cursor : pointer;
-  transition : 0s;
+.navbutton {
+  text-decoration: none;
+  background-color: green;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0px solid black;
+  color: black;
+  position: relative;
+  top: 50%;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0s;
 }
-.navbutton:hover
-{
-    transition : 0s;
-    color : lightgrey;
-    text-shadow : 1px 1px black;
+
+.navbutton:hover {
+  transition: 0s;
+  color: lightgrey;
+  text-shadow: 1px 1px black;
 }
 
 /*Find restaurants*/
-.tableDiv { 
+
+.tableDiv {
   max-width: 100%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 
 /*The table on the find restaurants page. */
+
 .restaurantsTable {
   margin-top: 10px;
   width: 80%;
@@ -112,68 +105,89 @@ article.content
   width: 5%;
 }
 
-
-
 /*The div for our future map of the restaurants. */
+
 .mapDiv {
   max-width: 100%;
 }
 
 /*The image of our future map. */
+
 #mapImg {
   align-content: center;
 }
 
 /*div containing everything on the page. */
-#container { 
+
+#container {
   position: relative;
   min-height: 100vh;
 }
 
 /*div containing everything except for the navbar and the footer. */
-#content { 
-  padding-bottom: 100px;
+
+#content {
+  padding-bottom: 50px;
+}
+
+/* The header representing our navbar on the testing page for our footer */
+#content h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* p elements on our testing page for our footer */
+#content p {
+  margin: 0 10% 0 10%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*div for the footer. */
+
 #footer {
-  position: relative;
-  text-align: center;
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  height: 0px;
+  text-align: center;
 }
 
 /*changes the cursor when hover over images in the footer. */
+
 #footer img:hover {
   cursor: pointer;
 }
 
 /*Sets the footer background image under the other images, and at the bottom. */
+
 #footerBackground {
   position: absolute;
   width: 100%;
   z-index: -1000;
-  bottom: 0;
   left: 0;
 }
 
 /*The logo in the footer */
+
 #footerLogo {
   position: relative;
   width: 15%;
+  left: 57px;
 }
 
-/*Facebook image in footer. */
+/* Facebook image in footer */
+
 #facebook {
-  position: absolute;
+  position: relative;
   width: 4%;
-  right: 80%;
-  top: 15%;
+  right: 35%;
 }
 
-/*Instagram image in the footer. */ 
+/* Instagram image in footer */
+
 #instagram {
-  position: absolute;
+  position: relative;
   width: 4%;
-  right: 80%;
-  top: 55%;
+  right: 34%;
 }
