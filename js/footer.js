@@ -1,4 +1,4 @@
-var myvar = '<div id="container">'+
+var footer = '<div id="container">'+
 '        <div id="content">'+
 '            <h1 id="hello">"----- Navbar -----"</h1>'+
 '            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio sunt velit hic numquam, quam cupiditate'+
@@ -17,4 +17,4 @@ var myvar = '<div id="container">'+
 '        </div>'+
 '    </div>';
 
-document.write(myvar);
+document.write(footer);
