@@ -4,7 +4,7 @@ var footer = '<div id="container">'+
 '        </div>'+
 ''+
 '        <div id="footer">'+
-'            <a href="#banner"><img src="../imgs/OBurger-logo3.png" alt="Logo" id="footerLogo"></a>'+
+'            <a href="#banner"><img src="../imgs/OBurger-logo.png" alt="Logo" id="footerLogo"></a>'+
 '            <img src="../imgs/banner.jpg" alt="Background" id="footerBackground">'+
 ''+
 '            <a href=https://wwww.facebook.com/barackobama target="_blank"><img src="../imgs/facebook.png"'+

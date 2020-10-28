@@ -225,7 +225,7 @@ article.content
 
 #footerBackground {
   position: absolute;
-  width: 100%;
+  width: 100%; 
   z-index: -1000;
   left: 0;
 }
