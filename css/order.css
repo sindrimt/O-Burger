@@ -1,0 +1,15 @@
+.dish
+{
+    background-color : rgb(237, 237, 337);
+    width : 200px;
+    height : 200px;
+    margin : 10px;
+    display : inline-block;
+}
+.buttonWrapper > *
+{
+    display : inline-block;
+    width : 50px;
+    height : 50px;
+    cursor : pointer;
+}

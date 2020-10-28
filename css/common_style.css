@@ -6,11 +6,9 @@ body, html {
     margin: 0;
   }
 
-
-
 header { /*NOT THE SAME AS NAVIGATON BAR*/
     /*background-image: url();*/
-    height: 500px; 
+    height: 682px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +42,6 @@ article.content
   width : 100%;
 }
 
-
 #banner
 {
   background-image : url("../imgs/banner.jpg");
@@ -60,6 +57,7 @@ article.content
 }
 .navCell
 {
+  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
   vertical-align : top;
   display : inline-block;
   position : relative;
@@ -76,6 +74,7 @@ article.content
 }
 .navButton
 {
+  font-family : inherit;
   text-decoration : none;
   border : none;
   border-bottom : 0px solid black;
@@ -93,3 +92,50 @@ article.content
     background-color : rgba(245, 127, 0, 1);
     text-shadow : 1px 1px black;
 }
+
+/*ADDED FOR SLIDESHOW*/
+
+#img1 {
+  width: 100%;
+  height: 682px;
+}
+
+#slide {
+  position: relative;
+  
+}
+
+#lButton {
+    position: absolute;
+    transform: rotate(-90deg);
+    filter: invert(100%);
+    top: 50%;
+    left: 2%;
+    background: url("../imgs/bestpil.png") no-repeat;
+    z-index: 100;
+    cursor: pointer;
+    background-size:100% 100%;
+    width: 5%;
+    height: 10%;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+}
+
+#RButton {
+    position: absolute;
+    transform: rotate(90deg);
+    filter: invert(100%);
+    right: 2%;
+    top: 50%;
+    background: url("../imgs/bestpil.png") no-repeat;
+    z-index: 100;
+    cursor: pointer;
+    background-size:100% 100%;
+    width: 5%;
+    height: 10%;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+}
+
