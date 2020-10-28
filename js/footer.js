@@ -1,3 +1,4 @@
+// HTML-kode gjort om til js ved å gjøre om alt til en string.
 var footer = '<div id="container">'+
 '        <div id="content">'+
 '            <h1 id="hello">"----- Navbar -----"</h1>'+
