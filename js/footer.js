@@ -1,6 +1,20 @@
-bodyEl = document.querySelector("body");
+var myvar = '<div id="container">'+
+'        <div id="content">'+
+'            <h1 id="hello">"----- Navbar -----"</h1>'+
+'            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio sunt velit hic numquam, quam cupiditate'+
+'                est fuga, aliquid eveniet dicta et quaerat ea fugiat recusandae porro placeat? Corrupti, tempore id.</p>'+
+'        </div>'+
+''+
+'        <div id="footer">'+
+'            <a href="#hello"><img src="../O-Burger/imgs/OBurger-logo3.png" alt="Logo" id="footerLogo"></a>'+
+'            <img src="../O-Burger/imgs/banner.jpg" alt="Background" id="footerBackground">'+
+''+
+'            <a href=https://wwww.facebook.com/barackobama target="_blank"><img src="../O-Burger/imgs/facebook.png"'+
+'                    alt="Facebook" id="facebook"></a>'+
+'            <a href=https://www.instagram.com/barackobama/?hl=en target="_blank"><img'+
+'                    src="../O-Burger/imgs/instagram.png" alt="Instagram" id="instagram"></a>'+
+''+
+'        </div>'+
+'    </div>';
 
-footerLogoEl = document.querySelector('#footerLogo')
-facebookEl = document.querySelector('#facebook')
-instagramEl = document.querySelector('#instagram')
-
+document.write(myvar);
