@@ -19,44 +19,30 @@ var imgs = ['../imgs/OShake.jpg',
             '../imgs/visepresident.jpg',
             '../imgs/littkult.jpg'];
 
+cooldown = 3000;
 time = 3000;
 count = 0;
 
 function slideshow() {
-  
-    if (count == imgs.length) { 
-            count = 0;
-     }
-    document.getElementById('img1').src = imgs[count];
-    count++;
-    
+    changeSlide(1);
     setTimeout("slideshow()", time);
 }
  //Clicks the left button
 lButton.addEventListener("click", () => {
-
-    count--;
-    console.log("left");
-    time = time;
-    
-    if (count < 0) { 
-        count = imgs.length-1;
- }
-    document.getElementById('img1').src = imgs[count];
+    changeSlide(-1);
 });
-
 //Clicks the right button
 RButton.addEventListener("click", () => {
-
-    count++;
-    console.log("right");
-    time = time;
-    
-    if (count > imgs.length-1) { 
-        count = 0;
-    }
-    document.getElementById('img1').src = imgs[count];
+    changeSlide(1);
 });
+function changeSlide(change)
+{
+    time = cooldown;
+    count += change;
+    if (count < 0) count = imgs.length-1;
+    else if (count >= imgs.length) count = 0;
+    document.getElementById('img1').src = imgs[count];
+}
 
 /*setInterval(function(){ 
     document.getElementById('img1').src = imgs[count]; 
