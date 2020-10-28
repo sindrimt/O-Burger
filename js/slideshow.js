@@ -7,6 +7,7 @@ lButton.id = "lButton";
 //lButton.addEventListener("click", lButtonf);
 bodyEL.appendChild(lButton);
 
+var timeoutVar;
 //Right button
 var RButton = document.createElement("button");
 //RButton.innerHTML = "RIGTHBUTTON";
@@ -20,12 +21,12 @@ var imgs = ['../imgs/OShake.jpg',
             '../imgs/littkult.jpg'];
 
 cooldown = 3000;
-time = 3000;
+time = cooldown;
 count = 0;
 
 function slideshow() {
     changeSlide(1);
-    setTimeout("slideshow()", time);
+    timeoutVar = setTimeout("slideshow()", time);
 }
  //Clicks the left button
 lButton.addEventListener("click", () => {
@@ -42,6 +43,7 @@ function changeSlide(change)
     if (count < 0) count = imgs.length-1;
     else if (count >= imgs.length) count = 0;
     document.getElementById('img1').src = imgs[count];
+    clearTimeout(timeoutVar);
 }
 
 /*setInterval(function(){ 
