@@ -83,6 +83,7 @@ article.content {
   max-width: 100%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  margin: 20px 0px 0px 0px;
 }
 
 /*The table on the find restaurants page. */
@@ -117,13 +118,14 @@ article.content {
 
 #mapImg {
   align-content: center;
+  width: 100%;
 }
 
 /*div containing everything on the page. */
 
 #container {
   position: relative;
-  min-height: 100vh;
+  min-height: 20vh;
 }
 
 /*div containing everything except for the navbar and the footer. */
