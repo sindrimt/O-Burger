@@ -6,7 +6,7 @@ body, html {
     margin: 0;
   }
 
-header { /*NOT THE SAME AS NAVIGATON BAR*/
+header { /*NOT THE SAMEe AS NAVIGATON BAR*/
     /*background-image: url();*/
     height: 682px; 
     background-position: center;
@@ -49,9 +49,6 @@ article.content
   background-color: rgba(255, 137, 0, 1);
 }
 
-.navcell {
-  background-color: red;
-}
 
 #banner
 {
@@ -106,31 +103,50 @@ article.content
 
 /*ADDED FOR SLIDESHOW*/
 
-.slideImg {
+
+#img1 {
   width: 100%;
   height: 682px;
 }
 
+#slide {
+  position: relative;
+  
+}
+
 #lButton {
-    background:url("https://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png") no-repeat;
+    position: absolute;
+    transform: rotate(-90deg);
+    filter: invert(100%);
+    top: 50%;
+    left: 2%;
+    background: url("../imgs/bestpil.png") no-repeat;
+    z-index: 100;
     cursor: pointer;
     background-size:100% 100%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    width: 200px;
-    height: 100px;
+    width: 5%;
+    height: 10%;
+    opacity: 0.5;
     border: none;
+    outline: none;
 }
 
 #RButton {
-    background:url("https://www.clker.com/cliparts/L/X/7/n/H/j/transparent-arrow-hi.png") no-repeat;
+    position: absolute;
+    transform: rotate(90deg);
+    filter: invert(100%);
+    right: 2%;
+    top: 50%;
+    background: url("../imgs/bestpil.png") no-repeat;
+    z-index: 100;
     cursor: pointer;
     background-size:100% 100%;
-    width: 200px;
-    height: 100px;
+    width: 5%;
+    height: 10%;
+    opacity: 0.5;
     border: none;
+    outline: none;
 }
-
 
 
 
@@ -252,3 +268,4 @@ article.content
   width: 3%;
   right: 42%;
 }
+
