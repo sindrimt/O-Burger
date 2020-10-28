@@ -96,7 +96,7 @@ article.content
 
 /*ADDED FOR SLIDESHOW*/
 
-img {
+.slideImg {
   width: 100%;
   height: 682px;
 }

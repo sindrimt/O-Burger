@@ -3,13 +3,14 @@
 var countIndex = 1;
 var dishes =
 [  // Dish blueprints are stored in objects
-    {"name":"O'Burger",     "price":4.99, "img":"banner.jpg"},
-    {"name":"O'Fries",      "price":1.99, "img":"banner.jpg"},
+    {"name":"O'Burger",     "price":4.99, "img":"../imgs/banner.jpg"},
+    {"name":"O'Fries",      "price":1.99, "img":"../imgs/littkult.jpg"},
     {"name":"O'Shake",      "price":2.99, "img":"banner.jpg"},
     {"name":"Soft Drink",   "price":1.99, "img":"banner.jpg"},
     {"name":"O'Curly",      "price":2.99, "img":"banner.jpg"},
     {"name":"O'Nuggets",    "price":2.99, "img":"banner.jpg", "info":"10 pcs"}
 ];
+var receiptLine = "<br>==========<br>";
 
 // System variables
 var bodyEL = document.querySelector("body");
@@ -49,8 +50,12 @@ function CreateDish(dishIndex)
     if ("info" in dish) text += " (" + dish["info"] + ")";
     displayNameEL.innerText = text;
 
+    var imgWrapperEL = document.createElement("div");
+    imgWrapperEL.className = "dishImgWrapper";
     var imgEL = document.createElement("img");
     imgEL.src = dish["img"];
+    imgEL.className = "dishImg";
+    imgWrapperEL.appendChild(imgEL);
 
     var buttonsEL = CreateDishButtons();
 
@@ -58,7 +63,7 @@ function CreateDish(dishIndex)
     priceEL.innerText = "$"+dish["price"];
 
     dishEL.appendChild(displayNameEL);
-    dishEL.appendChild(imgEL);
+    dishEL.appendChild(imgWrapperEL);
     dishEL.appendChild(buttonsEL);
     dishEL.appendChild(priceEL);
     return dishEL;
@@ -100,9 +105,6 @@ function CreateReceipt()
     if (receiptEL == null) 
     {
         receiptEL = document.createElement("span");
-    } else
-    {
-        receiptEL.innerHTML = "";
     }
     receiptEL.innerText = "";
     articleEL.appendChild(receiptEL);
@@ -116,6 +118,8 @@ function UpdateReceipt()
     }
     receiptEL.innerHTML = "";
     var dishELs = dishesEL.childNodes;
+    var receipt = "";
+    var totalCost = 0;
     for (var i = 0; i < dishELs.length; i++)
     {
         var dishEL = dishELs[i];
@@ -128,12 +132,16 @@ function UpdateReceipt()
         var price = dishBP["price"];
         var info = "";
         if ("info" in dishBP) info = dishBP["info"];
-        var cost = Math.round(price*count, 2);
+        var cost = Math.round((price*count) * 100) / 100;
+        totalCost += cost;
         var txt = count+"x "+name+": $"+cost+";<br>";
-        receiptEL.innerHTML += txt;
+        receipt += txt;
     }
-
-
+    if (receipt != "")
+    {
+        var finalCost = "Total price: $"+totalCost;
+        receiptEL.innerHTML = receiptLine+receipt+receiptLine+finalCost;
+    }
 }
 
 // ========== INITIALIZATION ==========
