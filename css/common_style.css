@@ -30,17 +30,25 @@ article.content
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
-  min-width : 800px;
-  width : 50%;
-  margin : auto;
+  min-width: 800px;
+  width: 50%;
+  margin: auto;
 }
 
-.backgroundImg
-{
-  position : fixed;
-  z-index : -1000;
-  width : 100%;
+.backgroundImg {
+  position: fixed;
+  z-index: -1000;
+  width: 100%;
 }
+
+#navbar {
+  z-index: 1000;
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  background-color: rgba(255, 137, 0, 1);
+}
+
 
 #banner
 {
@@ -95,6 +103,7 @@ article.content
 
 /*ADDED FOR SLIDESHOW*/
 
+
 #img1 {
   width: 100%;
   height: 682px;
@@ -137,5 +146,127 @@ article.content
     opacity: 0.5;
     border: none;
     outline: none;
+}
+
+
+
+/*Find restaurants*/
+
+.tableDiv {
+  max-width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 20px 0px 0px 0px;
+}
+
+/*The table on the find restaurants page. */
+
+.restaurantsTable {
+  margin-top: 10px;
+  width: 80%;
+  margin: 20px auto 20px auto;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* The names of the restaurants in the table (frist row) */
+.restaurantsName td {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+/* Changes the width of the cells in the table */
+.restaurantsTable td {
+  width: 5%;
+}
+
+/*The div for our future map of the restaurants. */
+
+.mapDiv {
+  max-width: 100%;
+}
+
+/*The image of our future map. */
+
+#mapImg {
+  align-content: center;
+  width: 100%;
+}
+
+/*div containing everything on the page. */
+
+#container {
+  position: relative;
+  min-height: 20vh;
+}
+
+/*div containing everything except for the navbar and the footer. */
+
+#content {
+  padding-bottom: 50px;
+}
+
+/* The header representing our navbar on the testing page for our footer */
+
+#content h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* p elements on our testing page for our footer */
+
+#content p {
+  margin: 0 10% 0 10%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*div for the footer. */
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  text-align: center;
+}
+
+/*changes the cursor when hover over images in the footer. */
+
+#footer a:hover {
+  cursor: pointer;
+}
+
+/*Sets the footer background image under the other images, and at the bottom. */
+
+#footerBackground {
+  position: absolute;
+  width: 100%;
+  z-index: -1000;
+  left: 0;
+}
+
+/*The logo in the footer */
+
+#footerLogo {
+  position: relative;
+  width: 15%;
+  left: 57px;
+}
+
+/* Facebook image in footer */
+
+#facebook {
+  position: relative;
+  width: 3%;
+  right: 44%;
+}
+
+/* Instagram image in footer */
+
+#instagram {
+  position: relative;
+  width: 3%;
+  right: 42%;
 }
 
