@@ -97,8 +97,6 @@ function CreateNavItems()
             itemEL.className = "navButton";
             itemEL.innerText = thisDisplay;
             itemEL.style.height = navBarHeight+"px";
-            
-            console.log(itemWidth);
         }
 
         itemCellEL.relWidth = itemWidth;  // Fraction of window space the cell/button should take
@@ -118,7 +116,6 @@ function GetNavItemWeightSum()
         if ("displayImg" in item)
         {
             sum += imageCellWidthWeight;
-            console.log("hjup");
         }
         else sum++;
     }
@@ -182,12 +179,10 @@ function UpdateNavbar()
             var rule3Width = rule3Height/GetImgHeightWidthRelation(navImgEL);
 
             var actualWidth = Math.min(rule2Width, rule3Width);
-            console.log("chose "+actualWidth);
             var actualHeight = Math.floor(actualWidth*GetImgHeightWidthRelation(navImgEL));
 
             navImgEL.style.width = actualWidth+"px";
             navImgEL.style.height = actualHeight+"px";
-            console.log(actualHeight+", "+navImgEL.style.height);
             navImgEL.style.top = Math.floor(centerY-actualHeight/2)+"px";
             navImgEL.style.left = Math.floor(centerX-actualWidth/2)+"px";
         }
