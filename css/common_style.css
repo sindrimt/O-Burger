@@ -138,8 +138,8 @@ article.content
 
 .tableDiv {
   max-width: 100%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(245, 127, 0, 1);
+  border-bottom: 1px solid rgba(245, 127, 0, 1);
   margin: 20px 0px 0px 0px;
 }
 
@@ -153,10 +153,8 @@ article.content
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
-
 /* The names of the restaurants in the table (frist row) */
 .restaurantsName td {
-  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
@@ -182,7 +180,7 @@ article.content
 
 #container {
   position: relative;
-  min-height: 20vh;
+  min-height: 0vh;
 }
 
 /*div containing everything except for the navbar and the footer. */
