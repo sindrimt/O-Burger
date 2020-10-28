@@ -1,3 +1,4 @@
+<<<<<<< HEAD:P2/style.css
  
 body
 {
@@ -48,3 +49,54 @@ footer
  
  
 
+=======
+ 
+body
+{
+    width: 800px;
+    margin: 0 auto;
+    background-color : rgb(217, 217, 217);
+    font-family : Verdana;
+}
+section
+{
+    background-color : rgb(237, 237, 237);
+    border : 2px dotted;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+    box-shadow : 0px 0px 1px black;
+}
+header 
+{
+    height : 100px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+h1
+{
+    font-size : 30px;
+    line-height : 2;
+}
+p, li
+{
+    font-size : 15px;
+    line-height : 1.5;
+}
+table, th, td
+{
+    border: 1px solid black;
+}
+footer 
+{
+    margin-top: 40px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+ 
+ 
+ 
+ 
+
+>>>>>>> 230072b36b184170cbd33f49ae8d4fae0d25f892:style.css
