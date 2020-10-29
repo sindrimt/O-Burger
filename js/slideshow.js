@@ -1,17 +1,24 @@
+//Elements from index.html
 var bodyEL = document.querySelector("body");
 var articleEL = document.querySelector("#slide");
+
 //Left button
 var lButton = document.createElement("button");
+
 //lButton.innerHTML = "LEFTBUTTON";
 lButton.id = "lButton";
+
 //lButton.addEventListener("click", lButtonf);
 bodyEL.appendChild(lButton);
 
 var timeoutVar;
+
 //Right button
 var RButton = document.createElement("button");
+
 //RButton.innerHTML = "RIGTHBUTTON";
 RButton.id = "RButton";
+
 //RButton.addEventListener("click", RButtonf);
 bodyEL.appendChild(RButton);
 
@@ -30,10 +37,14 @@ function slideshow() {
 }
  //Clicks the left button
 lButton.addEventListener("click", () => {
+    time = cooldown;
+    timeoutVar = setTimeout("slideshow()", time);
     changeSlide(-1);
 });
 //Clicks the right button
 RButton.addEventListener("click", () => {
+    time = cooldown;
+    timeoutVar = setTimeout("slideshow()", time);
     changeSlide(1);
 });
 function changeSlide(change)
