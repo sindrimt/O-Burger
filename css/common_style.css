@@ -148,7 +148,11 @@ article.content
     outline: none;
 }
 
-
+/*Image of Obama eating an apple on the home page*/
+#obama_apple {
+  height: 50%;
+  margin: auto;
+}
 
 /*Find restaurants*/
 
