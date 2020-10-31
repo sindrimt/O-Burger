@@ -209,7 +209,9 @@ function UpdateForm()
     emailEL.type = "email";
     emailEL.placeholder = "E-mail (for receipt)";
 
-    phoneEL.type = "tel";
+    phoneEL.type = "number";
+    phoneEL.min = "0";
+    phoneEL.max = "99999999999";
     phoneEL.placeholder = "Phone number";
 
     var orderButtonEL = document.createElement("button");

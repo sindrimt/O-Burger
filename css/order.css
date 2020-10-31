@@ -55,3 +55,7 @@ div.response
     width : 50%;
     height : 50%;
 }
+input
+{
+    padding : 20px;
+}
