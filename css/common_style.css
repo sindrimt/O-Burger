@@ -154,22 +154,36 @@ article.content {
 
 #obama_apple {
   width: 100%;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
-.obamaText {
+.imageText {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1000;
   color: white;
   transform: translate(-50%, -50%);
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 2px solid rgba(245, 127, 0, 1);
+  padding: 10px;
+}
+
+.imageText:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.preview {
+  position: relative;
 }
 
 #mapPreview {
   width: 100%;
+}
+
+#previewText {
+  color: #2f2f2f;
 }
 
 /*Find restaurants*/
