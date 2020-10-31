@@ -42,11 +42,10 @@ function changeSlide(change) {
     else if (count >= imgs.length) {
          count = 0;
     } 
-
-    timeoutVar = setTimeout("slideshow()", time);
-    document.getElementById('img1').src = imgs[count];
-    clearTimeout(timeoutVar);
     
+    document.getElementById('img1').src = imgs[count];
+
+    clearTimeout(timeoutVar);
     
 }
 
@@ -58,15 +57,16 @@ function slideshow() {
 
  //Clicks the left button
 lButton.addEventListener("click", () => {
-    timeoutVar = setTimeout("slideshow()", time);
     changeSlide(-1);
+    timeoutVar = setTimeout("slideshow()", time);
+    
 });
 
 //Clicks the right button
 RButton.addEventListener("click", () => {
-    
-    timeoutVar = setTimeout("slideshow()", time);
     changeSlide(1);
+    timeoutVar = setTimeout("slideshow()", time);
+    
 });
 
 slideshow();
