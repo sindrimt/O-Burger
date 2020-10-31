@@ -154,9 +154,9 @@ article.content
 
 .tableDiv {
   max-width: 100%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  margin: 20px 0px 0px 0px;
+  border-top: 1px solid rgba(245, 127, 0, 1);
+  border-bottom: 1px solid rgba(245, 127, 0, 1);
+  margin: 20px 0px 20px 0px;
 }
 
 /*The table on the find restaurants page. */
@@ -169,10 +169,8 @@ article.content
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
-
 /* The names of the restaurants in the table (frist row) */
 .restaurantsName td {
-  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
@@ -198,14 +196,14 @@ article.content
 
 #container {
   position: relative;
-  min-height: 20vh;
+  min-height: 0vh;
 }
 
 /*div containing everything except for the navbar and the footer. */
 
-#content {
-  padding-bottom: 50px;
-}
+/* #content {
+
+} */
 
 /* The header representing our navbar on the testing page for our footer */
 
@@ -241,7 +239,8 @@ article.content
 
 #footerBackground {
   position: absolute;
-  width: 100%;
+  width: 100%; 
+  height: 300px;
   z-index: -1000;
   left: 0;
 }
