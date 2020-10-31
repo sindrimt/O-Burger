@@ -145,18 +145,19 @@ article.content {
   outline: none;
 }
 
-/*Image of Obama eating an apple on the home page*/
-
+/*Gray overlay on the picture of Obama eating an apple on the home page*/
 .overlay {
   background-color: #000000;
   position: relative;
 }
 
+/*Obama eating an apple*/
 #obama_apple {
   width: 100%;
   opacity: 0.5;
 }
 
+/*The text on top of the images on the homepage (O'Story and Find restaurant)*/
 .imageText {
   position: absolute;
   top: 50%;
@@ -178,6 +179,7 @@ article.content {
   position: relative;
 }
 
+/*Image preview of the map*/
 #mapPreview {
   width: 100%;
 }
@@ -187,7 +189,7 @@ article.content {
 }
 
 /*Find restaurants*/
-
+/**/
 .tableDiv {
   max-width: 100%;
   border-top: 1px solid rgba(245, 127, 0, 1);
