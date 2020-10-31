@@ -15,7 +15,7 @@ var dishes =
 [  // Dish blueprints are stored in objects
     {"name":"O'Burger",     "price":4.99, "img":"oburger.png"},
     {"name":"O'Fries",      "price":1.99, "img":"ofries.png"},
-    {"name":"O'Shake",      "price":2.99, "img":"oshake.png"},
+    {"name":"O'Shake",      "price":2.99, "img":"SHAKE.png"},
     {"name":"Soft Drink",   "price":1.99, "img":"softdrink.png"},
     {"name":"O'Curly",      "price":2.99, "img":"ocurly.png"},
     {"name":"O'Nuggets",    "price":2.99, "img":"onuggets.png"}
@@ -209,7 +209,9 @@ function UpdateForm()
     emailEL.type = "email";
     emailEL.placeholder = "E-mail (for receipt)";
 
-    phoneEL.type = "tel";
+    phoneEL.type = "number";
+    phoneEL.min = "0";
+    phoneEL.max = "99999999999";
     phoneEL.placeholder = "Phone number";
 
     var orderButtonEL = document.createElement("button");
