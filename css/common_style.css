@@ -2,31 +2,31 @@
 Torbjørn, 05.10.2020 */
 
 body, html {
-    height: 100%;
-    margin: 0;
-  }
+  height: 100%;
+  margin: 0;
+}
 
-header { /*NOT THE SAMEe AS NAVIGATON BAR*/
-    /*background-image: url();*/
-    height: 682px; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index : -5;
-    }
-article.content, article.bg
-{
-  z-index : 100;
+header {
+  /*NOT THE SAMEe AS NAVIGATON BAR*/
+  /*background-image: url();*/
+  height: 682px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -5;
 }
-article.bg
-{
-  width : 100%;
-  
-  background-color : rgba(227, 227, 227, 1);
+
+article.content, article.bg {
+  z-index: 100;
 }
-article.content
-{
-  background-color : rgba(237, 237, 237, 0.4);
+
+article.bg {
+  width: 100%;
+  background-color: rgba(227, 227, 227, 1);
+}
+
+article.content {
+  background-color: rgba(237, 237, 237, 0.4);
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
@@ -49,60 +49,58 @@ article.content
   background-color: rgba(255, 137, 0, 1);
 }
 
+#banner {
+  background-image: url("../imgs/banner.jpg");
+}
 
-#banner
-{
-  background-image : url("../imgs/banner.jpg");
+#navBar {
+  display: inline-block;
+  z-index: 1000;
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  background-color: rgba(255, 137, 0, 1);
 }
-#navBar
-{
-  display : inline-block;
-  z-index : 1000;
-  position : fixed;
-  margin : auto;
-  width : 100%;
-  background-color : rgba(255, 137, 0, 1);
+
+.navCell {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*Signika Negative requires stylesheet link in HTML!*/
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  top: 0px;
 }
-.navCell
-{
-  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
-  vertical-align : top;
-  display : inline-block;
-  position : relative;
-  top : 0px;
+
+.navImg, .navButton {
+  cursor: pointer;
 }
-.navImg, .navButton
-{
-  cursor : pointer;
-}
-.navImg
-{
+
+.navImg {
   /*background-color : red;*/
-  position : relative;
+  position: relative;
 }
-.navButton
-{
-  font-family : inherit;
-  text-decoration : none;
-  border : none;
-  border-bottom : 0px solid black;
-  color : black;
-  width : 100%;
-  background-color : transparent;
-  font-size : 30px;
-  text-align : center;
-  transition : 0s;
+
+.navButton {
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  border-bottom: 0px solid black;
+  color: black;
+  width: 100%;
+  background-color: transparent;
+  font-size: 30px;
+  text-align: center;
+  transition: 0s;
 }
-.navButton:hover
-{
-    transition : 0s;
-    color : lightgrey;
-    background-color : rgba(245, 127, 0, 1);
-    text-shadow : 1px 1px black;
+
+.navButton:hover {
+  transition: 0s;
+  color: lightgrey;
+  background-color: rgba(245, 127, 0, 1);
+  text-shadow: 1px 1px black;
 }
 
 /*ADDED FOR SLIDESHOW*/
-
 
 #img1 {
   width: 100%;
@@ -111,47 +109,67 @@ article.content
 
 #slide {
   position: relative;
-  
 }
 
 #lButton {
-    position: absolute;
-    transform: rotate(-90deg);
-    filter: invert(100%);
-    top: 50%;
-    left: 2%;
-    background: url("../imgs/bestpil.png") no-repeat;
-    z-index: 100;
-    cursor: pointer;
-    background-size:100% 100%;
-    width: 5%;
-    height: 10%;
-    opacity: 0.5;
-    border: none;
-    outline: none;
+  position: absolute;
+  transform: rotate(-90deg);
+  filter: invert(100%);
+  top: 50%;
+  left: 2%;
+  background: url("../imgs/bestpil.png") no-repeat;
+  z-index: 100;
+  cursor: pointer;
+  background-size: 100% 100%;
+  width: 5%;
+  height: 10%;
+  opacity: 0.5;
+  border: none;
+  outline: none;
 }
 
 #RButton {
-    position: absolute;
-    transform: rotate(90deg);
-    filter: invert(100%);
-    right: 2%;
-    top: 50%;
-    background: url("../imgs/bestpil.png") no-repeat;
-    z-index: 100;
-    cursor: pointer;
-    background-size:100% 100%;
-    width: 5%;
-    height: 10%;
-    opacity: 0.5;
-    border: none;
-    outline: none;
+  position: absolute;
+  transform: rotate(90deg);
+  filter: invert(100%);
+  right: 2%;
+  top: 50%;
+  background: url("../imgs/bestpil.png") no-repeat;
+  z-index: 100;
+  cursor: pointer;
+  background-size: 100% 100%;
+  width: 5%;
+  height: 10%;
+  opacity: 0.5;
+  border: none;
+  outline: none;
 }
 
 /*Image of Obama eating an apple on the home page*/
+
+.overlay {
+  background-color: #000000;
+  position: relative;
+}
+
 #obama_apple {
-  height: 50%;
-  margin: auto;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.obamaText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  color: white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mapPreview {
+  width: 100%;
 }
 
 /*Find restaurants*/
@@ -173,12 +191,15 @@ article.content
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
+
 /* The names of the restaurants in the table (frist row) */
+
 .restaurantsName td {
   font-weight: bold;
 }
 
 /* Changes the width of the cells in the table */
+
 .restaurantsTable td {
   width: 5%;
 }
@@ -243,7 +264,7 @@ article.content
 
 #footerBackground {
   position: absolute;
-  width: 100%; 
+  width: 100%;
   height: 300px;
   z-index: -1000;
   left: 0;
@@ -272,4 +293,3 @@ article.content
   width: 3%;
   right: 42%;
 }
-
