@@ -156,7 +156,7 @@ article.content
   max-width: 100%;
   border-top: 1px solid rgba(245, 127, 0, 1);
   border-bottom: 1px solid rgba(245, 127, 0, 1);
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 /*The table on the find restaurants page. */
@@ -201,9 +201,9 @@ article.content
 
 /*div containing everything except for the navbar and the footer. */
 
-#content {
-  padding-bottom: 50px;
-}
+/* #content {
+
+} */
 
 /* The header representing our navbar on the testing page for our footer */
 
