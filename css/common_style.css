@@ -37,7 +37,6 @@ article.content
 
 .backgroundImg {
   position: fixed;
-  z-index: -1000;
   width: 100%;
 }
 
@@ -53,6 +52,9 @@ article.content
 #banner
 {
   background-image : url("../imgs/banner.jpg");
+  position : relative;
+  background-color : green;
+  z-index : 900;
 }
 #navBar
 {
@@ -92,6 +94,7 @@ article.content
   font-size : 30px;
   text-align : center;
   transition : 0s;
+  overflow : hidden;
 }
 .navButton:hover
 {
@@ -241,13 +244,14 @@ article.content
   position: absolute;
   width: 100%; 
   height: 300px;
-  z-index: -1000;
+  z-index: 100;
   left: 0;
 }
 
 /*The logo in the footer */
 
 #footerLogo {
+  z-index : 101;
   position: relative;
   width: 15%;
   left: 57px;
@@ -256,6 +260,7 @@ article.content
 /* Facebook image in footer */
 
 #facebook {
+  z-index : 101;
   position: relative;
   width: 3%;
   right: 44%;
@@ -264,6 +269,7 @@ article.content
 /* Instagram image in footer */
 
 #instagram {
+  z-index : 101;
   position: relative;
   width: 3%;
   right: 42%;
