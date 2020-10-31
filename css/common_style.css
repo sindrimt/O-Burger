@@ -365,3 +365,23 @@ article.content {
   margin-bottom: 10px;
 
 }
+
+#email, #subject {
+  width: 37%;
+}
+
+#contactSend {
+  background-color: rgba(245, 127, 0, 1);
+  color: white;
+  border-radius: 10%;
+  border-color: rgba(245, 127, 0, 1);
+  padding: 5px;
+}
+#contactSend:hover {
+  cursor: pointer;
+}
+
+#contactSend {
+  position: relative;
+  right: 175px;
+}
