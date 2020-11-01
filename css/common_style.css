@@ -2,31 +2,31 @@
 Torbjørn, 05.10.2020 */
 
 body, html {
-  height: 100%;
-  margin: 0;
-}
+    height: 100%;
+    margin: 0;
+  }
 
-header {
-  /*NOT THE SAMEe AS NAVIGATON BAR*/
-  /*background-image: url();*/
-  height: 682px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -5;
+header { /*NOT THE SAMEe AS NAVIGATON BAR*/
+    /*background-image: url();*/
+    height: 682px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index : -5;
+    }
+article.content, article.bg
+{
+  z-index : 100;
 }
-
-article.content, article.bg {
-  z-index: 100;
+article.bg
+{
+  width : 100%;
+  
+  background-color : rgba(227, 227, 227, 1);
 }
-
-article.bg {
-  width: 100%;
-  background-color: rgba(227, 227, 227, 1);
-}
-
-article.content {
-  background-color: rgba(237, 237, 237, 0.4);
+article.content
+{
+  background-color : rgba(237, 237, 237, 0.4);
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
@@ -37,6 +37,7 @@ article.content {
 
 .backgroundImg {
   position: fixed;
+  z-index: -1000;
   width: 100%;
 }
 
@@ -49,38 +50,33 @@ article.content {
 }
 
 
-
 #banner
 {
   background-image : url("../imgs/banner.jpg");
+}
+#navBar
+{
+  display : inline-block;
+  z-index : 1000;
+  position : fixed;
+  margin : auto;
+  width : 100%;
+  background-color : rgba(255, 137, 0, 1);
+}
+.navCell
+{
+  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
+  vertical-align : top;
+  display : inline-block;
   position : relative;
-  background-color : green;
-  z-index : 900;
+  top : 0px;
 }
-
-#navBar {
-  display: inline-block;
-  z-index: 1000;
-  position: fixed;
-  margin: auto;
-  width: 100%;
-  background-color: rgba(255, 137, 0, 1);
+.navImg, .navButton
+{
+  cursor : pointer;
 }
-
-.navCell {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*Signika Negative requires stylesheet link in HTML!*/
-  vertical-align: top;
-  display: inline-block;
-  position: relative;
-  top: 0px;
-}
-
-.navImg, .navButton {
-  cursor: pointer;
-}
-
-.navImg {
+.navImg
+{
   /*background-color : red;*/
   position : relative;
 }
@@ -96,7 +92,6 @@ article.content {
   font-size : 30px;
   text-align : center;
   transition : 0s;
-  overflow : hidden;
 }
 .navButton:hover
 {
@@ -106,27 +101,8 @@ article.content {
     text-shadow : 1px 1px black;
 }
 
-.navButton {
-  font-family: inherit;
-  text-decoration: none;
-  border: none;
-  border-bottom: 0px solid black;
-  color: black;
-  width: 100%;
-  background-color: transparent;
-  font-size: 30px;
-  text-align: center;
-  transition: 0s;
-}
-
-.navButton:hover {
-  transition: 0s;
-  color: lightgrey;
-  background-color: rgba(245, 127, 0, 1);
-  text-shadow: 1px 1px black;
-}
-
 /*ADDED FOR SLIDESHOW*/
+
 
 #img1 {
   width: 100%;
@@ -135,87 +111,47 @@ article.content {
 
 #slide {
   position: relative;
+  
 }
 
 #lButton {
-  position: absolute;
-  transform: rotate(-90deg);
-  filter: invert(100%);
-  top: 50%;
-  left: 2%;
-  background: url("../imgs/bestpil.png") no-repeat;
-  z-index: 100;
-  cursor: pointer;
-  background-size: 100% 100%;
-  width: 5%;
-  height: 10%;
-  opacity: 0.5;
-  border: none;
-  outline: none;
+    position: absolute;
+    transform: rotate(-90deg);
+    filter: invert(100%);
+    top: 50%;
+    left: 2%;
+    background: url("../imgs/bestpil.png") no-repeat;
+    z-index: 100;
+    cursor: pointer;
+    background-size:100% 100%;
+    width: 5%;
+    height: 10%;
+    opacity: 0.5;
+    border: none;
+    outline: none;
 }
 
 #RButton {
-  position: absolute;
-  transform: rotate(90deg);
-  filter: invert(100%);
-  right: 2%;
-  top: 50%;
-  background: url("../imgs/bestpil.png") no-repeat;
-  z-index: 100;
-  cursor: pointer;
-  background-size: 100% 100%;
-  width: 5%;
-  height: 10%;
-  opacity: 0.5;
-  border: none;
-  outline: none;
+    position: absolute;
+    transform: rotate(90deg);
+    filter: invert(100%);
+    right: 2%;
+    top: 50%;
+    background: url("../imgs/bestpil.png") no-repeat;
+    z-index: 100;
+    cursor: pointer;
+    background-size:100% 100%;
+    width: 5%;
+    height: 10%;
+    opacity: 0.5;
+    border: none;
+    outline: none;
 }
 
-/*Gray overlay on the picture of Obama eating an apple on the home page*/
-.overlay {
-  background-color: #000000;
-  position: relative;
-}
 
-/*Obama eating an apple*/
-#obama_apple {
-  width: 100%;
-  opacity: 0.5;
-}
-
-/*The text on top of the images on the homepage (O'Story and Find restaurant)*/
-.imageText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 2px solid rgba(245, 127, 0, 1);
-  padding: 10px;
-}
-
-.imageText:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-.preview {
-  position: relative;
-}
-
-/*Image preview of the map*/
-#mapPreview {
-  width: 100%;
-}
-
-#previewText {
-  color: #2f2f2f;
-}
 
 /*Find restaurants*/
-/**/
+
 .tableDiv {
   max-width: 100%;
   border-top: 1px solid rgba(245, 127, 0, 1);
@@ -233,15 +169,12 @@ article.content {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
-
 /* The names of the restaurants in the table (first row) */
-
 .restaurantsName td {
   font-weight: bold;
 }
 
 /* Changes the width of the cells in the table */
-
 .restaurantsTable td {
   width: 5%;
 }
@@ -306,16 +239,19 @@ article.content {
 
 #footerBackground {
   position: absolute;
-  width: 100%;
+  width: 100%; 
   height: 300px;
   z-index: 101;
+
   left: 0;
 }
 
 /*The logo in the footer */
 
 #footerLogo {
+
   z-index : 102;
+
   position: relative;
   width: 15%;
   left: 57px;
@@ -324,7 +260,6 @@ article.content {
 /* Facebook image in footer */
 
 #facebook {
-  z-index : 101;
   position: relative;
   width: 3%;
   right: 44%;
@@ -333,7 +268,6 @@ article.content {
 /* Instagram image in footer */
 
 #instagram {
-  z-index : 101;
   position: relative;
   width: 3%;
   right: 42%;
@@ -360,8 +294,25 @@ article.content {
 }
 
 .contactForm textarea {
-  width: 400px;
-  height: 100px;
-  margin-bottom: 10px;
 
+}
+
+#email, #subject {
+  width: 37%;
+}
+
+#contactSend {
+  background-color: rgba(245, 127, 0, 1);
+  color: white;
+  border-radius: 10%;
+  border-color: rgba(245, 127, 0, 1);
+  padding: 5px;
+}
+#contactSend:hover {
+  cursor: pointer;
+}
+
+#contactSend {
+  position: relative;
+  right: 175px;
 }

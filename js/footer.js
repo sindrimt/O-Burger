@@ -1,4 +1,4 @@
-// HTML-kode gjort om til js ved å gjøre om alt til en string.
+// HTML-kode gjort om til js ved å gjøre om alt til en string
 var footer = '<div id="container">'+
 '        <div id="content">'+
 '        </div>'+
@@ -13,6 +13,6 @@ var footer = '<div id="container">'+
 '                    src="../imgs/instagram.png" alt="Instagram" id="instagram"></a>'+
 ''+
 '        </div>'+
-'    </div>';
+'    </div>'; 
 
 document.write(footer);
