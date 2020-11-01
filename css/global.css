@@ -1,0 +1,146 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+article.content, article.bg
+{
+  z-index : 100;
+}
+article.bg
+{
+  width : 100%;
+  
+  background-color : rgba(227, 227, 227, 1);
+}
+article.content
+{
+  background-color : rgba(237, 237, 237, 0.4);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 30px;
+  min-width: 800px;
+  width: 50%;
+  margin: auto;
+}
+#banner
+{
+  background-image : url("../imgs/banner.jpg");
+}
+#navBar
+{
+  display : inline-block;
+  z-index : 1000;
+  position : fixed;
+  margin : auto;
+  width : 100%;
+  background-color : rgba(255, 137, 0, 1);
+}
+.navCell
+{
+  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
+  vertical-align : top;
+  display : inline-block;
+  position : relative;
+  top : 0px;
+}
+.navImg, .navButton
+{
+  cursor : pointer;
+}
+.navImg
+{
+  /*background-color : red;*/
+  position : relative;
+}
+.navButton
+{
+  font-family : inherit;
+  text-decoration : none;
+  border : none;
+  border-bottom : 0px solid black;
+  color : black;
+  width : 100%;
+  background-color : transparent;
+  font-size : 30px;
+  text-align : center;
+  transition : 0s;
+}
+.navButton:hover
+{
+    transition : 0s;
+    color : lightgrey;
+    background-color : rgba(245, 127, 0, 1);
+    text-shadow : 1px 1px black;
+}
+
+/*div for the footer. */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    text-align: center;
+  }
+  
+  /*changes the cursor when hover over images in the footer. */
+  
+  #footer a:hover {
+    cursor: pointer;
+  }
+  
+  /*Sets the footer background image under the other images, and at the bottom. */
+  
+  #footerBackground {
+    position: absolute;
+    width: 100%; 
+    height: 300px;
+    z-index: -1000;
+    left: 0;
+  }
+
+/*The logo in the footer */
+
+#footerLogo {
+
+    z-index : 102;
+  
+    position: relative;
+    width: 15%;
+    left: 57px;
+  }
+  
+  /* Facebook image in footer */
+  
+  #facebook {
+    position: relative;
+    width: 3%;
+    right: 44%;
+  }
+  
+  /* Instagram image in footer */
+  
+  #instagram {
+    position: relative;
+    width: 3%;
+    right: 42%;
+}
+/* The header representing our navbar on the testing page for our footer */
+
+#content h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* p elements on our testing page for our footer */
+  
+  #content p {
+    margin: 0 10% 0 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+/*div containing everything on the page. */
+
+#container {
+    position: relative;
+    min-height: 0vh;
+  }
