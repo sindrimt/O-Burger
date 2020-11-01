@@ -1,5 +1,7 @@
 // ========== GLOBAL VARIABLES ==========
 // Config
+var reloadButtonText = "Back to order page";
+var reloadText = "Thanks for your order! Your food will be ready in approximately never.";
 var restaurants =
 [
     {"name":"Honolulu"},
@@ -156,23 +158,6 @@ function UpdateReceipt()
         receiptEL.innerHTML = receiptLine+receipt+receiptLine+finalCost+"<br>";
     }
 }
-function Order()
-{
-    articleEL.innerHTML = "";
-    var responseEL = document.createElement("div");
-    responseEL.className = "response";
-    responseEL.innerHTML = "Thanks for your order! Your food will be ready in approximately never.<br>";
-    var backButtonEL = document.createElement("button");
-    backButtonEL.className = "orderButton";
-    backButtonEL.innerText = "Back to order page";
-    backButtonEL.addEventListener("click", Reload);
-    responseEL.appendChild(backButtonEL);
-    articleEL.appendChild(responseEL);
-}
-function Reload()
-{
-    window.location.href = "";
-}
 function CreateForm()
 {
     if (formEL == null) 
@@ -219,7 +204,7 @@ function UpdateForm()
     orderButtonEL.id = "orderButton";
     orderButtonEL.className = "orderButton";
     orderButtonEL.innerHTML = "O'rder!";
-    orderButtonEL.addEventListener("click", Order);
+    orderButtonEL.addEventListener("click", function(){Order(reloadButtonText, reloadText);});
 
     formEL.appendChild(chooseRestaurantEL);
     formEL.innerHTML += "<br>";
