@@ -315,7 +315,7 @@ article.content {
 /*The logo in the footer */
 
 #footerLogo {
-  z-index : 101;
+  z-index : 102;
   position: relative;
   width: 15%;
   left: 57px;
