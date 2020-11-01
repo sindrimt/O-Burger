@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
+
  }
   
  header {
@@ -43,34 +44,41 @@ body, html {
   margin: auto;
   width: 100%;
   background-color: rgba(255, 137, 0, 1);
+
  }
   
   
   
  #banner
  {
+
   background-image : url("../imgs/banner.jpg");
   position : relative;
   background-color : green;
   z-index : 900;
+
  }
   
  #navBar {
+
   display: inline-block;
   z-index: 1000;
   position: fixed;
   margin: auto;
   width: 100%;
   background-color: rgba(255, 137, 0, 1);
+
  }
   
  .navCell {
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /*Signika Negative requires stylesheet link in HTML!*/
   vertical-align: top;
   display: inline-block;
   position: relative;
   top: 0px;
+
  }
   
  .navImg, .navButton {
@@ -78,6 +86,7 @@ body, html {
  }
   
  .navImg {
+
   /*background-color : red;*/
   position : relative;
  }
@@ -94,16 +103,20 @@ body, html {
   text-align : center;
   transition : 0s;
   overflow : hidden;
+
  }
  .navButton:hover
  {
+
     transition : 0s;
     color : lightgrey;
     background-color : rgba(245, 127, 0, 1);
     text-shadow : 1px 1px black;
+
  }
   
  .navButton {
+
   font-family: inherit;
   text-decoration: none;
   border: none;
@@ -114,18 +127,22 @@ body, html {
   font-size: 30px;
   text-align: center;
   transition: 0s;
+
  }
   
  .navButton:hover {
+
   transition: 0s;
   color: lightgrey;
   background-color: rgba(245, 127, 0, 1);
   text-shadow: 1px 1px black;
+
  }
   
  /*ADDED FOR SLIDESHOW*/
   
  #img1 {
+
   width: 100%;
   height: 82vh;
  }
@@ -172,6 +189,7 @@ body, html {
  .overlay {
   background-color: #000000;
   position: relative;
+
  }
   
  /*Obama eating an apple*/
@@ -182,6 +200,7 @@ body, html {
   
  /*The text on top of the images on the homepage (O'Story and Find restaurant)*/
  .imageText {
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -191,6 +210,7 @@ body, html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 2px solid rgba(245, 127, 0, 1);
   padding: 10px;
+
  }
   
  .imageText:hover {
@@ -214,6 +234,7 @@ body, html {
  /*Find restaurants*/
  /**/
  .tableDiv {
+
   max-width: 100%;
   border-top: 1px solid rgba(245, 127, 0, 1);
   border-bottom: 1px solid rgba(245, 127, 0, 1);
@@ -229,6 +250,7 @@ body, html {
   padding: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+
  }
   
  /* The names of the restaurants in the table (first row) */
@@ -240,6 +262,7 @@ body, html {
  /* Changes the width of the cells in the table */
   
  .restaurantsTable td {
+
   width: 5%;
  }
   
@@ -305,6 +328,7 @@ body, html {
   position: absolute;
   width: 100%;
   height: 300px;
+
   z-index: 101;
   left: 0;
  }
@@ -321,35 +345,43 @@ body, html {
  /* Facebook image in footer */
   
  #facebook {
+
   z-index : 101;
   position: relative;
   width: 3%;
   right: 44%;
+
  }
   
  /* Instagram image in footer */
   
  #instagram {
+
   z-index : 101;
   position: relative;
   width: 3%;
   right: 42%;
+
  }
   
  /* CONTACT US */
   
  .contactDiv {
+
   max-width: 100%;
   border-top: 1px solid rgba(245, 127, 0, 1);
   border-bottom: 1px solid rgba(245, 127, 0, 1);
   margin: 20px 0px 20px 0px;
   text-align: center;
+
   
+
   margin-top: 10px;
   width: 80%;
   margin: 20px auto 20px auto;
   padding: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
  }
   
  .FAQ {
@@ -363,3 +395,4 @@ body, html {
   
  }
  
+
