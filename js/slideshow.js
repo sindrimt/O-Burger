@@ -24,7 +24,7 @@ bodyEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = ['../imgs/OShake.jpg',
-            '../imgs/updat.png',
+            '../imgs/FINAL.png',
             '../imgs/littkult.jpg'];
 
 cooldown = 3000;
