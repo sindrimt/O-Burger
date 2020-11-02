@@ -40,17 +40,18 @@
     margin: 0 0.2em 0.2em 0;
     border-radius: 0.12em;
     box-sizing: border-box;
+    border-color: rgba(245, 127, 0, 1);
     text-decoration: none;
     font-weight: 300;
-    color: black;
+    color:white;
     text-shadow: 0 0em 1em rgba(0,0,0,0.2);
-    background-color: white;
+    background-color: rgba(245, 127, 0, 1);
     text-align: center;
     transition: all 0.15s;
 
     }
     #contactSend:hover{
-    text-shadow: 2em 0 2em rgba(255,255,255,1);
-    color: white;
-    border-color: white;
+    text-shadow: 2em 1em 2em rgba(255,255,255,1);
+    color:white;
+    border-color: rgb(252, 168, 80);
     }
