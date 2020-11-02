@@ -24,7 +24,7 @@ bodyEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = ['../imgs/OShake.jpg',
-            '../imgs/visepresident.jpg',
+            '../imgs/FINAL.png',
             '../imgs/littkult.jpg'];
 
 cooldown = 3000;
@@ -42,7 +42,7 @@ function changeSlide(change) {
     else if (count >= imgs.length) {
          count = 0;
     } 
-    
+
     document.getElementById('img1').src = imgs[count];
 
     clearTimeout(timeoutVar);

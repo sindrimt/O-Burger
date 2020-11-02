@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O'Burger | Contact Us</title>
-    <link rel="stylesheet" href="../css/common_style.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             <form action="" id="contactUsForm">
                 <input class="inputEmail" id="email" name="email" placeholder="YOUR EMAIL"></input><br> <br>
                 <input class="inputSubject" id="subject" name="subject" placeholder="SUBJECT"></input><br> <br>
-                <textarea class="inputMessage" id="message" name="message" placeholder="MESSAGE"></textarea> <br>
+                <textarea class="inputMessage" rows="6" cols="68" id="message" name="message" placeholder="MESSAGE"></textarea> <br>
                 <button id="contactSend">Send</button>
             </form>
         </div>
@@ -57,7 +58,6 @@
             feedbackEL = document.createElement("h1");
             feedbackEL.innerHTML = "Your mail has been sent!";
             document.body.appendChild(feedbackEL);
-
         }
     </script>
     <script src="../js/footer.js"></script>
