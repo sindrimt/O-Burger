@@ -1,12 +1,23 @@
 // ========== GLOBAL VARIABLES ==========
 // Config
+var reloadButtonText = "Back to order page";
+var reloadText = "Thanks for your order! Your food will be ready in approximately never.";
+var restaurants =
+[
+    {"name":"Honolulu"},
+    {"name":"Las Vegas"},
+    {"name":"San Francisco"},
+    {"name":"Beverly Hills"},
+    {"name":"Santa Monica"},
+    {"name":"Fresno"}
+];
 var countIndex = 1;
 var commonImgPath = "../imgs/order/";
 var dishes =
 [  // Dish blueprints are stored in objects
     {"name":"O'Burger",     "price":4.99, "img":"oburger.png"},
     {"name":"O'Fries",      "price":1.99, "img":"ofries.png"},
-    {"name":"O'Shake",      "price":2.99, "img":"oshake.png"},
+    {"name":"O'Shake",      "price":2.99, "img":"SHAKE.png"},
     {"name":"Soft Drink",   "price":1.99, "img":"softdrink.png"},
     {"name":"O'Curly",      "price":2.99, "img":"ocurly.png"},
     {"name":"O'Nuggets",    "price":2.99, "img":"onuggets.png"}
@@ -18,6 +29,7 @@ var bodyEL = document.querySelector("body");
 var articleEL = document.getElementsByClassName("content")[0];
 var dishesEL = null;
 var receiptEL = null;
+var formEL = null;
 
 
 // ========== FUNCTIONS ==========
@@ -100,6 +112,7 @@ function ChangeDishCount(e, amount)
     countEL.innerText = count;
 
     UpdateReceipt();
+    UpdateForm();
 }
 
 // Everything to do with receipt
@@ -142,12 +155,69 @@ function UpdateReceipt()
     {
         totalCost = Math.round(totalCost*100)/100;
         var finalCost = "Total price: $"+totalCost;
-        receiptEL.innerHTML = receiptLine+receipt+receiptLine+finalCost;
+        receiptEL.innerHTML = receiptLine+receipt+receiptLine+finalCost+"<br>";
     }
 }
 function CreateForm()
 {
-    
+    if (formEL == null) 
+    {
+        formEL = document.createElement("form");
+    }
+    formEL.innerHTML = "";
+    formEL.action = "";
+    formEL.method = "POST";
+    articleEL.appendChild(formEL);
+}
+function UpdateForm()
+{
+    // Restaurant, name, phone, email (receipt)
+    formEL.innerHTML = "";
+    var chooseRestaurantEL = document.createElement("select");
+    var nameEL = document.createElement("input");
+    var emailEL = document.createElement("input");
+    var phoneEL = document.createElement("input");
+
+    for (var i = 0; i < restaurants.length; i++)
+    {
+        var r = restaurants[i];
+        var optionEL = document.createElement("option");
+        optionEL.value = r["name"];
+        optionEL.innerHTML = r["name"];
+        chooseRestaurantEL.appendChild(optionEL);
+    }
+
+
+    nameEL.type = "text";
+    nameEL.placeholder = "Full name";
+
+    emailEL.type = "email";
+    emailEL.placeholder = "E-mail (for receipt)";
+
+    phoneEL.type = "number";
+    phoneEL.min = "0";
+    phoneEL.max = "99999999999";
+    phoneEL.placeholder = "Phone number";
+
+    var orderButtonEL = document.createElement("button");
+    orderButtonEL.type = "button";
+    orderButtonEL.id = "orderButton";
+    orderButtonEL.className = "submitButton";
+    orderButtonEL.innerHTML = "O'rder!";
+    orderButtonEL.addEventListener("click", function(){Submit(reloadButtonText, reloadText);});
+
+    formEL.appendChild(chooseRestaurantEL);
+    formEL.innerHTML += "<br>";
+    formEL.appendChild(nameEL);
+    formEL.innerHTML += "<br>";
+    formEL.appendChild(phoneEL);
+    formEL.innerHTML += "<br>";
+    formEL.appendChild(emailEL);
+    formEL.innerHTML += "<br>";
+
+
+    formEL.appendChild(orderButtonEL);
+
 }
 
 // ========== INITIALIZATION ==========

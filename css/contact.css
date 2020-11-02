@@ -1,0 +1,56 @@
+/* CONTACT US */
+  
+.contactDiv {
+
+    max-width: 100%;
+    border-top: 1px solid rgba(245, 127, 0, 1);
+    border-bottom: 1px solid rgba(245, 127, 0, 1);
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+  
+    
+  
+    margin-top: 10px;
+    width: 80%;
+    margin: 20px auto 20px auto;
+    padding: 5px;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-size: 15px;
+  
+   }
+    
+   .FAQ {
+    border-bottom: 1px solid rgba(245, 127, 0, 1);
+   }
+    
+   .contactForm textarea {
+    margin-bottom: 10px;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-size: 13px;
+   }
+  
+  #email, #subject {
+    width: 40%;
+  }
+
+  #contactSend{
+    display: inline-block;
+    padding: 0.46em 1.6em;
+    border: 0.1em solid black;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    text-shadow: 0 0em 1em rgba(0,0,0,0.2);
+    background-color: white;
+    text-align: center;
+    transition: all 0.15s;
+
+    }
+    #contactSend:hover{
+    text-shadow: 2em 0 2em rgba(255,255,255,1);
+    color: white;
+    border-color: white;
+    }

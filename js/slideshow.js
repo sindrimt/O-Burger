@@ -1,6 +1,6 @@
 //Elements from index.html
 var bodyEL = document.querySelector("body");
-var articleEL = document.querySelector("#slide");
+var contentEL = document.querySelector("article.content");
 
 //Left button
 var lButton = document.createElement("button");
@@ -24,41 +24,49 @@ bodyEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = ['../imgs/OShake.jpg',
-            '../imgs/visepresident.jpg',
-            '../imgs/littkult.jpg'];
+            '../imgs/FINAL.png',
+            '../imgs/stud.png'];
 
 cooldown = 3000;
 time = cooldown;
 count = 0;
 
-function slideshow() {
-    changeSlide(1);
-    timeoutVar = setTimeout("slideshow()", time);
-}
- //Clicks the left button
-lButton.addEventListener("click", () => {
-    time = cooldown;
-    timeoutVar = setTimeout("slideshow()", time);
-    changeSlide(-1);
-});
-//Clicks the right button
-RButton.addEventListener("click", () => {
-    time = cooldown;
-    timeoutVar = setTimeout("slideshow()", time);
-    changeSlide(1);
-});
-function changeSlide(change)
-{
+function changeSlide(change) {
     time = cooldown;
     count += change;
-    if (count < 0) count = imgs.length-1;
-    else if (count >= imgs.length) count = 0;
+
+    if (count < 0) {
+        count = imgs.length-1;
+    }
+
+    else if (count >= imgs.length) {
+         count = 0;
+    } 
+
     document.getElementById('img1').src = imgs[count];
+
     clearTimeout(timeoutVar);
+    
 }
 
-/*setInterval(function(){ 
-    document.getElementById('img1').src = imgs[count]; 
-}, 10);*/
+function slideshow() {
+    changeSlide(1);
+    
+    timeoutVar = setTimeout("slideshow()", time);
+}
+
+ //Clicks the left button
+lButton.addEventListener("click", () => {
+    changeSlide(-1);
+    timeoutVar = setTimeout("slideshow()", time);
+    
+});
+
+//Clicks the right button
+RButton.addEventListener("click", () => {
+    changeSlide(1);
+    timeoutVar = setTimeout("slideshow()", time);
+    
+});
 
 slideshow();
