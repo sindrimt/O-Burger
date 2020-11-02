@@ -28,7 +28,7 @@ p{
 header{
   background-position: center;
   background-size: cover;
-  background-color: red;
+  background-color: black;
   /*background-image: url("../imgs/yep.jpg");*/
 
   min-height: 80%;
@@ -38,29 +38,15 @@ header{
     margin-left:auto;
     margin-right:auto;
     max-width:760px;
-    padding-top:32px!important;
-    padding-bottom:64px!important;
+    padding-top: 32px;
+    padding-bottom:50px;
     text-align:center;
- 
 
 }
-
-.Olore{
-    margin-left:auto;
-    margin-right:auto;
-    max-width:760px;
-    padding-bottom:64px!important;
-    text-align:center;
- 
-
-}
-
 
 h5{
-    padding-top:64px!important;
-    padding-bottom:64px!important;
+    padding-bottom: 25px;
 }
-
 
 .overskrift{
     color:#fff;display:inline-block;
@@ -72,8 +58,8 @@ h5{
 
 
 .gray_background{
-    color:#000!important;
-    background-color:#2F2F2F!important;
+    color:#000;
+    background-color:#2F2F2F;
 }
 
 

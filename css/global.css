@@ -30,6 +30,7 @@ article.bg
 article.content
 { /*article.content is inside article.bg, and contains the content of the page*/
   text-align: center;
+  
   padding: 5px 0;
   font-size: 30px;
   min-width: 800px;
@@ -52,6 +53,7 @@ article.content
   z-index: 1000;
   position: fixed;
   margin: auto;
+  font-family: 'Raleway', sans-serif;
   width: 100%;
   background-color: rgba(255, 137, 0, 1);
 }
@@ -80,7 +82,7 @@ article.content
   text-decoration : none;
   border : none;
   border-bottom : 0px solid black;
-  color : black;
+  color : white;
   width : 100%;
   background-color : transparent;
   font-size : 30px;
