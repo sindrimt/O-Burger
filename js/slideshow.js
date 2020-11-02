@@ -23,7 +23,7 @@ RButton.id = "RButton";
 bodyEL.appendChild(RButton);
 
 //Array with the img sources
-var imgs = ['../imgs/OShake.jpg',
+var imgs = ['../imgs/shakeupd.png',
             '../imgs/FINAL.png',
             '../imgs/stud.png'];
 
