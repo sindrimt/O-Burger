@@ -74,7 +74,7 @@
 #contactSend:hover {
   text-shadow: 2em 1em 2em rgba(255, 255, 255, 1);
   color: white;
-  border-color: rgb(252, 168, 80);
+  background-color: rgb(199, 116, 27);
 }
 
 /* SUBMIT PAGE (CONTACT) */

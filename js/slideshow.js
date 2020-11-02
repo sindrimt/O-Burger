@@ -23,9 +23,9 @@ RButton.id = "RButton";
 bodyEL.appendChild(RButton);
 
 //Array with the img sources
-var imgs = ['../imgs/shakeupd.png',
-            '../imgs/hourFINAL.png',
-            '../imgs/stud.png'];
+var imgs = ['../imgs/shakeBanner.png',
+            '../imgs/happyHour.png',
+            '../imgs/studentDiscount.png'];
 
 //Sets a base cooldown between each image change.
 cooldown = 3000;
