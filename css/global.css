@@ -186,3 +186,32 @@ article.content
     width : 50%;
     height : 50%;
 }
+
+/*SCROLL IMAGES*/
+img.scroll
+{
+    z-index : 10;
+    position : absolute;
+    display : block;
+    justify-content: center;
+    min-width : 100%;
+    min-height : 1000px;
+
+    /*Center the image*/
+    left : 50%;
+    transform : translateX(-50%);
+}
+.scrollParent
+{
+  display : block;
+  width : 100%;
+  height : 900px;
+  overflow : hidden;
+
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  /*background-image: url("../imgs/yep.jpg");*/
+
+  position:relative;
+}
