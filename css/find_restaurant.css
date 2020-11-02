@@ -46,6 +46,7 @@ article.content
     
    .mapDiv {
     max-width: 100%;
+    background: aliceblue;
    }
     
    /*The image of our future map. */
