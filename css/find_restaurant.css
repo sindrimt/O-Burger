@@ -42,13 +42,6 @@ article.content
     width: 5%;
    }
     
-   /*The div for our future map of the restaurants. */
-    
-   .mapDiv {
-    max-width: 100%;
-    background: aliceblue;
-   }
-    
    /*The image of our future map. */
     
    #mapImg {

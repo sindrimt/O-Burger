@@ -26,13 +26,7 @@ p{
 
 
 header{
-  background-position: center;
-  background-size: cover;
-  background-color: black;
-  /*background-image: url("../imgs/yep.jpg");*/
 
-  min-height: 80%;
-  position:relative;
 }
 .Ostory{
     margin-left:auto;

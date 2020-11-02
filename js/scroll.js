@@ -23,7 +23,6 @@ function UpdateImgs()
         var initialY = image["initialY"];
         var y = scroll*scrollScalar-initialY+navBarHeight;
         imgEL.style.top = y+"px";
-        console.log(y);
     }
 }
 
@@ -44,7 +43,4 @@ for (var i = 0; i < imgELs.length; i++)
     newImageObj["initialY"] = GetPosOf(imgEL)+startScroll;  // The y-position of the element when loading the page
     scrollImages.push(newImageObj);
 }
-
-console.log(scrollImages);
-
 UpdateImgs();
