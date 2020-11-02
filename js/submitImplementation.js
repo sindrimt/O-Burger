@@ -6,13 +6,14 @@
 
 function Submit(buttonText, responseText)
 {
+    console.log("test");
     var contentEL = document.querySelector("article.content");
     contentEL.innerHTML = "";
     var responseEL = document.createElement("div");
-    responseEL.className = "response";
+    responseEL.className = "submitResponse";
     responseEL.innerHTML = responseText+"<br>";
     var backButtonEL = document.createElement("button");
-    backButtonEL.className = "orderButton";
+    backButtonEL.className = "submitButton";
     backButtonEL.innerText = buttonText;
     backButtonEL.addEventListener("click", Reload);
     responseEL.appendChild(backButtonEL);

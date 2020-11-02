@@ -42,14 +42,14 @@
                 <input class="inputEmail" id="email" name="email" placeholder="YOUR EMAIL"></input><br> <br>
                 <input class="inputSubject" id="subject" name="subject" placeholder="SUBJECT"></input><br> <br>
                 <textarea class="inputMessage" rows="6" cols="68" id="message" name="message" placeholder="MESSAGE"></textarea> <br>
-                <button id="contactSend">Send</button>
+                <button id="contactSend" class="submitButton">Send</button>
             </form>
         </div>
     </div>
     </article>
     </article>
 
-    <script src="../js/reloadPage.js"></script>
+    <script src="../js/submitImplementation.js"></script>
     <script>
         var reloadText = "Your mail has been sent! We will respond as soon as possible.";
         var reloadButtonText = "Back to contact page";
@@ -59,17 +59,6 @@
         var contentEL = document.getElementsByClassName("content")[0];
         buttonEL.type = "button";  // This button is made out of button
         buttonEL.addEventListener("click", function(){Submit(reloadButtonText, reloadText);});
-
-
-        //Noe er feil her 
-        function mailFeedback(e) {
-            e.preventDefault();
-            console.log("Your mail has been sent")
-
-            feedbackEL = document.createElement("h1");
-            feedbackEL.innerHTML = "Your mail has been sent!";
-            document.body.appendChild(feedbackEL);
-        }
     </script>
     <script src="../js/footer.js"></script>
     <script src="../js/navbar.js"></script>
