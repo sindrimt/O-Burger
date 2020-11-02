@@ -76,3 +76,23 @@
   color: white;
   border-color: rgb(252, 168, 80);
 }
+
+/* SUBMIT PAGE (CONTACT) */
+.submitButton
+{
+    background-color : rgba(245, 127, 0, 1);
+    color : white;
+    border-radius : 10px;
+    padding : 20px;
+    font-size : 20px;
+    cursor : pointer;
+    border : 0px;
+}
+.submitResponse
+{
+    position : relative;
+    width : 50%;
+    height : 50%;
+    left: 0%;
+    margin-bottom: 30px;
+}
