@@ -15,7 +15,7 @@ var bannerEL = null;  // bannerEL is the spruce wood-part
 var navBarEL = null;  // navBarEL is the orange part with all the buttons and logo
 var navItems =
 [  // Template to use when creating navButtons
-    {"display":"Home", "link":"index.html", "displayImg":"../imgs/OBurger-logo-cropped.png"},
+    {"display":"Home", "link":"index.html", "displayImg":"../imgs/global/OBurger-logo-cropped.png"},
     {"display":"Order", "link":"order.html"},
     {"display":"Restaurants", "link":"find_restaurant.html"},
     {"display":"O'bout", "link":"about.html"},

@@ -2,7 +2,7 @@
 body, html
 {
   background-color: black;
-  background-image: url("../imgs/sprucewood.jpg");
+  background-image: url("../imgs/global/sprucewood.jpg");
   height: 100%;
   margin: 0;
 }
@@ -42,7 +42,7 @@ article.content
 /*NAVBAR*/
 #banner
 {
-  background-image : url("../imgs/sprucewood.jpg");
+  background-image : url("../imgs/global/sprucewood.jpg");
   position : relative;
   z-index : 900;
 }
