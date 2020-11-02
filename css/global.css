@@ -20,12 +20,11 @@ article.content, article.bg
 article.bg
 {
   width: 100%;
-  background-color: rgba(227, 227, 227, 1);
+  background-color: rgba(237, 237, 237, 1);
 }
   
 article.content
 { /*article.content is inside article.bg, and contains the content of the page*/
-  background-color: rgba(237, 237, 237, 0.4);
   text-align: center;
   padding: 5px 0;
   font-size: 30px;
