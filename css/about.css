@@ -15,8 +15,7 @@ p{
     position: absolute;
     top: 50%;
     margin-top: -25px; /* half this element's height */
-
-    font-family: Signika;
+    padding-left: 25px;
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
@@ -30,7 +29,7 @@ header{
   background-position: center;
   background-size: cover;
   background-image: url("../imgs/yep.jpg");
-  min-height: 60%;
+  min-height: 80%;
   position:relative;
 }
 
@@ -38,7 +37,7 @@ header{
     margin-left:auto;
     margin-right:auto;
     max-width:760px;
-    padding-top:64px!important;
+    padding-top:32px!important;
     padding-bottom:64px!important;
     text-align:center;
  
@@ -49,7 +48,6 @@ header{
     margin-left:auto;
     margin-right:auto;
     max-width:760px;
-    padding-top:64px!important;
     padding-bottom:64px!important;
     text-align:center;
  
