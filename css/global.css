@@ -1,6 +1,8 @@
 /*ARTICLE & MISC*/
 body, html
 {
+  background-color: black;
+  background-image: url("../imgs/banner.jpg");
   height: 100%;
   margin: 0;
   /*Signika Negative requires stylesheet link in every HTML page!*/
@@ -39,7 +41,6 @@ article.content
 {
   background-image : url("../imgs/banner.jpg");
   position : relative;
-  background-color : green;
   z-index : 900;
 }
   
