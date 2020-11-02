@@ -1,6 +1,6 @@
 //Elements from index.html
 var bodyEL = document.querySelector("body");
-var articleEL = document.querySelector("#slide");
+var contentEL = document.querySelector("article.content");
 
 //Left button
 var lButton = document.createElement("button");
@@ -24,8 +24,8 @@ bodyEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = ['../imgs/OShake.jpg',
-            '../imgs/visepresident.jpg',
-            '../imgs/littkult.jpg'];
+            '../imgs/FINAL.png',
+            '../imgs/stud.png'];
 
 cooldown = 3000;
 time = cooldown;
@@ -42,7 +42,7 @@ function changeSlide(change) {
     else if (count >= imgs.length) {
          count = 0;
     } 
-    
+
     document.getElementById('img1').src = imgs[count];
 
     clearTimeout(timeoutVar);

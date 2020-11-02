@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O'Burger | Contact Us</title>
-    <link rel="stylesheet" href="../css/common_style.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
 </head>
 
 <body>
     <div id="banner"></div>
     <div id="navbar"></div>
+    <article class="bg">
+    <article class="content">
     <div class="contactDiv">
         <div class="FAQ">
             <h2>HOW CAN WE HELP YOU?</h2>
@@ -37,28 +41,24 @@
             <form action="" id="contactUsForm">
                 <input class="inputEmail" id="email" name="email" placeholder="YOUR EMAIL"></input><br> <br>
                 <input class="inputSubject" id="subject" name="subject" placeholder="SUBJECT"></input><br> <br>
-                <textarea class="inputMessage" id="message" name="message" placeholder="MESSAGE"></textarea> <br>
-                <button id="contactSend">Send</button>
+                <textarea class="inputMessage" rows="6" cols="68" id="message" name="message" placeholder="MESSAGE"></textarea> <br>
+                <button id="contactSend" class="submitButton" style="border-color:#FFFFFF; background-color:rgba(0,0,0,0); color:#FFFFFF">Send</button>
             </form>
         </div>
     </div>
+    </article>
+    </article>
 
+    <script src="../js/submitImplementation.js"></script>
     <script>
-        bodyEL = document.querySelector("body");
-        buttonEL = document.querySelector("#contactSend");
-        buttonEL.addEventListener("click", mailFeedback)
+        var reloadText = "Your mail has been sent! We will respond as soon as possible.";
+        var reloadButtonText = "Back to contact page";
 
-
-        //Noe er feil her 
-        function mailFeedback(e) {
-            e.preventDefault();
-            console.log("Your mail has been sent")
-
-            feedbackEL = document.createElement("h1");
-            feedbackEL.innerHTML = "Your mail has been sent!";
-            document.body.appendChild(feedbackEL);
-
-        }
+        var bodyEL = document.querySelector("body");
+        var buttonEL = document.querySelector("#contactSend");
+        var contentEL = document.getElementsByClassName("content")[0];
+        buttonEL.type = "button";  // This button is made out of button
+        buttonEL.addEventListener("click", function(){Submit(reloadButtonText, reloadText);});
     </script>
     <script src="../js/footer.js"></script>
     <script src="../js/navbar.js"></script>
