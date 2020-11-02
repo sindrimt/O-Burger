@@ -1,6 +1,6 @@
 //Elements from index.html
 var bodyEL = document.querySelector("body");
-var articleEL = document.querySelector("#slide");
+var contentEL = document.querySelector("article.content");
 
 //Left button
 var lButton = document.createElement("button");
