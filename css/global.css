@@ -5,8 +5,10 @@ body, html
   background-image: url("../imgs/banner.jpg");
   height: 100%;
   margin: 0;
+}
   /*Signika Negative requires stylesheet link in every HTML page!*/
   /*Default fallback font is Verdana*/
+body, html, input, button, textarea, select {
   font-family: "Signika", Verdana, Geneva, Tahoma, sans-serif;
 }
 p
