@@ -32,16 +32,26 @@
   #email, #subject {
     width: 40%;
   }
-  
-  #contactSend {
-    background-color: rgba(245, 127, 0, 1);
+
+  #contactSend{
+    display: inline-block;
+    padding: 0.46em 1.6em;
+    border: 0.1em solid black;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    color: black;
+    text-shadow: 0 0em 1em rgba(0,0,0,0.2);
+    background-color: white;
+    text-align: center;
+    transition: all 0.15s;
+
+    }
+    #contactSend:hover{
+    text-shadow: 2em 0 2em rgba(255,255,255,1);
     color: white;
-    border-radius: 10%;
-    border-color: rgba(245, 127, 0, 1);
-    padding: 5px;
-    position: relative;
-    right: 215px;
-  }
-  #contactSend:hover {
-    cursor: pointer;
-  }
+    border-color: white;
+    }
