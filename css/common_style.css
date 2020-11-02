@@ -1,141 +1,16 @@
-/* LAST EDITED BY:
-Torbjørn, 05.10.2020 */
-
-body, html {
-    height: 100%;
-    margin: 0;
-  }
-
-header { /*NOT THE SAME AS NAVIGATON BAR*/
+/*I have no idea what these are used for, so I'm afraid to delete for good*/
+/*-Tor the bjørn*/
+  
+   header {
+    /*NOT THE SAMEe AS NAVIGATON BAR*/
     /*background-image: url();*/
-    height: 682px; 
+    height: 682px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index : -5;
-    }
-article.content, article.bg
-{
-  z-index : 100;
-}
-article.bg
-{
-  width : 100%;
-  
-  background-color : rgba(227, 227, 227, 1);
-}
-article.content
-{
-  background-color : rgba(237, 237, 237, 0.4);
-  text-align: center;
-  padding: 5px 0;
-  font-size: 30px;
-  min-width : 800px;
-  width : 50%;
-  margin : auto;
-}
-
-.backgroundImg
-{
-  position : fixed;
-  z-index : -1000;
-  width : 100%;
-}
-
-#banner
-{
-  background-image : url("../imgs/banner.jpg");
-}
-#navBar
-{
-  display : inline-block;
-  z-index : 1000;
-  position : fixed;
-  margin : auto;
-  width : 100%;
-  background-color : rgba(255, 137, 0, 1);
-}
-.navCell
-{
-  font-family : Verdana, Geneva, Tahoma, sans-serif;  /*Signika Negative requires stylesheet link in HTML!*/
-  vertical-align : top;
-  display : inline-block;
-  position : relative;
-  top : 0px;
-}
-.navImg, .navButton
-{
-  cursor : pointer;
-}
-.navImg
-{
-  /*background-color : red;*/
-  position : relative;
-}
-.navButton
-{
-  font-family : inherit;
-  text-decoration : none;
-  border : none;
-  border-bottom : 0px solid black;
-  color : black;
-  width : 100%;
-  background-color : transparent;
-  font-size : 30px;
-  text-align : center;
-  transition : 0s;
-}
-.navButton:hover
-{
-    transition : 0s;
-    color : lightgrey;
-    background-color : rgba(245, 127, 0, 1);
-    text-shadow : 1px 1px black;
-}
-
-/*ADDED FOR SLIDESHOW*/
-
-#img1 {
-  width: 100%;
-  height: 682px;
-}
-
-#slide {
-  position: relative;
-  
-}
-
-#lButton {
-    position: absolute;
-    transform: rotate(-90deg);
-    filter: invert(100%);
-    top: 50%;
-    left: 2%;
-    background: url("../imgs/bestpil.png") no-repeat;
-    z-index: 100;
-    cursor: pointer;
-    background-size:100% 100%;
-    width: 5%;
-    height: 10%;
-    opacity: 0.5;
-    border: none;
-    outline: none;
-}
-
-#RButton {
-    position: absolute;
-    transform: rotate(90deg);
-    filter: invert(100%);
-    right: 2%;
-    top: 50%;
-    background: url("../imgs/bestpil.png") no-repeat;
-    z-index: 100;
-    cursor: pointer;
-    background-size:100% 100%;
-    width: 5%;
-    height: 10%;
-    opacity: 0.5;
-    border: none;
-    outline: none;
-}
-
+    z-index: -5;
+   }
+   .backgroundImg {
+    position: fixed;
+    width: 100%;
+   }
