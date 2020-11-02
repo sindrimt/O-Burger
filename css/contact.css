@@ -14,7 +14,7 @@
     width: 80%;
     margin: 20px auto 20px auto;
     padding: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     font-size: 15px;
   
    }
@@ -25,7 +25,7 @@
     
    .contactForm textarea {
     margin-bottom: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     font-size: 13px;
    }
   

@@ -3,6 +3,13 @@ body, html
 {
   height: 100%;
   margin: 0;
+  /*Signika Negative requires stylesheet link in every HTML page!*/
+  /*Default fallback font is Verdana*/
+  font-family: "Signika", Verdana, Geneva, Tahoma, sans-serif;
+}
+p
+{
+  font-size : 20px;
 }
 
 article.content, article.bg
@@ -49,8 +56,6 @@ article.content
   
 .navCell
 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*Signika Negative requires stylesheet link in HTML!*/
   vertical-align: top;
   display: inline-block;
   position: relative;
