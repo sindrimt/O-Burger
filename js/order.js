@@ -202,7 +202,7 @@ function UpdateForm()
     var orderButtonEL = document.createElement("button");
     orderButtonEL.type = "button";
     orderButtonEL.id = "orderButton";
-    orderButtonEL.className = "orderButton";
+    orderButtonEL.className = "submitButton";
     orderButtonEL.innerHTML = "O'rder!";
     orderButtonEL.addEventListener("click", function(){Submit(reloadButtonText, reloadText);});
 
