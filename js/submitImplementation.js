@@ -6,7 +6,8 @@
 
 function Submit(buttonText, responseText)
 {
-    console.log("test");
+    console.log(buttonText);
+    console.log(responseText);
     var contentEL = document.querySelector("article.content");
     contentEL.innerHTML = "";
     var responseEL = document.createElement("div");

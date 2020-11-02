@@ -1,7 +1,17 @@
+/*Override for articles*/
+article.bg
+{
+   background-color: aliceblue;   
+}
+article.content
+{
+   width : 90%;
+}
+
 /*Find restaurants*/
  /**/
  .tableDiv {
-
+   font-size : 20px;
     max-width: 100%;
     border-top: 1px solid rgba(245, 127, 0, 1);
     border-bottom: 1px solid rgba(245, 127, 0, 1);
