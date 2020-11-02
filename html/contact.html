@@ -13,6 +13,8 @@
 <body>
     <div id="banner"></div>
     <div id="navbar"></div>
+    <article class="bg">
+    <article class="content">
     <div class="contactDiv">
         <div class="FAQ">
             <h2>HOW CAN WE HELP YOU?</h2>
@@ -44,11 +46,19 @@
             </form>
         </div>
     </div>
+    </article>
+    </article>
 
+    <script src="../js/reloadPage.js"></script>
     <script>
-        bodyEL = document.querySelector("body");
-        buttonEL = document.querySelector("#contactSend");
-        buttonEL.addEventListener("click", mailFeedback)
+        var reloadText = "Your mail has been sent! We will respond as soon as possible.";
+        var reloadButtonText = "Back to contact page";
+
+        var bodyEL = document.querySelector("body");
+        var buttonEL = document.querySelector("#contactSend");
+        var contentEL = document.getElementsByClassName("content")[0];
+        buttonEL.type = "button";  // This button is made out of button
+        buttonEL.addEventListener("click", function(){Submit(reloadButtonText, reloadText);});
 
 
         //Noe er feil her 
