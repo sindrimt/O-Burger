@@ -12,6 +12,7 @@
     
    #lButton {
     position: absolute;
+    /*Roterer og inverterer fargen til venstre knapp*/
     transform: rotate(-90deg);
     filter: invert(100%);
     top: 50%;
@@ -29,6 +30,7 @@
     
    #RButton {
     position: absolute;
+    /*Roterer og inverterer fargen til høyre knapp*/
     transform: rotate(90deg);
     filter: invert(100%);
     right: 2%;
@@ -89,9 +91,3 @@
    #previewText {
     color: #2f2f2f;
    }
-
-
-
-
-
-    
