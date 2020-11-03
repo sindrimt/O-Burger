@@ -36,6 +36,16 @@ p{
     text-align:center;
 }
 
+.burger{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    opacity: 0.4;
+
+    
+}
+
 
 .Ostory{
     margin-left:auto;
