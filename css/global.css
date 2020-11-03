@@ -1,0 +1,237 @@
+/*ARTICLE & MISC*/
+body, html
+{
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+  /*Signika Negative requires stylesheet link in every HTML page!*/
+  /*Default fallback font is Verdana*/
+body, html, input, button, textarea, select {
+  font-family: "Signika", Verdana, Geneva, Tahoma, sans-serif;
+}
+p
+{
+  font-size : 20px;
+}
+
+article.content, article.bg
+{
+  z-index: 100;
+}
+
+article.bg
+{
+  width: 100%;
+  background-color: white;
+}
+  
+article.content
+{ /*article.content is inside article.bg, and contains the content of the page*/
+  text-align: center;
+  
+  padding: 5px 0;
+  font-size: 30px;
+  min-width: 800px;
+  width: 50%;
+  margin: auto;
+}
+
+/*========================================*/
+/*NAVBAR*/
+#banner
+{
+  position : relative;
+  z-index : 900;
+  overflow : hidden;
+}
+  
+ #navBar
+{
+  display: inline-block;
+  z-index: 1000;
+  position: fixed;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+
+  width: 100%;
+  background-color: rgba(255, 137, 0, 1);
+}
+  
+.navCell
+{
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+}
+
+.navImg, .navButton
+{
+  cursor: pointer;
+}
+  
+.navImg {
+
+  /*background-color : red;*/
+  position : relative;
+}
+.navButton
+{
+  font-family : inherit;
+  text-decoration : none;
+  border : none;
+  border-bottom : 0px solid black;
+  color : white;
+  width : 100%;
+  background-color : transparent;
+  font-size : 2vw;
+  text-align : center;
+  transition : 0s;
+  overflow : hidden;
+}
+  
+.navButton:hover
+{
+  transition: 0s;
+  color: lightgrey;
+  background-color: rgba(245, 127, 0, 1);
+  text-shadow: 1px 1px black;
+}
+
+
+/*=========================================*/
+/*FOOTER*/
+
+/*div for the footer. */
+#footer
+{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+  
+
+
+/*changes the cursor when hover over images in the footer. */
+#footer a:hover
+{
+  cursor: pointer;
+}
+
+/*Sets the footer background image under the other images, and at the bottom. */ 
+#footerBackground
+{
+  position: absolute;
+  min-width: 100%;
+  min-height : 100%;
+
+  z-index: 101;
+}
+  
+
+/*The logo in the footer */
+#footerLogo
+{
+  z-index : 102;
+  position: relative;
+  width: 15%;
+  left: 57px;
+}
+  
+ 
+ 
+ 
+/* Facebook image in footer */
+#facebook
+{
+  z-index : 101;
+  position: relative;
+  width: 3%;
+  right: 44%;
+
+}
+  
+ /* Instagram image in footer */
+#instagram
+{
+  z-index : 101;
+  position: relative;
+  width: 3%;
+  right: 42%;
+}
+
+
+/* SUBMIT PAGES (ORDER & CONTACT) */
+.submitButton
+{
+  display: inline-block;
+  padding: 0.46em 1.6em;
+  border: 0.1em solid black;
+  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.12em;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-color: rgba(245, 127, 0, 1);
+  text-decoration: none;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 0em 1em rgba(0, 0, 0, 0.2);
+  background-color: rgba(245, 127, 0, 1);
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.submitButton:hover {
+  text-shadow: 2em 1em 2em rgba(255, 255, 255, 1);
+  color: white;
+  cursor: pointer;
+  border-color: rgb(252, 168, 80);
+
+}
+.submitResponse
+{
+    position : absolute;
+    left : 25%;
+    top : 35%;
+    margin : auto;
+    width : 50%;
+    height : 50%;
+}
+
+img.centered
+{
+  /*Center the image*/
+  min-width : 100%;
+  min-height : 100%;
+  
+  position : absolute;
+  left : 50%;
+  transform : translateX(-50%);
+}
+/*SCROLL IMAGES*/
+img.scroll
+{
+  z-index : 10;
+  position : absolute;
+  display : block;
+  min-width : 100%;
+  min-height : 110%;
+}
+.scrollParent
+{
+  display : block;
+  width : 100%;
+  height : 90%;
+  overflow : hidden;
+
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  /*background-image: url("../imgs/yep.jpg");*/
+
+  position:relative;
+}

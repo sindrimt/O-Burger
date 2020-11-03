@@ -1,34 +1,53 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>O'Burger</title>
-    <link rel="stylesheet" href="../css/common_style.css">
+    <title>O'Burger | Main Page</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel='icon' href='../imgs/global/OBurger-logo.png' type='image/x-icon' >
 </head>
+
 <body>
-    <div id="menu">
-  </div>
-    <img class="backgroundImg" src="https://d.newsweek.com/en/full/623639/gettyimages-116048571.jpg">
-        <header>
-            Header
-        </header>
-        <article class="bg">
-        <article class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus in hendrerit gravida rutrum. Integer eget aliquet nibh praesent tristique magna sit amet. Mauris nunc congue nisi vitae suscipit. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Nisl tincidunt eget nullam non nisi. Vitae suscipit tellus mauris a. Interdum varius sit amet mattis vulputate. Faucibus et molestie ac feugiat sed lectus. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Nisl nisi scelerisque eu ultrices. Maecenas volutpat blandit aliquam etiam erat. Sit amet est placerat in egestas erat imperdiet. Justo eget magna fermentum iaculis eu.
+    <div id="banner"></div>
 
-Donec massa sapien faucibus et molestie. Tortor posuere ac ut consequat semper. Urna nec tincidunt praesent semper feugiat nibh. Natoque penatibus et magnis dis parturient. Lacinia at quis risus sed vulputate odio. Odio ut sem nulla pharetra diam. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Imperdiet proin fermentum leo vel orci porta. Eget nullam non nisi est sit. Nunc sed id semper risus in hendrerit gravida rutrum. Nascetur ridiculus mus mauris vitae ultricies leo integer. Amet consectetur adipiscing elit ut. Vitae suscipit tellus mauris a diam maecenas. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Metus aliquam eleifend mi in. Metus aliquam eleifend mi in nulla posuere. Massa sed elementum tempus egestas. Phasellus egestas tellus rutrum tellus pellentesque. In nisl nisi scelerisque eu ultrices vitae auctor eu.
+    <!--Slideshow script-->
 
-Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Dui sapien eget mi proin sed libero. Pellentesque habitant morbi tristique senectus et netus et. Bibendum neque egestas congue quisque egestas diam in. Nec dui nunc mattis enim ut tellus. Commodo viverra maecenas accumsan lacus. Mattis pellentesque id nibh tortor. Ut diam quam nulla porttitor massa id neque. Diam maecenas sed enim ut sem viverra aliquet eget. Ac turpis egestas sed tempus urna.
-        </article>
-        </article>
-        <footer>
-            Footer
-        </footer>
+    <div id="slide">
+        <img id="img1" />
+    </div>
 
-<script src = "../js/menu.js">
-    </script>
-<script src = "../js/index.js">
-</script>
+    <article class="bg">
+
+        <div class="pagePreview" id="obout">
+
+            <img class="imagePreview" src="../imgs/index/obamaApple.png" alt="Obama eating an apple" id="obamaApple">
+            <a href="about.html">
+            <div class="imageText">
+                <h2>O'STORY - OUR STORY</h2>
+                <h3>EST. 2019</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="pagePreview" id="find_restaurant">
+            <img class="imagePreview" src="../imgs/index/mapPreview.png" alt="Map of O'Burger restaurants" id="mapPreview">
+            <a href="find_restaurant.html">
+
+                <div class="imageText" id="restaurantText">
+                    <h2>FIND YOUR RESTAURANT</h2>
+                </div>
+            </a>
+        </div>
+    </article>
+    <script src="../js/slideshow.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

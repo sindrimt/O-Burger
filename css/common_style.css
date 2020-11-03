@@ -1,87 +1,16 @@
-/* LAST EDITED BY:
-Torbjørn, 05.10.2020 */
-
-body, html {
-    height: 100%;
-    margin: 0;
-  }
-
-
-
-header { /*NOT THE SAME AS NAVIGATON BAR*/
+/*I have no idea what these are used for, so I'm afraid to delete for good*/
+/*-Tor the bjørn*/
+  
+   header {
+    /*NOT THE SAMEe AS NAVIGATON BAR*/
     /*background-image: url();*/
-    height: 500px; 
+    height: 682px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index : -5;
-    }
-article.content, article.bg
-{
-  z-index : 100;
-}
-article.bg
-{
-  width : 100%;
-  
-  background-color : rgba(227, 227, 227, 1);
-}
-article.content
-{
-  background-color : rgba(237, 237, 237, 0.4);
-  text-align: center;
-  padding: 5px 0;
-  font-size: 30px;
-  min-width : 800px;
-  width : 50%;
-  margin : auto;
-}
-
-.backgroundImg
-{
-  position : fixed;
-  z-index : -1000;
-  width : 100%;
-}
-
-
-
-#navbar
-{
-  z-index : 1000;
-  position : fixed;
-  margin : auto;
-  width : 100%;
-  background-color : rgba(255, 137, 0, 1);
-}
-.navcell
-{
-  
-  background-color: red;
-}
-.navbutton
-{
-  text-decoration : none;
-  background-color : green;
-  display : inline-block;
-
-  background-color : transparent;
-  border : none;
-  border-bottom : 0px solid black;
-  color : black;
-  
-  position : relative;
-  top : 50%;
-  width : 300px;
-  height : 100px;
-  text-align : center;
-  font-size : 30px;
-  cursor : pointer;
-  transition : 0s;
-}
-.navbutton:hover
-{
-    transition : 0s;
-    color : lightgrey;
-    text-shadow : 1px 1px black;
-}
+    z-index: -5;
+   }
+   .backgroundImg {
+    position: fixed;
+    width: 100%;
+   }
