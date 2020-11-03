@@ -18,11 +18,11 @@ var dishes =
     {"name":"O'Burger",     "price":4.99, "img":"hawaiiBurger.png"},
     {"name":"O'Fries",      "price":1.99, "img":"ofries.png"},
     {"name":"O'Shake",      "price":2.99, "img":"SHAKE.png"},
-    {"name":"Soft Drink",   "price":1.99, "img":"softdrink.png"},
+    {"name":"O'Beverage",   "price":1.99, "img":"softdrink.png"},
     {"name":"O'Curly",      "price":2.99, "img":"ocurly.png"},
     {"name":"O'Nuggets",    "price":2.99, "img":"onuggets.png"}
 ];
-var receiptLine = "<br>==========<br>";
+var receiptLine = "<br>";
 
 // System variables
 var bodyEL = document.querySelector("body");
@@ -120,10 +120,13 @@ function CreateReceipt()
 {
     if (receiptEL == null) 
     {
+        receiptDivEL = document.createElement("div");
         receiptEL = document.createElement("span");
+        receiptDivEL.appendChild(receiptEL);
     }
     receiptEL.innerText = "";
-    articleEL.appendChild(receiptEL);
+    articleEL.appendChild(receiptDivEL);
+
 }
 function UpdateReceipt()
 {
@@ -148,14 +151,15 @@ function UpdateReceipt()
         var price = dishBP["price"];
         var cost = Math.round((price*count) * 100) / 100;
         totalCost += cost;
-        var txt = count+"x "+name+": $"+cost+";<br>";
+        var txt = count+"x "+name+": $"+cost+"<br>";
         receipt += txt;
     }
     if (receipt != "")
     {
         totalCost = Math.round(totalCost*100)/100;
         var finalCost = "Total price: $"+totalCost;
-        receiptEL.innerHTML = receiptLine+receipt+receiptLine+finalCost+"<br>";
+        receiptEL.innerHTML = receipt+receiptLine+finalCost+"<br>";
+        receiptDivEL.className = "orangeBorders"
     }
 }
 function CreateForm()
@@ -167,6 +171,7 @@ function CreateForm()
     formEL.innerHTML = "";
     formEL.action = "";
     formEL.method = "POST";
+    formEL.id = "receiptForm"
     articleEL.appendChild(formEL);
 }
 function UpdateForm()

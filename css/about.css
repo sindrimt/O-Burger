@@ -1,18 +1,11 @@
-
-body, html {
-  height: 100%;
-  margin:0
-}
-
-p{
+p
+{
     color: white;
-    font-size: 20px;
     line-height: 25px;
 }
 
-
-
-.O_1{
+.O_1
+{
     z-index: 20;
     position: absolute;
     top: 50%;
@@ -26,7 +19,7 @@ p{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 
-.Our_food
+.Our_food, .Ostory
 {
     margin-left:auto;
     margin-right:auto;
@@ -58,10 +51,12 @@ p{
 }
 
 h5{
+
     padding-bottom: 25px;
 }
 
-.overskrift{
+.heading
+{
     color:#fff;display:inline-block;
     font-size: 40px;
     padding-left:8px;
@@ -78,7 +73,8 @@ h5{
     opacity: 0.4;
 }
 
-.gray_background{
+.gray_background
+{
     color:#000;
     background-color:#2F2F2F;
 }
