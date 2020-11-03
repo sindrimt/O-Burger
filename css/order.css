@@ -22,8 +22,8 @@
 .buttonWrapper > *
 {
     display : inline-block;
-    width : 30px;
-    height : 30px;
+    width : 50px;
+    height : 50px;
     cursor : pointer;
 }
 article.content
@@ -31,10 +31,6 @@ article.content
     width : 90%;
     min-width : 0px;
     min-height : 300px;
-}
-input
-{
-    padding : 15px;
 }
 
 .orangeBorders {
@@ -47,13 +43,27 @@ input
     margin: 20px 0px 20px 0px;
 }
 
-input {
+input[type="number"], input[type="text"] {
     width: 300px;
     height: 10px;
     margin: 15px;
+    padding : 15px;
   }
   select {
     width: 334px;
     height: 30px;
     margin: 10px;
   }
+input[type="checkbox"]
+{
+    position : relative;
+    right : -50px;
+    transform : scale(4.0);  /*Double the size*/
+}
+.discounts
+{
+    margin-left : 15%;
+    width : 40%;
+    text-align : right;
+    line-height: 50px;
+}

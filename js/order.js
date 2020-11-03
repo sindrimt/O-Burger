@@ -44,19 +44,23 @@ function CreateDiscounts()
     var justCreated = false;
     if (discountsEL == null)
     {
-        discountsEL = document.createElement("div");
         justCreated = true;
+        discountsEL = document.createElement("div");
     } else
     {
         discountsEL.innerHTML = "";
     }
 
+    discountsEL.className = "discounts";
     for (var i = 0; i < discounts.length; i++)
     {
         console.log(i);
         discountsEL.appendChild(CreateDiscount(i));
     }
-    if (justCreated) articleEL.appendChild(discountsEL);
+    if (justCreated)
+    {
+        articleEL.appendChild(discountsEL);
+    }
 }
 function CreateDishes()
 {
@@ -96,8 +100,8 @@ function CreateDiscount(index)
     var text = disDisplay+" ("+disValuePercent+"% off)";
     disTextEL.innerText = text;
 
-    disEL.appendChild(disCheckEL);
     disEL.appendChild(disTextEL);
+    disEL.appendChild(disCheckEL);
     return disEL;  // returns the created element so it can be appended to discountsEL
 }
 function CreateDish(index)
@@ -207,7 +211,7 @@ function UpdateReceipt()
     {
         for (var i = 0; i < discounts.length; i++)
         {
-            var checked = discountsEL.childNodes[i].childNodes[0].checked;
+            var checked = discountsEL.childNodes[i].childNodes[1].checked;
             var discount = discounts[i];
             var discountName = discount["name"];
             var discountValue = discount["value"];
@@ -267,7 +271,7 @@ function UpdateForm()
     nameEL.type = "text";
     nameEL.placeholder = "Full name";
 
-    emailEL.type = "email";
+    emailEL.type = "text";
     emailEL.placeholder = "E-mail (for receipt)";
 
     phoneEL.type = "number";
