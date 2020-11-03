@@ -23,9 +23,10 @@ RButton.id = "RButton";
 bodyEL.appendChild(RButton);
 
 //Array with the img sources
-var imgs = ['../imgs/index/shakeBanner.png',
+var imgs = ['https://media.tenor.com/images/5b61a360d83b8fccc05f5060b048c6e1/tenor.gif',
             '../imgs/index/happyHour.png',
-            '../imgs/index/studentDiscount.png'];
+            '../imgs/index/studentDiscount.png',
+            '../imgs/index/shakeBanner.png'];
 
 //Sets a base cooldown between each image change.
 cooldown = 3000;
