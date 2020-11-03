@@ -18,7 +18,7 @@
     filter: invert(100%);
     top: 50%;
     left: 2%;
-    background: url("../imgs/slideArrow.png") no-repeat;
+    background: url("../imgs/index/slideArrow.png") no-repeat;
     z-index: 100;
     cursor: pointer;
     background-size: 100% 100%;
@@ -36,7 +36,7 @@
     filter: invert(100%);
     right: 2%;
     top: 50%;
-    background: url("../imgs/slideArrow.png") no-repeat;
+    background: url("../imgs/index/slideArrow.png") no-repeat;
     z-index: 100;
     cursor: pointer;
     background-size: 100% 100%;

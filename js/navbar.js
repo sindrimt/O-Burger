@@ -11,11 +11,12 @@ var navBarHeight = 80;
 var imageCellWidthWeight = 1;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
 
 var bodyEL = document.querySelector("body");
-var bannerEL = null;  // bannerEL is the spruce wood-part
+var bannerEL = null;  // bannerEL is the wrapper of bannerBGEL
+var bannerBGEL = null;  // bannerBGEL is the spruce wood-part
 var navBarEL = null;  // navBarEL is the orange part with all the buttons and logo
 var navItems =
 [  // Template to use when creating navButtons
-    {"display":"Home", "link":"index.html", "displayImg":"../imgs/OBurger-logo-cropped.png"},
+    {"display":"Home", "link":"index.html", "displayImg":"../imgs/global/OBurger-logo-cropped.png"},
     {"display":"Order", "link":"order.html"},
     {"display":"Restaurants", "link":"find_restaurant.html"},
     {"display":"O'bout", "link":"about.html"},
@@ -29,7 +30,7 @@ function ResetAll()
 
     bannerEL = GetBanner();
     navBarEL = CreateNavBar();
-
+    CreateBannerBackground();
     navBarEL.innerHTML = "";
     CreateNavItems();
     document.addEventListener("scroll", UpdateNavbar);
@@ -50,10 +51,22 @@ function CreateNavBar()
         // Delete previous navBar.
         navBarEL.parentNode.removeChild(navBarEL);
     }
-    tempEL = document.createElement("div");
+    var tempEL = document.createElement("div");
     tempEL.id = "navBar";
     GetBanner().appendChild(tempEL);
     return tempEL;
+}
+function CreateBannerBackground()
+{
+    if (bannerEL == null) return;
+    if (bannerBGEL != null)
+    {
+        bannerEL.removeChild(bannerBGEL);
+    }
+    bannerBGEL = document.createElement("img");
+    bannerBGEL.className = "centered";
+    bannerBGEL.src = "../imgs/global/sprucewood.jpg";
+    bannerEL.appendChild(bannerBGEL);
 }
 function GetNavBar()
 {
@@ -136,6 +149,11 @@ function ResetStyle()
 {
     navBarEL.style.height = navBarHeight+"px";
     bannerEL.style.height = navBarHeight+bannerHeight+"px";
+    if (!bannerEL.className.includes("centered"))
+    {
+        console.log("activate");
+        bannerEL.className += " centered";
+    }
 }
 function UpdateNavbar()
 {
@@ -153,7 +171,7 @@ function UpdateNavbar()
     {
         var cellEL = navCellELs[i];
         var relWidth = cellEL.relWidth;
-        var absWidth = Math.floor(relWidth*vw);  // floor because if it rounds up, the last button may go on a new line
+        var absWidth = Math.floor(relWidth*vw)-1;  // floor because if it rounds up, the last button may go on a new line
         cellEL.style.width = absWidth+"px";
 
         var itemEL = cellEL.firstChild;
