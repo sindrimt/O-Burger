@@ -29,7 +29,7 @@ article.bg
 article.content
 { /*article.content is inside article.bg, and contains the content of the page*/
   text-align: center;
-  
+  background-color: white;
   padding: 5px 0;
   font-size: 30px;
   min-width: 800px;
@@ -109,7 +109,8 @@ article.content
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 40%;
+  max-height: 40%;
   text-align: center;
   overflow: hidden;
 }
@@ -128,7 +129,6 @@ article.content
   position: absolute;
   min-width: 100%;
   min-height : 100%;
-
   z-index: 101;
 }
   
@@ -150,7 +150,7 @@ article.content
 {
   z-index : 101;
   position: relative;
-  width: 3%;
+  width: 4%;
   right: 44%;
 
 }
@@ -160,7 +160,7 @@ article.content
 {
   z-index : 101;
   position: relative;
-  width: 3%;
+  width: 4%;
   right: 42%;
 }
 
@@ -234,4 +234,7 @@ img.scroll
   /*background-image: url("../imgs/yep.jpg");*/
 
   position:relative;
+}
+body {
+  margin:0; padding:0; box-sizing:border-box;
 }
