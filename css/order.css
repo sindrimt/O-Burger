@@ -42,17 +42,19 @@ article.content
     margin: 20px 0px 20px 0px;
 }
 
-input[type="number"], input[type="text"] {
+input[type="number"], input[type="text"]
+{
     width: 300px;
     height: 10px;
     margin: 15px;
     padding : 15px;
-  }
-  select {
+}
+select
+{
     width: 334px;
     height: 30px;
     margin: 10px;
-  }
+}
 input[type="checkbox"]
 {
     position : relative;
