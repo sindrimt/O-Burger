@@ -18,7 +18,7 @@
 }
 
 .imageText {
-  position: absolute;
+  position: relative;
   font-size: 22px;
   top: 50%;
   left: 10%;
@@ -26,11 +26,17 @@
   padding: 10px;
   border: 2px solid rgba(245, 127, 0, 0.8);
   background: rgba(47, 47, 47, 0.5);
+  z-index: 100;
+  width: 24%;
+  text-align: center;
 }
 
 .imageText a {
-  text-decoration: none;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 .imageText:hover {
