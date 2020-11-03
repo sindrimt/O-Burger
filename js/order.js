@@ -171,6 +171,7 @@ function CreateForm()
     formEL.innerHTML = "";
     formEL.action = "";
     formEL.method = "POST";
+    formEL.id = "receiptForm"
     articleEL.appendChild(formEL);
 }
 function UpdateForm()
