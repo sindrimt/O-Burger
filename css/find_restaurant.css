@@ -1,5 +1,10 @@
-/*Override for articles*/
+/*Ignore aspect ratio here, it's more important that the whole image is visible*/
+.scroll
+{
+   width : 100%;
+}
 
+/*Override for articles*/
 article.content {
    width: 90%;
 }
