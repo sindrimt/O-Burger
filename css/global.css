@@ -29,7 +29,7 @@ article.bg
 article.content
 { /*article.content is inside article.bg, and contains the content of the page*/
   text-align: center;
-  
+  background-color: white;
   padding: 5px 0;
   font-size: 30px;
   min-width: 800px;
