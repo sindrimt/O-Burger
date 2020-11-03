@@ -2,6 +2,10 @@
 // Config
 var reloadButtonText = "Back to order page";
 var reloadText = "Thanks for your order! A receipt has been sent to your email!";
+var discounts =
+[  // Checkboxes before the receipt, that alter price through discounts
+    {"name":"Student discount","display":"Are you a student?", "value":0.25}
+];
 var restaurants =
 [
     {"name":"Honolulu"},
@@ -28,18 +32,39 @@ var receiptLine = "<br>";
 var bodyEL = document.querySelector("body");
 var articleEL = document.getElementsByClassName("content")[0];
 var dishesEL = null;
+var discountsEL = null;
 var receiptEL = null;
 var formEL = null;
 
 
 // ========== FUNCTIONS ==========
 
-// Everything to do with dishes
+function CreateDiscounts()
+{
+    var justCreated = false;
+    if (discountsEL == null)
+    {
+        discountsEL = document.createElement("div");
+        justCreated = true;
+    } else
+    {
+        discountsEL.innerHTML = "";
+    }
+
+    for (var i = 0; i < discounts.length; i++)
+    {
+        console.log(i);
+        discountsEL.appendChild(CreateDiscount(i));
+    }
+    if (justCreated) articleEL.appendChild(discountsEL);
+}
 function CreateDishes()
-{  // Dishes means the menu items where you add and subtract dishes
+{
+    var justCreated = false;
     if (dishesEL == null)
     {
         dishesEL = document.createElement("div");
+        justCreated = true;
     } else
     {
         dishesEL.innerHTML = "";
@@ -47,16 +72,40 @@ function CreateDishes()
 
     for (var i = 0; i < dishes.length; i++)
     {
+        console.log(i);
         dishesEL.appendChild(CreateDish(i));
     }
-    articleEL.appendChild(dishesEL);
+    if (justCreated) articleEL.appendChild(dishesEL);
 }
-function CreateDish(dishIndex)
+function CreateDiscount(index)
 {
-    var dish = dishes[dishIndex];
+    // dis abbreviation for discount, refers to preset discount objects
+    var dis = discounts[index];
+    var disDisplay = dis["display"];
+    var disValue = dis["value"];
+
+    // disEL abbreviation for discountEL
+    var disEL = document.createElement("div");
+    var disCheckEL = document.createElement("input");
+    var disTextEL = document.createElement("span");
+
+    disCheckEL.type = "checkbox";
+    disCheckEL.addEventListener("click", UpdateReceipt);
+
+    var disValuePercent = disValue*100;
+    var text = disDisplay+" ("+disValuePercent+"% off)";
+    disTextEL.innerText = text;
+
+    disEL.appendChild(disCheckEL);
+    disEL.appendChild(disTextEL);
+    return disEL;  // returns the created element so it can be appended to discountsEL
+}
+function CreateDish(index)
+{
+    var dish = dishes[index];
     var dishEL = document.createElement("div");
     dishEL.className = "dish";
-    dishEL.dishIndex = dishIndex;  // Refers to the corresponding dish in dishes variable
+    dishEL.index = index;  // Refers to the corresponding dish in dishes variable
 
     var displayNameEL = document.createElement("div");
     var text = dish["name"];
@@ -102,7 +151,7 @@ function CreateDishButtons()
 }
 function IncreaseDishCount(e) {ChangeDishCount(e, 1);}
 function DecreaseDishCount(e) {ChangeDishCount(e, -1);}
-function ChangeDishCount(e, amount)
+function ChangeDishCount(e, amount = 0)
 {
     var countEL = e.target.parentNode.childNodes[countIndex];
     var count = parseInt(countEL.innerText);
@@ -145,8 +194,8 @@ function UpdateReceipt()
         var count = parseInt(dishEL.childNodes[2].childNodes[countIndex].innerText);
 
         if (count == 0) continue;
-        var dishIndex = dishEL.dishIndex;
-        var dishBP = dishes[dishIndex];
+        var index = dishEL.index;
+        var dishBP = dishes[index];
         var name = dishBP["name"];
         var price = dishBP["price"];
         var cost = Math.round((price*count) * 100) / 100;
@@ -156,7 +205,29 @@ function UpdateReceipt()
     }
     if (receipt != "")
     {
+        for (var i = 0; i < discounts.length; i++)
+        {
+            var checked = discountsEL.childNodes[i].childNodes[0].checked;
+            var discount = discounts[i];
+            var discountName = discount["name"];
+            var discountValue = discount["value"];
+            if (checked)
+            {
+                var absDiscount = totalCost*discountValue;
+                absDiscount = Math.round(absDiscount*100)/100;
+
+                var text = discountName+": -$"+absDiscount+"<br>";
+                receipt += text;
+                totalCost -= absDiscount;
+            }
+        }
+
+
         totalCost = Math.round(totalCost*100)/100;
+
+
+
+
         var finalCost = "Total price: $"+totalCost;
         receiptEL.innerHTML = receipt+receiptLine+finalCost+"<br>";
         receiptDivEL.className = "orangeBorders"
@@ -227,5 +298,6 @@ function UpdateForm()
 
 // ========== INITIALIZATION ==========
 CreateDishes();
+CreateDiscounts();
 CreateReceipt();
 CreateForm();
