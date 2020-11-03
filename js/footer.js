@@ -9,7 +9,7 @@ var footer =
 '            <a href=https://www.instagram.com/barackobama/?hl=en target="_blank"><img'+
 '                    src="../imgs/global/instagram.png" alt="Instagram" id="instagram"></a>'+
 '            <a href=https://docs.google.com/forms/d/e/1FAIpQLSe4xSufUl9toPvV6qXgf01FXZROUV0ViQZG0j13s4xAI2IMzQ/viewform target="_blank"><div'+
-'                    id="review">Leave a review for our webpage here</div></a>'+
+'                    id="review">Leave feedback on our website here!</div></a>'+
 ''+
 '        </div>';
 
