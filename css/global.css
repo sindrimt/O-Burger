@@ -109,7 +109,8 @@ article.content
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 40%;
+  max-height: 40%;
   text-align: center;
   overflow: hidden;
 }
@@ -128,7 +129,6 @@ article.content
   position: absolute;
   min-width: 100%;
   min-height : 100%;
-
   z-index: 101;
 }
   
@@ -150,7 +150,7 @@ article.content
 {
   z-index : 101;
   position: relative;
-  width: 3%;
+  width: 4%;
   right: 44%;
 
 }
@@ -160,7 +160,7 @@ article.content
 {
   z-index : 101;
   position: relative;
-  width: 3%;
+  width: 4%;
   right: 42%;
 }
 
