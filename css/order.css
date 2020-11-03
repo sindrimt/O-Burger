@@ -36,3 +36,9 @@ input
 {
     padding : 20px;
 }
+
+.orangeBorders {
+    border-top: 1px solid rgba(245, 127, 0, 1);
+    border-bottom: 1px solid rgba(245, 127, 0, 1);
+    padding: 10px;
+}
