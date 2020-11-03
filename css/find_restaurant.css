@@ -6,24 +6,29 @@ article.content {
 
 /*Find restaurants*/
 
+.tableWrapper {
+   width: 100%;
+   margin: 50px;
+}
+
 .tableDiv {
    font-size: 20px;
    max-width: 100%;
    border-top: 1px solid rgba(245, 127, 0, 1);
    border-bottom: 1px solid rgba(245, 127, 0, 1);
-   margin: 20px 0px 20px 0px;
+   height: 100%;
 }
 
 /*The table on the find restaurants page. */
 
 .restaurantsTable {
-   margin-top: 10px;
    width: 80%;
-   margin: 20px auto 20px auto;
    padding: 5px;
    text-align: center;
+   margin: 20px auto 20px auto;
 }
 
+.restaurantsTable border
 /* The names of the restaurants in the table (first row) */
 
 .restaurantsName td {
