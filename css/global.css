@@ -10,6 +10,16 @@ body, html
 body, html, input, button, textarea, select {
   font-family: "Signika", Verdana, Geneva, Tahoma, sans-serif;
 }
+input {
+  width: 300px;
+  height: 10px;
+  margin: 20px;
+}
+select {
+  width: 334px;
+  height: 30px;
+  margin: 20px;
+}
 p
 {
   font-size : 20px;
@@ -168,6 +178,15 @@ article.content
 /* SUBMIT PAGES (ORDER & CONTACT) */
 .submitButton
 {
+<<<<<<< HEAD
+    background-color : rgba(245, 127, 0, 1);
+    color : white;
+    border-radius : 10px;
+    padding : 10px;
+    font-size : 20px;
+    cursor : pointer;
+    border : 0px;
+=======
   display: inline-block;
   padding: 0.46em 1.6em;
   border: 0.1em solid black;
@@ -191,6 +210,7 @@ article.content
   cursor: pointer;
   border-color: rgb(252, 168, 80);
 
+>>>>>>> 956edc62491281c2c66cc32bc89a677b76a4690a
 }
 .submitResponse
 {
