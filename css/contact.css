@@ -3,10 +3,9 @@
 .contactDiv {
   max-width: 100%;
   border-top: 1px solid rgba(245, 127, 0, 1);
-  border-bottom: 1px solid rgba(245, 127, 0, 1);
   text-align: center;
   width: 80%;
-  margin: 10px auto 50px auto;
+  margin: 10px auto 0px auto;
   padding: 5px;
   /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
   font-size: 15px;
