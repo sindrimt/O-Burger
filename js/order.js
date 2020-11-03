@@ -15,7 +15,7 @@ var countIndex = 1;
 var commonImgPath = "../imgs/order/";
 var dishes =
 [  // Dish blueprints are stored in objects
-    {"name":"O'Burger",     "price":4.99, "img":"oburger.png"},
+    {"name":"O'Burger",     "price":4.99, "img":"hawaiiBurger.png"},
     {"name":"O'Fries",      "price":1.99, "img":"ofries.png"},
     {"name":"O'Shake",      "price":2.99, "img":"SHAKE.png"},
     {"name":"Soft Drink",   "price":1.99, "img":"softdrink.png"},

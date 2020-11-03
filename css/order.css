@@ -1,7 +1,7 @@
 .dish
 {
     /*background-color : rgb(237, 237, 337);*/
-    width : 200px;
+    width : 320px;
     height : 38vh;
     margin : 10px;
     display : inline-block;
@@ -22,8 +22,8 @@
 .buttonWrapper > *
 {
     display : inline-block;
-    width : 50px;
-    height : 50px;
+    width : 30px;
+    height : 30px;
     cursor : pointer;
 }
 article.content
