@@ -1,7 +1,7 @@
 // ========== GLOBAL VARIABLES ==========
 // Config
 var reloadButtonText = "Back to order page";
-var reloadText = "Thanks for your order! Your food will be ready in approximately never.";
+var reloadText = "Thanks for your order! A receipt has been sent to your email!";
 var restaurants =
 [
     {"name":"Honolulu"},
