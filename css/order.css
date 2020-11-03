@@ -29,7 +29,6 @@
 article.content
 {  /* Override for this special page */
     width : 90%;
-    min-width : 0px;
     min-height : 300px;
 }
 
