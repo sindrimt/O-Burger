@@ -21,7 +21,7 @@ var dishes =
 [  // Dish blueprints are stored in objects
     {"name":"O'Burger",     "price":4.99, "img":"hawaiiBurger.png"},
     {"name":"O'Fries",      "price":1.99, "img":"ofries.png"},
-    {"name":"O'Shake",      "price":2.99, "img":"SHAKE.png"},
+    {"name":"O'Shake",      "price":2.99, "img":"oshake.png"},
     {"name":"O'Beverage",   "price":1.99, "img":"softdrink.png"},
     {"name":"O'Curly",      "price":2.99, "img":"ocurly.png"},
     {"name":"O'Nuggets",    "price":2.99, "img":"onuggets.png"}

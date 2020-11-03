@@ -29,7 +29,6 @@ p
     text-align:center;
 }
 
-
 h5
 {
     padding-bottom: 25px;
@@ -44,7 +43,8 @@ h5
     text-align:center;
 }
 
-.befunky{
+.farmers
+{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -53,7 +53,7 @@ h5
 
 }
 
-.pic
+.obamaCollage
 {
     display: block;
     margin-left: auto;
