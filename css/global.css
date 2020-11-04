@@ -222,7 +222,7 @@ img.centered
 {
   /*Center the image*/
   min-width: 100%;
-  max-width: 100%;
+  min-height: 100%;
   
   position : absolute;
   left : 50%;
@@ -235,7 +235,7 @@ img.scroll
   position : absolute;
   display : block;
   min-width: 100%;
-  max-width: 100%;
+  min-height: 110%;
 }
 .scrollParent
 {
