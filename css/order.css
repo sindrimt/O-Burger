@@ -1,3 +1,6 @@
+html, body {
+    background-color: white;
+}
 .dish
 {
     /*background-color : rgb(237, 237, 337);*/
@@ -29,7 +32,8 @@
 article.content
 {  /* Override for this special page */
     width : 90%;
-    min-height : 300px;
+    min-height: 300px;
+
 }
 
 .orangeBorders {
