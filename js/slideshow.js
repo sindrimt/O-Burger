@@ -19,7 +19,6 @@ var imgs = [
             '../imgs/index/happyHourBanner.png',
             '../imgs/index/studentDiscountBanner.png',
             '../imgs/index/shakeBanner.png',
-            'https://media.tenor.com/images/5b61a360d83b8fccc05f5060b048c6e1/tenor.gif'
         ];
 
 //Sets a base cooldown between each image change.
