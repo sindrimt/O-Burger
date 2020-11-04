@@ -8,7 +8,7 @@ lButton.id = "lButton";
 bodyEL.appendChild(lButton);
 
 var timeoutVar;
-
+var phoneWidth = 600;  // Width, in pixels, before slideshow stops
 //Right button
 var RButton = document.createElement("button");
 RButton.id = "RButton";
@@ -38,7 +38,7 @@ function changeSlide(change) {
     // vw is the width, in pixels, of the user's viewport
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     console.log(vw);
-    if (vw < 600) return;
+    if (vw < phoneWidth) return;
     count += change;
 
     /*Checks if the place in the list if count is before the first element in the list.
