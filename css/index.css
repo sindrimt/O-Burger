@@ -2,12 +2,12 @@
   
 #img1 {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
     
 #slide {
     position: relative;
-    height : 82vh;
+    height : auto;
 }
     
 #lButton {
@@ -45,49 +45,59 @@
     border: none;
     outline: none;
 }
-    
-.pagePreview {
-    position: relative;
-    height : 300px;
-    width : 100%;
-}
 
-.imagePreview {
+article.bg {
+    position: relative;
     width: 100%;
-    height : 100%;
+    height: auto;
 }
 
 /*Gray overlay on the picture of Obama eating an apple on the home page*/
-#obout {
-    background-color: #000000;
-}
+
+.pagePreview {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    background-color: black;
+  }
     
 /*Obama eating an apple*/
 #obamaApple {
+    position: relative;
     width: 100%;
     opacity: 0.5;
-    height : 100%;
+    height : auto;
 }
-    
-/*The text on top of the images on the homepage (O'Story and Find restaurant)*/
+
+#mapPreview {
+    position: relative;
+    width: 100%;
+    opacity: 0.5;
+    height : auto;
+}
+
 .imageText {
-    z-index : 50;
+    display: block;
     position: absolute;
+    font-size: 11px;
     top: 50%;
     left: 50%;
-    color: white;
+    min-height: 18%;
+    min-width: 15%;
+    max-height: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    border: 2px solid rgba(245, 127, 0, 1);
+    text-decoration: none;
+    color: white;
     padding: 10px;
+    border: 2px solid rgba(245, 127, 0, 0.8);
+    background: rgba(47, 47, 47, 0.5);
+    text-align: center;
 }
     
 .imageText:hover {
     opacity: 0.7;
     cursor: pointer;
-}
-    
-/*Image preview of the map*/
-#restaurantText {
-    color: #2f2f2f;
 }
