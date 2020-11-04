@@ -87,7 +87,7 @@ article.bg {
 .imageText {
     display: block;
     position: absolute;
-    font-size: 11px;
+    font-size: 2vmin;
     top: 50%;
     left: 50%;
     min-height: 18%;
@@ -96,7 +96,7 @@ article.bg {
     transform: translate(-50%, -50%);
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 1.2vmin;
     border: 2px solid rgba(245, 127, 0, 0.8);
     background: rgba(47, 47, 47, 0.5);
     text-align: center;

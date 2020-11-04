@@ -51,7 +51,6 @@ article.content
   position: fixed;
   margin: auto;
   font-family: 'Raleway', sans-serif;
-
   width: 100%;
   background-color: rgba(255, 137, 0, 1);
 }
@@ -264,5 +263,10 @@ img.centered
 @media only screen and (max-width: 610px) {
   .navButton {
     font-size : 3.2vmin;
+  }
+}
+@media only screen and (min-width: 3000px) {
+  .navButton {
+    font-size : 3vmin;
   }
 }
