@@ -12,7 +12,7 @@ var timeoutVar;
 var phoneWidth = 600;  // Width, in pixels, before slideshow stops
 //Right button
 var RButton = document.createElement("button");
-RButton.id = "RButton";
+RButton.id = "rButton";
 bodyEL.appendChild(RButton);
 
 //Array with the img sources

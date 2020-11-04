@@ -15,13 +15,13 @@ html {
     height : auto;
 }
     
-#lButton {
+
+#lButton, #rButton
+{  /* Writing common style for two similar imgs is unecessary */
     position: absolute;
-    /*Roterer og inverterer fargen til venstre knapp*/
-    transform: rotate(-90deg);
+    /*Roterer og inverterer fargen til høyre knapp*/
     filter: invert(100%);
     top: 50%;
-    left: 2%;
     background: url("../imgs/index/slideArrow.png") no-repeat;
     z-index: 100;
     cursor: pointer;
@@ -32,23 +32,13 @@ html {
     border: none;
     outline: none;
 }
-    
-#RButton {
-    position: absolute;
-    /*Roterer og inverterer fargen til høyre knapp*/
+#lButton {
+    transform: rotate(-90deg);
+    left: 2%;
+}
+#rButton {
     transform: rotate(90deg);
-    filter: invert(100%);
     right: 2%;
-    top: 50%;
-    background: url("../imgs/index/slideArrow.png") no-repeat;
-    z-index: 100;
-    cursor: pointer;
-    background-size: 100% 100%;
-    width: 40px;
-    height: 40px;
-    opacity: 0.5;
-    border: none;
-    outline: none;
 }
 
 article.bg {
@@ -68,16 +58,8 @@ article.bg {
     margin: 0;
     background-color: black;
   }
-    
-/*Obama eating an apple*/
-#obamaApple {
-    position: relative;
-    width: 100%;
-    opacity: 0.5;
-    height : auto;
-}
 
-#mapPreview {
+#mapPreview, #obamaApple {
     position: relative;
     width: 100%;
     opacity: 0.5;
@@ -109,7 +91,7 @@ article.bg {
 
 @media only screen and (max-width: 600px)
 {
-    #lButton, #RButton
+    #lButton, #rButton
     {
         /* When using phone, slideshow is inactive. This hides the buttons. */
         display : none;
