@@ -221,8 +221,8 @@ article.content
 img.centered
 {
   /*Center the image*/
-  min-width : 100%;
-  min-height : 100%;
+  min-width: 100%;
+  max-width: 100%;
   
   position : absolute;
   left : 50%;
@@ -234,8 +234,8 @@ img.scroll
   z-index : 10;
   position : absolute;
   display : block;
-  min-width : 100%;
-  min-height : 110%;
+  min-width: 100%;
+  max-width: 100%;
 }
 .scrollParent
 {
