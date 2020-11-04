@@ -51,7 +51,7 @@ a {
 #email, #subject, .contactForm textarea
 {
   width: 40%;
-  font-size : 30px;
+  font-size : 20px;
 }
 .contactForm textarea {
   min-width : 300px;
@@ -60,7 +60,6 @@ a {
   max-height : 500px;
   margin-bottom: 10px;
   /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
-  font-size: 18px;
 }
 
 
