@@ -18,7 +18,7 @@
 
 .imageText {
   position: relative;
-  font-size: 14px;
+  font-size: 18px;
   top: 50vh;
   left: 5%;
   color: white;
@@ -26,7 +26,7 @@
   border: 2px solid rgba(245, 127, 0, 0.8);
   background: rgba(47, 47, 47, 0.5);
   z-index: 100;
-  width: 18%;
+  width: 300px;
   text-align: center;
 }
 
