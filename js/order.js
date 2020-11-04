@@ -1,3 +1,5 @@
+// DEPENDS ON submitImplementation.js TO WORK!
+
 // ========== GLOBAL VARIABLES ==========
 // Config
 var reloadButtonText = "Back to order page";
