@@ -109,8 +109,6 @@ article.content
   text-align: center;
   overflow: hidden;
 }
-  
-
 
 /*changes the cursor when hover over images in the footer. */
 #footer a:hover
@@ -127,7 +125,6 @@ article.content
   z-index: 101;
 }
   
-
 /*The logo in the footer */
 #footerLogo
 {
@@ -137,9 +134,6 @@ article.content
   left: 57px;
 }
   
- 
- 
- 
 /* Facebook image in footer */
 #facebook
 {
@@ -160,6 +154,7 @@ article.content
   right: 42%;
   padding-bottom: 5%;
 }
+
 #review
 {
   display : inline-block;
@@ -175,6 +170,7 @@ article.content
   padding : 40px;
   font-size: 30px;
 }
+
 #review:hover
 {
   background-color: rgba(245, 127, 0, 1);
@@ -208,6 +204,7 @@ article.content
   border-color: rgb(252, 168, 80);
 
 }
+
 .submitResponse
 {
     position : absolute;
@@ -228,6 +225,7 @@ img.centered
   left : 50%;
   transform : translateX(-50%);
 }
+
 /*SCROLL IMAGES*/
 img.scroll
 {
@@ -237,6 +235,7 @@ img.scroll
   min-width: 100%;
   min-height: 110%;
 }
+
 .scrollParent
 {
   display : block;
@@ -247,10 +246,6 @@ img.scroll
   background-position: center;
   background-size: cover;
   background-color: black;
-  /*background-image: url("../imgs/yep.jpg");*/
-
   position:relative;
 }
-body {
-  margin:0; padding:0; box-sizing:border-box;
-}
+
