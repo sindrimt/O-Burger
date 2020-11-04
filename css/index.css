@@ -5,12 +5,12 @@ html {
 
 /*ADDED FOR SLIDESHOW*/
   
-#img1 {
+#slide {
     width: 100%;
     height: auto;
 }
     
-#slide {
+#slideshow {
     position: relative;
     height : auto;
 }
