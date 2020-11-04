@@ -19,8 +19,8 @@
 .imageText {
   position: relative;
   font-size: 22px;
-  top: 50%;
-  left: 10%;
+  top: 60vh;
+  left: 5%;
   color: white;
   padding: 10px;
   border: 2px solid rgba(245, 127, 0, 0.8);
