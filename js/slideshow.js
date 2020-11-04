@@ -16,8 +16,8 @@ bodyEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = [
-            '../imgs/index/happyHour.png',
-            '../imgs/index/studentDiscount.png',
+            '../imgs/index/happyHourBanner.png',
+            '../imgs/index/studentDiscountBanner.png',
             '../imgs/index/shakeBanner.png',
             'https://media.tenor.com/images/5b61a360d83b8fccc05f5060b048c6e1/tenor.gif'
         ];
