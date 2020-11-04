@@ -16,6 +16,10 @@
   height: 510px;
 }
 
+article.content{
+  max-width: 80%;
+}
+
 .imageText {
   position: relative;
   font-size: 18px;
