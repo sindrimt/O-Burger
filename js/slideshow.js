@@ -2,6 +2,7 @@
 var bodyEL = document.querySelector("body");
 var contentEL = document.querySelector("article.content");
 
+var slideImgEL = document.getElementById("img1");
 //Left button
 var lButton = document.createElement("button");
 lButton.id = "lButton";
@@ -38,7 +39,12 @@ function changeSlide(change) {
     // vw is the width, in pixels, of the user's viewport
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     console.log(vw);
-    if (vw < phoneWidth) return;
+    if (vw < phoneWidth)
+    {  // Either mobile user or small window. This effectively disables slideshow and just displays the current image
+      // However, if the page just got loaded, the current image is not rendered yet. This must be taken care of.
+      if (!slideImgEL.hasAttribute("src")) slideImgEL.src = imgs[count];
+      return;
+    }
     count += change;
 
     /*Checks if the place in the list if count is before the first element in the list.
@@ -53,7 +59,7 @@ function changeSlide(change) {
          count = 0;
     } 
 
-    document.getElementById('img1').src = imgs[count];
+    slideImgEL.src = imgs[count];
     
 }
 function NextSlide() {changeSlide(1);}
