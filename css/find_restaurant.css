@@ -1,8 +1,8 @@
 /*Ignore aspect ratio here, it's more important that the whole image is visible*/
-.scroll
+/* .scroll
 {
    width : 100%;
-}
+} */
 
 /*Override for articles*/
 article.content {
@@ -51,4 +51,5 @@ article.content {
 #mapImg {
    align-content: center;
    width: 100%;
+   height: auto;
 }
