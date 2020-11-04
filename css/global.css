@@ -263,6 +263,6 @@ img.centered
 }
 @media only screen and (max-width: 610px) {
   .navButton {
-    font-size : 3.4vmin;
+    font-size : 3.2vmin;
   }
 }
