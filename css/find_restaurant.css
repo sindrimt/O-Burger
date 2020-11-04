@@ -16,11 +16,12 @@ article.content {
    margin: 50px;
 }
 
+/*Made the borders white instead of removing them because the removal causes blank space*/
 .tableDiv {
    font-size: 20px;
    max-width: 100%;
-   border-top: 1px solid rgba(245, 127, 0, 1);
-   border-bottom: 1px solid rgba(245, 127, 0, 1);
+   border-top: 1px solid white;
+   border-bottom: 1px solid white;
    height: 100%;
 }
 
