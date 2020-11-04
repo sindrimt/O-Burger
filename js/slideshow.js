@@ -16,6 +16,7 @@ bodyEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = [
+
             '../imgs/index/happyHourBanner.png',
             '../imgs/index/studentDiscountBanner.png',
             '../imgs/index/shakeBanner.png',
@@ -28,6 +29,16 @@ count = 0;
 
 //Changes the slides
 function changeSlide(change) {
+    // If the user clicked the left or right button, the timer for next slide should be reset.
+    // Removes timeout.
+    clearTimeout(timeoutVar);
+    // Sets the timeout to the set cooldown
+    timeoutVar = setTimeout("NextSlide()", cooldown);
+
+    // vw is the width, in pixels, of the user's viewport
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    console.log(vw);
+    if (vw < 600) return;
     count += change;
 
     /*Checks if the place in the list if count is before the first element in the list.
@@ -43,11 +54,6 @@ function changeSlide(change) {
     } 
 
     document.getElementById('img1').src = imgs[count];
-    // If the user clicked the left or right button, the timer for next slide should be reset.
-    // Removes timeout.
-    clearTimeout(timeoutVar);
-    // Sets the timeout to the set cooldown
-    timeoutVar = setTimeout("NextSlide()", cooldown);
     
 }
 function NextSlide() {changeSlide(1);}
