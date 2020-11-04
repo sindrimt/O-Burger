@@ -106,3 +106,12 @@ article.bg {
     opacity: 0.7;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px)
+{
+    #lButton, #RButton
+    {
+        /* When using phone, slideshow is inactive. This hides the buttons. */
+        display : none;
+    }
+}
