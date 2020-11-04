@@ -250,3 +250,19 @@ img.centered
   left : 50%;
   transform : translateX(-50%);
 }
+
+@media only screen and (max-width: 800px) {
+  .navButton {
+    font-size : 4.5vmin;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .navButton {
+    font-size : 3.5vmin;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .navButton {
+    font-size : 3.4vmin;
+  }
+}
