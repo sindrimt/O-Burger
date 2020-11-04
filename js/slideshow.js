@@ -2,7 +2,11 @@
 var bodyEL = document.querySelector("body");
 var contentEL = document.querySelector("article.content");
 
-var slideImgEL = document.getElementById("img1");
+var slideshowEL = document.getElementById("slideshow");
+var slideImgEL = document.createElement("img");
+slideImgEL.id = "slide";
+slideImgEL.alt = "Slideshow";
+slideshowEL.appendChild(slideImgEL);
 //Left button
 var lButton = document.createElement("button");
 lButton.id = "lButton";
@@ -12,7 +16,7 @@ var timeoutVar;
 var phoneWidth = 600;  // Width, in pixels, before slideshow stops
 //Right button
 var RButton = document.createElement("button");
-RButton.id = "RButton";
+RButton.id = "rButton";
 bodyEL.appendChild(RButton);
 
 //Array with the img sources
