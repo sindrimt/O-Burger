@@ -280,6 +280,7 @@ function UpdateForm()
     phoneEL.min = "0";
     phoneEL.max = "99999999999";
     phoneEL.placeholder = "Phone number";
+    phoneEL.required = true;
 
     var orderButtonEL = document.createElement("button");
     orderButtonEL.type = "button";
