@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap">
     <link rel='icon' href='../imgs/global/OBurger-logo.png' type='image/x-icon'>
-
 </head>
 
 <body>
     <div id="banner"></div>
     <div id="navbar"></div>
     <div class="scrollParent">
-        <img src="../imgs/restaurants/map.png" alt="Map" class="scroll">
+      <div id="map" class = "scroll"></div>
     </div>
+  
 
       <!-- Add a background color and large text to the whole page -->
     <article class="bg">
@@ -40,15 +40,15 @@
                             Sun: 08:00 a.m - 10:00 p.m</td>
                     </tr>
                     <tr>
-                        <td>1450 Ala Moana Blvd, <br>
+                        <td><a href = "#" id = "moana">1450 Ala Moana Blvd, <br>
                             Honolulu, HI <br>
-                            96814</td>
-                        <td>2730 Airport Dr, <br>
+                            96814</td></a>
+                        <td><a href = "#" id = "vegas">2730 Airport Dr, <br>
                             North Las Vegas, NV <br>
-                            89032</td>
-                        <td>1900 Folsom St, <br>
+                            89032</td></a>
+                        <td><a href = "#" id = "fran">1900 Folsom St, <br>
                             San Francisco, CA <br>
-                            94103</td>
+                            94103</td></a>
                     </tr>
                     <tr>
                         <td>Contact Us: +1 808-935-9117</td>
@@ -71,15 +71,15 @@
                             Sun: 10:00 a.m - 09:00 p.m</td>
                     </tr>
                     <tr>
-                        <td>364 N Beverly Dr, <br>
+                        <td><a href = "#" id = "hills">364 N Beverly Dr, <br>
                             Beverly Hills, CA <br>
-                            90210</td>
-                        <td>2104 Main St, <br>
+                            90210</td></a>
+                        <td><a href = "#" id = "monica">2104 Main St, <br>
                             Santa Monica, CA <br>
-                            90405</td>
-                        <td>1589 N Palm Ave, <br>
+                            90405</td></a>
+                        <td><a href = "#" id = "fresno">1589 N Palm Ave, <br>
                             Fresno, CA <br>
-                            93728</td>
+                            93728</td></a>
                     </tr>
                     <tr>
                         <td>Contact Us: +1 310-278-7270</td>
@@ -90,9 +90,15 @@
             </div>
         </article>
     </article>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcS4lzHA5CvpZjrSFT9PHCZm0f7W27T-U&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
+    <script src = "../js/find_resturants.js"></script>
     <script src="../js/footer.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/scroll.js"></script>
+
 </body>
 
 </html>
