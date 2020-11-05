@@ -59,8 +59,13 @@ article.content {
    width: 100%;
 }
 
-a:link {
+a {
    text-decoration: none;
+   color: rgb(247, 128, 31);
+ }
+
+ a:hover {
+    color: rgb(245, 157, 84);
  }
 
  #posText {
@@ -69,5 +74,8 @@ a:link {
    left: 2%;
    color: black;
    z-index: 9099999;
-   font-size: 30px;
+   font-size: 32px;
+   padding: 10px;
+   border: 2px solid rgb(121, 120, 120);
+   background-color: rgba(236, 235, 235, 0.466);
  }
