@@ -28,7 +28,7 @@ article.content {
 /*The table on the find restaurants page. */
 
 .restaurantsTable {
-   width: 100%;
+   width: 80%;
    padding: 5px;
    text-align: center;
    margin: 20px auto 20px auto;
@@ -72,10 +72,10 @@ a {
    position: absolute;
    top: 80%;
    left: 2%;
-   color: black;
+   color: rgb(70, 69, 69);
    z-index: 99;
    font-size: 32px;
    padding: 10px;
-   border: 2px solid rgb(121, 120, 120);
-   background-color: rgba(236, 235, 235, 0.466);
+   border: 2px solid rgba(252, 183, 137, 0.568);
+   background-color: rgba(236, 235, 235, 0.055);
  }

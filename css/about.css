@@ -39,3 +39,7 @@ article.content
     padding-top: 32px;
     padding-bottom:50px;
 }
+
+#farmImg {
+    opacity: 0.7;
+}
