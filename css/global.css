@@ -1,3 +1,17 @@
+/*ANIMATIONS*/
+@keyframes navDropdown
+{
+  0%
+  {
+    max-height : 0%;
+  }
+  100%
+  {
+    max-height: 300%;
+  }
+}
+
+
 /*=========================================*/
 /*ARTICLE & MISC*/
 body, html
@@ -44,15 +58,16 @@ article.content
   overflow : hidden;
 }
   
- #navBar
+#navBar
 {
+  box-shadow: 0px 0px 5px black;
+  background-color: rgba(255, 137, 0, 1);
   display: inline-block;
   z-index: 1000;
   position: fixed;
   margin: auto;
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   width: 100%;
-  background-color: rgba(255, 137, 0, 1);
 }
   
 .navCell
@@ -70,20 +85,19 @@ article.content
   
 .navImg {
 
-  /*background-color : red;*/
   position : relative;
 }
 
 .navButton
 {
+  background-color: rgba(255, 137, 0, 1);
   font-family : inherit;
   text-decoration : none;
   border : none;
   border-bottom : 0px solid black;
   color : white;
   width : 100%;
-  background-color : transparent;
-  font-size : 5vmin;
+  font-size : 40px;/*5vmin;*/
   text-align : center;
   transition : 0s;
   overflow : hidden;
@@ -93,8 +107,9 @@ article.content
 {
   transition: 0s;
   color: lightgrey;
-  background-color: rgba(245, 127, 0, 1);
+  background-color: rgba(235, 117, 0, 1);
   text-shadow: 1px 1px black;
+  
 }
 
 .menuCell
@@ -104,15 +119,21 @@ article.content
 .menuButton
 {
   width : 100%;
+  opacity: 0.9;
 }
-
+.menuButton:hover
+{
+  border : 1px solid black;
+}
 .menu
 { /* The fancy dropdown menu that appears when screen width is too low */
-  background-color: red;
+  z-index : -10;
   position: relative;
   width : 100%;
+  animation : navDropdown 0.25s;
   max-height : 300%;
   overflow-y : scroll;
+  box-shadow: 0px 1px 10px black;
 }
 
 /*=========================================*/
@@ -225,12 +246,12 @@ article.content
 
 .submitResponse
 {
-    position : absolute;
-    left : 25%;
-    top : 35%;
-    margin : auto;
-    width : 50%;
-    height : 50%;
+  position : absolute;
+  left : 25%;
+  top : 35%;
+  margin : auto;
+  width : 50%;
+  height : 50%;
 }
 
 /*=========================================*/
@@ -267,7 +288,7 @@ img.centered
   left : 50%;
   transform : translateX(-50%);
 }
-
+/*
 @media only screen and (max-width: 800px) {
   .navButton {
     font-size : 4.5vmin;
@@ -283,8 +304,9 @@ img.centered
     font-size : 3.2vmin;
   }
 }
+*/
 @media only screen and (min-width: 3000px) {
   .navButton {
-    font-size : 3vmin;
+    font-size : 60px;
   }
 }

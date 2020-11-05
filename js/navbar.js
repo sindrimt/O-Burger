@@ -9,7 +9,7 @@
 var bannerHeight = 70;
 var navBarHeight = 80;
 var imageCellWidthWeight = 1;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
-var showMenuAtSize = 600;  // If device width in pixels is below this, show menu
+var showMenuAtSize = 1100;  // If device width in pixels is below this, show menu
 var showMenu = null;  // Stores if navbar shows menu or just items right out
 var menuText = "Pages V";
 
