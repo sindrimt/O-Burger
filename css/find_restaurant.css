@@ -59,8 +59,13 @@ article.content {
    width: 100%;
 }
 
-a:link {
+a {
    text-decoration: none;
+   color: rgb(247, 128, 31);
+ }
+
+ a:hover {
+    color: rgb(245, 157, 84);
  }
 
  #posText {
