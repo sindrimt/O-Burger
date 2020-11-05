@@ -38,10 +38,4 @@ instagramEL.alt = "Instagram";
 instagramEL.id = "instagram";
 CreateWrapperFor(instagramEL, "https://www.instagram.com/barackobama/?hl=en", true);
 
-var feedbackEL = document.createElement("div");
-feedbackEL.id = "review";
-feedbackEL.innerHTML = "Leave feedback (google forms)";
-CreateWrapperFor(feedbackEL, "https://docs.google.com/forms/d/e/1FAIpQLSe4xSufUl9toPvV6qXgf01FXZROUV0ViQZG0j13s4xAI2IMzQ/viewform", true);
-
-
 bodyEL.appendChild(footerEL);
