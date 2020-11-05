@@ -11,7 +11,7 @@ var navBarHeight = 80;
 var imageCellWidthWeight = 1;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
 var showMenuAtSize = 1100;  // If device width in pixels is below this, show menu
 var showMenu = null;  // Stores if navbar shows menu or just items right out
-var menuText = "Pages V";
+var menuText = "MENU";
 
 var bodyEL = document.querySelector("body");
 var bannerEL = null;  // bannerEL is the wrapper of bannerBGEL
@@ -102,7 +102,6 @@ function CreateMenu()
 }
 function ShowMenuItems(e)
 {
-    console.log("show!");
     var dropdownEL = e.target;
 
     CreateItems(true);  // Create items, but specified isMenu = true
@@ -115,7 +114,6 @@ function ShowMenuItems(e)
 }
 function HideMenuItems(e)
 {
-    console.log("hide!");
     var dropdownEL = e.target;
     menuItemsEL.parentNode.removeChild(menuItemsEL);  // Remove menuItemsEL from the document.
     menuItemsEL = null;  // Remove the element from the script, since it shouldn't be accessible anymore
@@ -169,7 +167,7 @@ function CreateItems(isMenu = false)
             // Menu buttons have both navButton and menuButton classes!
             // The menuButton class works as an override for navButton,
             // rather than needing its own, separate style in global.css.
-            itemEL.innerText = thisDisplay;
+            itemEL.innerText = thisDisplay.toUpperCase();
             itemEL.style.height = navBarEL.style.height;
         }
 
@@ -229,7 +227,6 @@ function UpdateNavbar()
         showMenu = false;
         
         CreateItems(false);  // Creates items, isMenu = false since navbar should have the items
-        console.log("Create nav items!");
     }
     else if (showMenu != true && vw < showMenuAtSize)
     {  // if menu wasn't previously shown, but now should
