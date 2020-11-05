@@ -10,14 +10,14 @@ slideshowEL.appendChild(slideImgEL);
 //Left button
 var lButton = document.createElement("button");
 lButton.id = "lButton";
-bodyEL.appendChild(lButton);
+slideshowEL.appendChild(lButton);
 
 var timeoutVar;
 var phoneWidth = 600;  // Width, in pixels, before slideshow stops
 //Right button
 var RButton = document.createElement("button");
 RButton.id = "rButton";
-bodyEL.appendChild(RButton);
+slideshowEL.appendChild(RButton);
 
 //Array with the img sources
 var imgs = [
