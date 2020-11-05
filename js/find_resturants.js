@@ -1,22 +1,31 @@
+//Creates a global variable, so it can be changed later on
 var currentPos = { lat: 21.291278, lng: -157.842922 };
   
-    // Initialize and add the map
+    
+    // This function is for the most part taken from: 
+    // https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 
+    // Initialize and add the map
     function initMap() {
       
+      //The current position of the link clicked will changed to the global variable
       pos = currentPos;
       
       const map = new google.maps.Map(document.getElementById("map"), {
+        //Dictates the amount of zoom
         zoom: 15,
+        //Centers the map to the current position
         center: pos,
       });
-
+      //Sets the marker
       const marker = new google.maps.Marker({
+        //The positon
         position: pos,
         map: map,
       });
     }
 
+    //These lines gets all the link elements from find_resturants.html
     var linkMoana = document.getElementById('moana');
     linkMoana.onclick = updateMoana;
 
@@ -35,8 +44,11 @@ var currentPos = { lat: 21.291278, lng: -157.842922 };
     var linkFresno = document.getElementById('fresno');
     linkFresno.onclick = updateFresno;
 
+    //Gets the posText element from find_resturants.html
     posTextEL = document.getElementById('posText');
 
+    //All there functions updates the current position and changes the 
+    //now viewing
     function updateMoana() {
      console.log("moana");
      posTextEL.innerHTML = "Viewing: Moana";
