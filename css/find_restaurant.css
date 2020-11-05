@@ -62,3 +62,12 @@ article.content {
 a:link {
    text-decoration: none;
  }
+
+ #posText {
+   position: absolute;
+   top: 80%;
+   left: 2%;
+   color: black;
+   z-index: 9099999;
+   font-size: 30px;
+ }
