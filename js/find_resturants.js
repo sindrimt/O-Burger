@@ -50,43 +50,39 @@ var currentPos = { lat: 21.291278, lng: -157.842922 };
     //All there functions updates the current position and changes the 
     //now viewing
     function updateMoana() {
-     console.log("moana");
      posTextEL.innerHTML = "O'Burger: Honolulu";
      currentPos = { lat: 21.293493, lng: -157.85005 };
      initMap();
     }
 
     function updateVegas() {
-     console.log("vegas baby");
      posTextEL.innerHTML = "O'Burger: Las Vegas";
      currentPos = { lat: 36.211, lng: -115.194 };
      initMap();
     }
 
     function updateFran() {
-     console.log("fran");
      posTextEL.innerHTML = "O'Burger: San Fransisco";
      currentPos = { lat: 37.773972, lng: -122.431297 };
      initMap();
     }
 
     function updateHills() {
-     console.log("hills");
      posTextEL.innerHTML = "O'Burger: Beverly Hills";
      currentPos = { lat: 34.0698712, lng: -118.4014686 };
      initMap();
     }
 
     function updateMonica() {
-     console.log("monica");
      posTextEL.innerHTML = "O'Burger: Santa Monica";
      currentPos = { lat: 34.006147, lng: -118.4881439 };
      initMap();
     }
 
     function updateFresno() {
-     console.log("fresno");
      posTextEL.innerHTML = "O'Burger: Fresno";
      currentPos = { lat: 36.7646259, lng: -119.8090723 };
      initMap();
     }
+
+ 
