@@ -11,7 +11,7 @@ var navBarHeight = 80;
 var imageCellWidthWeight = 1;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
 var showMenuAtSize = 1100;  // If device width in pixels is below this, show menu
 var showMenu = null;  // Stores if navbar shows menu or just items right out
-var menuText = "Menu";
+var menuText = "MENU";
 
 var bodyEL = document.querySelector("body");
 var bannerEL = null;  // bannerEL is the wrapper of bannerBGEL
@@ -167,7 +167,7 @@ function CreateItems(isMenu = false)
             // Menu buttons have both navButton and menuButton classes!
             // The menuButton class works as an override for navButton,
             // rather than needing its own, separate style in global.css.
-            itemEL.innerText = thisDisplay;
+            itemEL.innerText = thisDisplay.toUpperCase();
             itemEL.style.height = navBarEL.style.height;
         }
 
