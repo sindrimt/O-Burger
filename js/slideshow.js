@@ -42,7 +42,6 @@ function changeSlide(change) {
 
     // vw is the width, in pixels, of the user's viewport
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    console.log(vw);
     if (vw < phoneWidth)
     {  // Either mobile user or small window. This effectively disables slideshow and just displays the current image
       // However, if the page just got loaded, the current image is not rendered yet. This must be taken care of.

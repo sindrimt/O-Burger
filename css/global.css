@@ -97,6 +97,24 @@ article.content
   text-shadow: 1px 1px black;
 }
 
+.menuCell
+{
+  width : 100%;
+}
+.menuButton
+{
+  width : 100%;
+}
+
+.menu
+{ /* The fancy dropdown menu that appears when screen width is too low */
+  background-color: red;
+  position: relative;
+  width : 100%;
+  max-height : 300%;
+  overflow-y : scroll;
+}
+
 /*=========================================*/
 /*FOOTER*/
 

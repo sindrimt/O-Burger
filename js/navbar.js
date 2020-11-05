@@ -9,11 +9,15 @@
 var bannerHeight = 70;
 var navBarHeight = 80;
 var imageCellWidthWeight = 1;  // Cell widths get distributed among items. Image cells get this weight compared to buttons, which get 1 weight.
+var showMenuAtSize = 600;  // If device width in pixels is below this, show menu
+var showMenu = null;  // Stores if navbar shows menu or just items right out
+var menuText = "Pages V";
 
 var bodyEL = document.querySelector("body");
 var bannerEL = null;  // bannerEL is the wrapper of bannerBGEL
 var bannerBGEL = null;  // bannerBGEL is the spruce wood-part
 var navBarEL = null;  // navBarEL is the orange part with all the buttons and logo
+var menuItemsEL = null;
 var navItems =
 [  // Template to use when creating navButtons
     {"display":"Home", "link":"index.html", "displayImg":"../imgs/global/OBurger-logo-cropped.png"},
@@ -32,7 +36,7 @@ function ResetAll()
     navBarEL = CreateNavBar();
     CreateBannerBackground();
     navBarEL.innerHTML = "";
-    CreateNavItems();
+    CreateItems(false);  // Create items where isMenu = false, which means start the page using navbar.
     document.addEventListener("scroll", UpdateNavbar);
     window.addEventListener("resize", UpdateNavbar);
     ResetStyle();
@@ -80,44 +84,102 @@ function GetBanner()
     if (tempEL == null) console.error("navBar.js ERROR: Banner not found in document. Did you forget to add a div with id='banner' in the HTML?");
     return tempEL;
 }
-function CreateNavItems()
+function CreateMenu()
+{  // Creates a dropdown-menu which can be clicked to reveal the pages.
+    navBarEL.innerHTML = "";
+
+    var itemCellEL = document.createElement("span");
+    itemCellEL.className = "navCell";
+    itemCellEL.relWidth = 1;  // Take up the entire navbar
+    var dropdownEL = document.createElement("button");
+    dropdownEL.innerText = menuText;
+    dropdownEL.className = "navButton";
+    dropdownEL.style.height = navBarEL.style.height;
+    dropdownEL.addEventListener("click", ShowMenuItems);
+
+    itemCellEL.appendChild(dropdownEL);
+    navBarEL.appendChild(itemCellEL);
+}
+function ShowMenuItems(e)
 {
-    var weightSum = GetNavItemWeightSum();
+    console.log("show!");
+    var dropdownEL = e.target;
+
+    CreateItems(true);  // Create items, but specified isMenu = true
+
+    navBarEL.appendChild(menuItemsEL);
+
+    dropdownEL.removeEventListener("click", ShowMenuItems);
+    dropdownEL.addEventListener("click", HideMenuItems);
+
+}
+function HideMenuItems(e)
+{
+    console.log("hide!");
+    var dropdownEL = e.target;
+    menuItemsEL.parentNode.removeChild(menuItemsEL);  // Remove menuItemsEL from the document.
+    menuItemsEL = null;  // Remove the element from the script, since it shouldn't be accessible anymore
+    dropdownEL.removeEventListener("click", HideMenuItems);
+    dropdownEL.addEventListener("click", ShowMenuItems);
+}
+function CreateItems(isMenu = false)
+{  // Combined function for creating items in both navbar and menu. Takes in argument bool isMenu.
+    if (isMenu)
+    {
+        menuItemsEL = document.createElement("div");
+        menuItemsEL.className = "menu";
+    }
+    else
+    {
+        navBarEL.innerHTML = "";  // Resets in case it already exists
+        var weightSum = GetNavItemWeightSum();
+        // weightSum is only important if the items are NOT in a menu.
+    }
     for (var i = 0; i < navItems.length; i++)
     {  // i: navItem-index
         var itemCellEL = document.createElement("span");
         itemCellEL.className = "navCell";
+        if (isMenu) itemCellEL.className += " menuCell";
+        // Menu cells have both navCell and menuCell classes!
+        // The menuCell class works as an override for navCell,
+        // rather than needing its own, separate style in global.css.
         var thisItem = navItems[i];
         var thisDisplay = thisItem["display"];
         var thisLink = thisItem["link"];
-        var itemWidth = 1/weightSum;
+        if (!isMenu) var itemWidth = 1/weightSum;
 
-        if ("displayImg" in thisItem)
-        {  // Display an image instead of text
+        if (!isMenu && "displayImg" in thisItem)
+        {  // This object is configured to show logo instead of text.
+            // If it's a menu, the logo is never shown regardless.
             var itemEL = document.createElement("img");
             itemWidth *= imageCellWidthWeight;
             itemEL.className = "navImg";
-            // Images need to be loaded in order to get their width and height,
-            // which is necessary for the page to look alright.
+            // Images need to be loaded in order to get their width and height.
+            // Knowing their width and height is necessary for the page to look alright.
             itemEL.addEventListener("load", UpdateNavbar);
             itemEL.src = thisItem["displayImg"];
             itemEL.alt = thisDisplay;
-            itemEL.style.height = navBarHeight+"px";
+            itemEL.style.height = navBarEL.style.height;
             
         } else
-        {  // Display text
+        {  // Display text as usual.
             var itemEL = document.createElement("button");
             itemEL.className = "navButton";
+            if (isMenu) itemEL.className += " menuButton";
+            // Menu buttons have both navButton and menuButton classes!
+            // The menuButton class works as an override for navButton,
+            // rather than needing its own, separate style in global.css.
             itemEL.innerText = thisDisplay;
-            itemEL.style.height = navBarHeight+"px";
+            itemEL.style.height = navBarEL.style.height;
         }
 
-        itemCellEL.relWidth = itemWidth;  // Fraction of window space the cell/button should take
+        if (!isMenu) itemCellEL.relWidth = itemWidth;  // Fraction of window space the cell/button should take
         itemEL.link = thisLink;
         itemEL.addEventListener("click", NavItemClicked);
 
         itemCellEL.appendChild(itemEL);
-        navBarEL.appendChild(itemCellEL);
+        if (isMenu) menuItemsEL.appendChild(itemCellEL);
+        else navBarEL.appendChild(itemCellEL);
     }
 }
 function GetNavItemWeightSum()
@@ -151,7 +213,6 @@ function ResetStyle()
     bannerEL.style.height = navBarHeight+bannerHeight+"px";
     if (!bannerEL.className.includes("centered"))
     {
-        console.log("activate");
         bannerEL.className += " centered";
     }
 }
@@ -159,6 +220,26 @@ function UpdateNavbar()
 {
     var scroll = document.scrollingElement.scrollTop;
     const vw = document.documentElement.clientWidth;
+
+    // The following code creates a menu if supposed to,
+    // or fills in nav items if not.
+    // Only creates nav items or menu if the mode changed, to improve performance.
+    if (showMenu != false && vw > showMenuAtSize)
+    {  // if menu was previously shown, but now shouldn't
+        showMenu = false;
+        
+        CreateItems(false);  // Creates items, isMenu = false since navbar should have the items
+        console.log("Create nav items!");
+    }
+    else if (showMenu != true && vw < showMenuAtSize)
+    {  // if menu wasn't previously shown, but now should
+        showMenu = true;
+        CreateMenu();
+    }
+
+
+
+
     // y is a scalar [0, 1]. 0 => navbar is at top, 1 => is as low as possible
     var y = (bannerHeight-scroll)/bannerHeight;
     if (y < 0) y = 0;
