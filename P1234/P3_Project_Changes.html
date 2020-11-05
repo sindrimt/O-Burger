@@ -26,58 +26,96 @@
         </section>
         <section>
             <h2>Changes Made to HTML Files:</h2>
-            <p>Innledende tekst</p>
-            <p>
-                <strong>Changes to .html:</strong>
-                Endringer...
+            <p>We decided to keep our five intended pages. However, we have made minimal changes to the majority of the
+                pages, these are summarized and listed below.
             </p>
             <p>
-                <strong>Changes to .html:</strong>
-                Endringer...
+                <strong>Changes to index.html (Homepage):</strong>
+                The slideshow is now updated with fitting deals and discounts. When comparing the intended and the final
+                webpage, we have added more visual buttons for “O’Story” and “Find your restaurant”, which will help the
+                user navigate to the different pages easier. Finally, we decided to add a darker overlay over both the
+                banners of “O’Story” and “Find your restaurant”, considering the intended lighter overlay stood out too
+                much.
             </p>
             <p>
-                <strong>Changes to .html:</strong>
-                Endringer...
+                <strong>Changes to about.html:</strong>
+                The intended banner has been replaced with a more fitting image with higher quality. The background
+                images behind the texts have also been replaced with picture collages, which are located below each
+                text, respectively. We added a grey overlay over the collages to make them smoother and fit the general
+                color scheme of the website.
             </p>
             <p>
-                <strong>Changes to .html:</strong>
-                Endringer...
+                <strong>Changes to order.html:</strong>
+                We decided to change the images for O’Burger to a Hawaiian Burger, which will correspond with the text
+                in the “O’Story”-section. Soft drink was updated to O’Beverage to fit the O’-name theme. Regarding the
+                receipt, we decided to add a checkbox, which will give the user a student discount if checked. The
+                overall design of the receipt also received some small tweaks, e.g adding the orange lines to separate
+                the receipt from the menu items and the input areas.
             </p>
             <p>
-                <strong>Changes to .html:</strong>
-                Endringer...
+                <strong>Changes to find_restaurant.html:</strong>
+                We decided to replace the static image with a live one, using Google Maps API. The overall design on
+                this page also received some small changes:
             </p>
+            <ul>
+                <li>Only restaurant names are in bold text.</li>
+                <li>Removed the horizontal orange border lines.</li>
+                <li>The addresses of each restaurant is now clickable, and will pinpoint location on the map. (see
+                    <b>find_restaurant.js</b> in "Changes to intended Javascript files:")</li>
+            </ul>
             <p>
-                <strong>Changes to .html:</strong>
-                Endringer...
+                <strong>Changes to contact.html:</strong>
+                This page didn't undergo many changes. We added an image of Obama and a "How can we help you"-button,
+                which will direct the user down to the FAQ and contact form.
             </p>
         </section>
         <section>
             <h2>Changes Made to Javascript and CSS:</h2>
-            <p>Innledende tekst</p>
+            <p>We decided to add three additional scripts, </p>
             <h3>Changes to intended Javascript files:</h3>
             <p>
-                <strong>Changes to .js:</strong>
+                <strong>Changes to navbar.js:</strong>
+                In P2 we wrote that the O’Burger logo would be “slightly” bigger when scrolling to the top of the page.
+                In the final website, that is an underestimation. The logo is quite enormous. No more changes have been
+                made to the navbar functionality, only style, which will be covered later. </p>
+            <p>
+                <strong>Changes to slideshow.js:</strong>
+                The functionality of the slideshow includes everything specified in P2. We also added some lines in the
+                script which make the slideshow stop if the user uses a mobile device (less than 600px, configurable).
+                This to reduce power consumption for mobile devices. The left and right buttons are also hidden when
+                width is less than 600px, but that is done through @media in index.css. </p>
+            <p>
+                <strong>Changes to order.js:</strong>
+                All functionalities specified in P2 are implemented, as well as some new ones:
+                The user now has the ability to use discounts to pay less, e.g. student discount (-25%). The discounts
+                are present as checkboxes, and more discounts can easily be added to the page through a single line of
+                code.
+                We added a form to the page where the user sends in information such as name, email and phone number.
+                The form, the submit button, and the receipt are now hidden until the user actually adds items to order.
+                When the submit button is clicked, a function inside of another javascript file called
+                submitImplementation.js is activated. More on that later.
+            </p>
+            <p>
+                <strong>Changes to contact.js:</strong>
+                The functionality of contact.js remains the same as in P2, but instead of creating a separate function
+                for the submit button on this page, we did as in order.js, and imported a function from
+                submitImplementation.js and used that instead, in order to effectively reuse code. </p>
+            <p>
+                <strong>Changes to footer.js:</strong>
+                The footer functionality remains about the same as in P2. However, a button has been added to the right
+                of the logo. The button reads “Leave a review” and when clicked, redirects the user to a google forms
+                page where they can leave a review for us to see. </p>
+            <h4>Additional JavaScript files:</h4>
+            <p>
+                <strong>Added scroll.js:</strong>
                 Endringer...
             </p>
             <p>
-                <strong>Changes to .js:</strong>
+                <strong>Added submitImplementation.js:</strong>
                 Endringer...
             </p>
             <p>
-                <strong>Changes to .js:</strong>
-                Endringer...
-            </p>
-            <p>
-                <strong>Changes to .js:</strong>
-                Endringer...
-            </p>
-            <p>
-                <strong>Changes to .js:</strong>
-                Endringer...
-            </p>
-            <p>
-                <strong>Additional JavaScript files - "__":</strong>
+                <strong>Added find_restaurant.js:</strong>
                 Endringer...
             </p>
             <h3>Changes to intended CSS styling:</h3>
@@ -115,15 +153,38 @@
         </section>
         <section>
             <h2>Updated Organizational Scheme:</h2>
-            <p>All of the following files are gathered inside the folder <b>"FOLDER NAME"</b></p>
+            <p>All of the following files are gathered inside the folder: <i>O_Burger</i></p>
             <h3>List of folders with files:</h3>
             <ul>
-                <li>index.html</li>
-                <li>about.html</li>
-                <li>order.html</li>
-                <li>find_restaurant.html</li>
-                <li>contact.html</li>
-                <li>images/</li>
+                <li>html</li>
+                <ul>
+                    <li>about.html</li>
+                    <li>contact.html</li>
+                    <li>find_restaurant.html</li>
+                    <li>index.html</li>
+                    <li>order.html</li>
+                </ul>
+                <li>scripts</li>
+                <ul>
+                    <li>contact.js</li>
+                    <li>find_restaurant.js</li>
+                    <li>footer.js</li>
+                    <li>navbar.js</li>
+                    <li>order.js</li>
+                    <li>scroll.js</li>
+                    <li>slideshow.js</li>
+                    <li>submitImplementation.js</li>
+                </ul>
+                <li>css</li>
+                <ul>
+                    <li>global.css</li>
+                    <li>about.css</li>
+                    <li>contact.css</li>
+                    <li>find_restaurant.css</li>
+                    <li>index.css</li>
+                    <li>order.css</li>
+                </ul>
+                <li>imgs</li>
                 <ul>
                     <li>O_Burger.png</li>
                     <li>spruce_background.png</li>
@@ -145,15 +206,6 @@
                     <li>googlemaps.png</li>
                     <li>... We are going to find more pictures ...</li>
                 </ul>
-                <li>scripts</li>
-                <ul>
-                    <li>navbar.js</li>
-                    <li>slideshow.js</li>
-                    <li>order.js</li>
-                    <li>contact.js</li>
-                    <li>footer.js</li>
-                </ul>
-                <li>style.css</li>
             </ul>
             <h3>Final Work Division</h3>
             <p>TEKST OM FORDELING AV OPPGAVER, ALLE GJORDE LITT HER OG DER. TEAMWORK KAPPA HEE XDDDD WEEWOO WEEWOO</p>
