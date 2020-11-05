@@ -73,7 +73,7 @@ a {
    top: 80%;
    left: 2%;
    color: black;
-   z-index: 9099999;
+   z-index: 99;
    font-size: 32px;
    padding: 10px;
    border: 2px solid rgb(121, 120, 120);
