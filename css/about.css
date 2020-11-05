@@ -30,11 +30,12 @@ h5
 article.bg
 {
     background-color:#2F2F2F;
-    line-height: 25px;
+    line-height: 30px;
 }
 article.content
 {
     max-width: 80%;
+    text-align: left;
     padding-top: 32px;
     padding-bottom:50px;
 }
