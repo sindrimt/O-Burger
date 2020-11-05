@@ -35,22 +35,21 @@
                 webpage, we have added more visual buttons for “O’Story” and “Find your restaurant”, which will help the
                 user navigate to the different pages easier. Finally, we decided to add a darker overlay over both the
                 banners of “O’Story” and “Find your restaurant”, considering the intended lighter overlay stood out too
-                much.
+                much. Changed the image of Obama eating an apple to Obama sitting with Anthony Bourdain, which has a
+                higher quality.
             </p>
             <p>
                 <strong>Changes to about.html:</strong>
                 The intended banner has been replaced with a more fitting image with higher quality. The background
-                images behind the texts have also been replaced with picture collages, which are located below each
-                text, respectively. We added a grey overlay over the collages to make them smoother and fit the general
+                images behind the texts have also been replaced with picture collages, which are located below the text
+                elements, respectively. We added a grey overlay to the images to make them smoother and fit the general
                 color scheme of the website.
             </p>
             <p>
                 <strong>Changes to order.html:</strong>
                 We decided to change the images for O’Burger to a Hawaiian Burger, which will correspond with the text
                 in the “O’Story”-section. Soft drink was updated to O’Beverage to fit the O’-name theme. Regarding the
-                receipt, we decided to add a checkbox, which will give the user a student discount if checked. The
-                overall design of the receipt also received some small tweaks, e.g adding the orange lines to separate
-                the receipt from the menu items and the input areas.
+                receipt, we decided to add a checkbox, which will give the user a student discount if checked.
             </p>
             <p>
                 <strong>Changes to find_restaurant.html:</strong>
@@ -58,15 +57,13 @@
                 this page also received some small changes:
             </p>
             <ul>
-                <li>Only restaurant names are in bold text.</li>
-                <li>Removed the horizontal orange border lines.</li>
                 <li>The addresses of each restaurant is now clickable, and will pinpoint location on the map. (see
                     <b>find_restaurant.js</b> in "Changes to intended Javascript files:")</li>
             </ul>
             <p>
                 <strong>Changes to contact.html:</strong>
-                This page didn't undergo many changes. We added an image of Obama and a "How can we help you"-button,
-                which will direct the user down to the FAQ and contact form.
+                This page didn’t undergo many changes. We added an image of Obama and a “How can we help you”-button
+                that scrolls down to the FAQ questions when clicked.
             </p>
         </section>
         <section>
@@ -77,20 +74,24 @@
                 <strong>Changes to navbar.js:</strong>
                 In P2 we wrote that the O’Burger logo would be “slightly” bigger when scrolling to the top of the page.
                 In the final website, that is an underestimation. The logo is quite enormous. No more changes have been
-                made to the navbar functionality, only style, which will be covered later. </p>
+                made to the navbar functionality, only style, which will be covered later. The navbar is smaller for
+                mobile users, and the user has to use two clicks to navigate to any of the pages. This is because the
+                user has to click on the navbar to open the drop down menu, and then click on the desired page. </p>
             <p>
                 <strong>Changes to slideshow.js:</strong>
                 The functionality of the slideshow includes everything specified in P2. We also added some lines in the
                 script which make the slideshow stop if the user uses a mobile device (less than 600px, configurable).
                 This to reduce power consumption for mobile devices. The left and right buttons are also hidden when
-                width is less than 600px, but that is done through @media in index.css. </p>
+                width is less than 600px, but that is done through a media query in index.css. </p>
             <p>
                 <strong>Changes to order.js:</strong>
                 All functionalities specified in P2 are implemented, as well as some new ones:
                 The user now has the ability to use discounts to pay less, e.g. student discount (-25%). The discounts
                 are present as checkboxes, and more discounts can easily be added to the page through a single line of
                 code.
-                We added a form to the page where the user sends in information such as name, email and phone number.
+                We added a form to the page where the user sends in information such as name, email and phone number. We
+                decided not to add the intended labels in the form, but rather use placeholders with their respective
+                values.
                 The form, the submit button, and the receipt are now hidden until the user actually adds items to order.
                 When the submit button is clicked, a function inside of another javascript file called
                 submitImplementation.js is activated. More on that later.
@@ -99,7 +100,8 @@
                 <strong>Changes to contact.js:</strong>
                 The functionality of contact.js remains the same as in P2, but instead of creating a separate function
                 for the submit button on this page, we did as in order.js, and imported a function from
-                submitImplementation.js and used that instead, in order to effectively reuse code. </p>
+                submitImplementation.js and used that instead, in order to effectively reuse code.
+            </p>
             <p>
                 <strong>Changes to footer.js:</strong>
                 The footer functionality remains about the same as in P2. However, a button has been added to the right
@@ -108,15 +110,101 @@
             <h4>Additional JavaScript files:</h4>
             <p>
                 <strong>Added scroll.js:</strong>
-                Endringer...
+                We came up with a functionality that might look modern and appealing for gen z and millennials.
+                Scroll.js lets us easily create images that scroll with a different speed compared to the rest of the
+                content, which creates a cool “background” feel to the images. Theoretically, since we use classes to
+                identify scroll images, there can exist more than one scroll image on each page, but we only have one
+                scroll image for Find Restaurant, O’bout and Contact.
             </p>
             <p>
                 <strong>Added submitImplementation.js:</strong>
-                Endringer...
+                This file acts a little different than the others. It does nothing on its own, but rather provides
+                useful functions that other javascript pages can use. It is used by contact.js and order.js for, as the
+                name might suggest, the submit buttons. submitImplementation.js offers functions that reset all the
+                content of the article.content elements on the page (which are present and standardized on almost every
+                page), and fills the void with a custom message and a button which can be clicked to reload the current
+                page. This javascript file was primarily created to avoid copy-pasting very similar code in the order
+                and contact pages, we thought it was better to rather call a single function from this file instead.
             </p>
             <p>
                 <strong>Added find_restaurant.js:</strong>
-                Endringer...
+
+            </p>
+            <h3>Changes to the intended CSS-styling:</h3>
+            <p>
+                We decided to make a global.css which applies to all of the pages, and seperate css-files which applies
+                to their respective html-files. This way, we can make changes to every page in the global.css and
+                overwrite or make separate changes to the html-files in their respective css-files.
+            </p>
+            <p>
+                <strong>global.css:</strong>
+            <ul>
+                <li>
+                    Contains the style for our navbar and footer, some buttons, image classes and scroll functions.
+                </li>
+                <li>
+                    Added media queries to reduce the font size of the navbar when the user zooms out or uses a large
+                    monitor. This way, the text in the footer won’t disappear.
+                </li>
+                <li>
+                    Main font: Changed from Signika Negative SC to Signika.
+                </li>
+                <li>
+                    Fallback fonts: Verdana, Geneva, Tahoma, sans-serif
+                </li>
+                <li>
+                    Links with borders and gray overlays have white fonts, while the links connected to the google API
+                    on the ‘find_restaurant.html’ page have an orange font.
+                </li>
+                <li>
+                    The orange font has a lighter hue when the
+                    cursor is hovered above the link.
+                </li>
+                <li>
+                    The background image in the footer is a bit more zoomed in. Removed the white line in the footer,
+                    and positioned the facebook and instagram logo beside each other and vertically centered.
+                </li>
+            </ul>
+            </p>
+            <p>
+                <strong>about.css</strong>
+            <ul>
+                <li>
+                    Made the font-size of the paragraphs and headings bigger.
+                </li>
+                <li>
+                    Added a solid color (HEX: #2f2f2f) background behind the paragraphs.
+                </li>
+            </ul>
+            </p>
+            <p>
+                <strong>contact.css</strong>
+            <ul>
+                <li>
+                    The items in the receipt are written on separate lines.
+                </li>
+                <li>
+                    There’s an orange border above and below the receipt.
+                </li>
+            </ul>
+            </p>
+            <p>
+                <strong>index.css:</strong>
+                Changed the pictures in the slide-show. Added a gray overlay on the pictures under the slide-show. Added
+                text-boxes on top of the images of obama eating an apple, and the map preview. Made the overlay on the
+                images darker. The buttons on the slideshow are now invisible when it’s a mobile device (reasons behind
+                this was covered in the slideshow.js part).
+            </p>
+            <p>
+                <strong>order.css:</strong>
+                The overall design of the receipt also received some small tweaks, e.g adding the orange lines to
+                separate the receipt from the menu items and the input areas.
+            </p>
+            <p>
+                <strong>find_restaurant.css:</strong>
+                Decreased the margin between the restaurant table-elements. Only the names of the restaurants have a
+                bold font. Removed the orange borders above and below the tables. Bold text only on restaurant names.
+                Removed the horizontal border lines. The color of these links are orange.
             </p>
             <h3>Modularity Requirement:</h3>
             <p>TEKSTTT</p>
