@@ -15,7 +15,7 @@ html {
     height : auto;
 }
     
-
+/*The two arrows on the slideshow*/
 #lButton, #rButton
 {  /* Writing common style for two similar imgs is unecessary */
     position: absolute;
@@ -47,7 +47,7 @@ article.bg {
     height: auto;
 }
 
-/*Gray overlay on the picture of Obama eating an apple on the home page*/
+/*Gray overlay on the picture of Obama and Anthony Bourdain on the home page*/
 
 .pagePreview {
     width: 100%;
