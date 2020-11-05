@@ -68,7 +68,7 @@
         </section>
         <section>
             <h2>Changes Made to Javascript and CSS:</h2>
-            <p>We decided to add three additional scripts, </p>
+            <p>We decided to add three additional scripts, without abandoning the plans we already had. </p>
             <h3>Changes to intended Javascript files:</h3>
             <p>
                 <strong>Changes to navbar.js:</strong>
@@ -227,9 +227,14 @@
 
             </p>
             <h3>Modularity Requirement:</h3>
-            <p>We achieved modularity by making the navbar and footer in javascript. This allows us to include them
-                on every page. We used a global css-file, but also specific css-files in order to overwrite or
-                make specific changes to their respective html-files.
+            <p>We achieved modularity by making the navbar and footer in javascript. This allowed us to include them
+                on every page. We used a global css-file, but also specific css-files for each page in order to override or
+                make specific changes to their respective html-files. We also had a system where we reused a bunch of classes
+                across pages. elements such as "img.scroll" to automatically make an image scroll in the background, 
+                and "article" to have a standardized look on text fields. 
+                A top priority when writing the javascript files was to be able to add new content with as little effort as possible. 
+                We have therefore utilized lists of objects as much as we could, and in some cases made separate javascript files
+                which contain functions that are used on multiple pages (such as submitImplementation.js).
             </p>
         </section>
         <section>
